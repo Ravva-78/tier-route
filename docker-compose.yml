@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
   # TierRoute API Gateway (Reverse proxy & intelligent dispatcher)
@@ -11,6 +10,7 @@ services:
     environment:
       - TIERROUTE_MODE=live
       - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - TIERROUTE_LOCAL_BASE_URL=http://local-ollama:11434/v1  # inside compose, localhost is the gateway itself
     volumes:
       - ./results:/app/results
       - ./config:/app/config

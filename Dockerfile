@@ -9,8 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Copy dependency specifications and install
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt \
-    && pip install --no-cache-dir scikit-learn>=1.4.0
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application source code
 COPY . .

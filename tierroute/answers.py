@@ -1,5 +1,6 @@
 """Gold-free helpers that work on a prompt and a model output only (no grader, no gold, no tests)."""
 import ast
+import builtins
 import re
 import unicodedata
 
@@ -34,6 +35,16 @@ def final_answer(prompt: str, text: str) -> str:
     return re.sub(r"\s+", " ", a).replace(",", "")
 
 
+def _self_contained(assert_line: str, fn) -> bool:
+    """True if the assert only uses literals, builtins and the target function (no free example variables)."""
+    try:
+        tree = ast.parse(assert_line)
+    except SyntaxError:
+        return False
+    ok_names = set(dir(builtins)) | {fn}
+    return all(n.id in ok_names for n in ast.walk(tree) if isinstance(n, ast.Name))
+
+
 def prompt_examples(prompt: str):
     """Example asserts that literally appear inside the prompt. Returns (func_name or None, [assert lines])."""
     asserts = [l.strip() for l in prompt.splitlines() if l.strip().startswith("assert ")]
@@ -66,4 +77,4 @@ def prompt_examples(prompt: str):
                 except SyntaxError:
                     continue
                 asserts.append(f"assert {m4.group(1)} == ({exp})")
-    return fn, list(dict.fromkeys(asserts))
+    return fn, [a for a in dict.fromkeys(asserts) if _self_contained(a, fn)]
