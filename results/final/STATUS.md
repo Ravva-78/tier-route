@@ -1,16 +1,12 @@
-# Status (written 2026-10-17 19:25 IST) - live evaluation NOT finished
+# Status (updated 2026-10-17 20:15 IST)
 
-Done and committed: Phase 1 (no-leak routing + tests), Phase 2 code (verifiers a-d; e not run), Phase 3 (v3 frozen,
-SHA-256 `4a5af81ef68c2003bd4f85978f09af00cb03297c08489d8cad2733282026606c`, committed before any model call),
-Phase 4 runner (`benchmark/run_final.py`), Phase 5 (health check, smoke test, run_dashboard.bat, QUICKSTART.md).
+Done: Phases 1, 3, 5 (see git log); Phase 2 DEV verifier selection finished -> `selected_verifier.json` = judge, threshold 0.5
+(`verifier_selection.md`); live health check OK; live smoke test saved (`smoke_live.txt`, partly rate-limited).
 
-**Blocker: Groq `openai/gpt-oss-120b` free-tier cap of 200,000 tokens/day (rolling 24 h).** The audit and earlier
-runs consumed it (`Used 199638` at 2026-10-17 19:2x IST). Every strong-tier call now returns HTTP 429 until old usage
-ages out of the window (roughly 2026-10-18 morning for the first ~100k tokens). The runners retry forever with 60 s
-backoff and cache every successful call, so they resume without re-sampling.
-
-Pipeline running in the background: `select_verifier.py` (Phase 2 on DEV) then `run_final.py` (Phase 4 on v3).
-If the machine restarts, resume with:
-    python benchmark/select_verifier.py && python benchmark/run_final.py
-Remaining strong-tier need is about 100k tokens (DEV ~30k, v3 low ~30k, v3 default ~40k).
-No results are reported until those runs finish. `results/final/problems.log` logs every 429.
+**Blocked: the single v3 run (`benchmark/run_final.py`, running in the background).** Groq `openai/gpt-oss-120b` allows
+200,000 tokens per rolling 24 h; the latest response said `Used 199720` at 20:14 IST. Each strong-tier call waits and retries
+(60 s backoff, calls cached, nothing re-sampled or filled in). Tokens free up only as earlier usage ages past 24 h; the large
+earlier batches (v2 follow-up on Oct 17 morning, audit on Oct 17 14:00-16:30 IST) free up roughly Oct 18 morning to afternoon IST.
+Still needed from the strong tier: about 70k tokens (v3 low-effort run about 30k, always_strong 4096/default baseline about 40k).
+`results/final/v3_tables.md` appears when the run completes; then write `RESULTS_FINAL.md` (not yet written: no numbers yet).
+Resume after a restart: `python benchmark/run_final.py` (selection already done; do not re-run it).

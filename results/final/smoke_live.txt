@@ -73,3 +73,14 @@ mode: live | models: local-small, hosted-mid, hosted-strong
   total cost $0.000026 (all-strong estimate $0.000053)
 
 smoke test finished (overrides restored)
+
+## Notes on this run (added by hand, 2026-10-17 20:15 IST)
+* Cases 1, 3 and 6 completed cleanly on live models (case 3 shows a real escalation: `local-small [judge_conf=0.00] -> hosted-mid`).
+* Cases 2, 4 and 5 touched `hosted-strong` while the benchmark was running at the same time and Groq's 200,000 tokens/day cap
+  for `openai/gpt-oss-120b` was exhausted: they show `finish_reason=length`, `provider error: HTTP 429` or `provider_error`
+  (45 s client timeout). Nothing was edited or filled in. The server was started before the default `max_tokens` was raised
+  from 1024 to 4096 and reasoning_effort=low was added for hosted tiers, which explains case 2's truncated answer.
+* Case 4 uses a per-request `verifier=heuristic` override: with the selected `judge` verifier the draft "I'm not sure" is
+  accepted, because the prompt asked for exactly those words and the judge rates instruction-following, not uncertainty.
+* Re-run after quota resets (strong tier needs a few thousand tokens): `python scripts/smoke_test.py > results/final/smoke_live_rerun.txt`
+  with `PYTHONIOENCODING=utf-8`, server running via `run_dashboard.bat`.
