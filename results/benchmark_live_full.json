@@ -1,0 +1,243 @@
+{
+  "mode": "live",
+  "split": "full",
+  "split_description": "full (all 55 subtasks, not held-out)",
+  "n_runs": 1,
+  "temperature": 0.0,
+  "timestamp": "2026-10-16 21:45:06",
+  "models": [
+    {
+      "name": "local-small",
+      "tier": 0,
+      "model": "llama3.2:3b",
+      "price_in_per_m": 0.0,
+      "price_out_per_m": 0.0
+    },
+    {
+      "name": "hosted-mid",
+      "tier": 1,
+      "model": "openai/gpt-oss-20b",
+      "price_in_per_m": 0.075,
+      "price_out_per_m": 0.3
+    },
+    {
+      "name": "hosted-strong",
+      "tier": 2,
+      "model": "openai/gpt-oss-120b",
+      "price_in_per_m": 0.15,
+      "price_out_per_m": 0.6
+    }
+  ],
+  "strategies": [
+    {
+      "strategy": "always_strong",
+      "bias": 0.5,
+      "sub_tasks": 55,
+      "n_runs": 1,
+      "cost_usd": 0.004018,
+      "cost_usd_std": 0.0,
+      "quality": 0.9455,
+      "quality_std": 0.0,
+      "latency_s": 102.43,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.2727,
+      "routing_accuracy_std": 0.0,
+      "escalations": 0.0,
+      "escalations_std": 0.0,
+      "under_routed": 0,
+      "over_routed": 40,
+      "final_model_counts": {
+        "hosted-strong": 55
+      },
+      "replicates": [
+        {
+          "strategy": "always_strong",
+          "bias": 0.5,
+          "sub_tasks": 55,
+          "cost_usd": 0.00401835,
+          "latency_s": 102.43,
+          "quality": 0.9455,
+          "routing_accuracy": 0.2727,
+          "under_routed": 0,
+          "over_routed": 40,
+          "escalations": 0,
+          "final_model_counts": {
+            "hosted-strong": 55
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 0.0,
+      "quality_vs_strong": 1.0
+    },
+    {
+      "strategy": "always_cheap",
+      "bias": 0.5,
+      "sub_tasks": 55,
+      "n_runs": 1,
+      "cost_usd": 0.0,
+      "cost_usd_std": 0.0,
+      "quality": 0.0,
+      "quality_std": 0.0,
+      "latency_s": 22.726,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.4,
+      "routing_accuracy_std": 0.0,
+      "escalations": 0.0,
+      "escalations_std": 0.0,
+      "under_routed": 33,
+      "over_routed": 0,
+      "final_model_counts": {
+        "local-small": 55
+      },
+      "replicates": [
+        {
+          "strategy": "always_cheap",
+          "bias": 0.5,
+          "sub_tasks": 55,
+          "cost_usd": 0.0,
+          "latency_s": 22.726,
+          "quality": 0.0,
+          "routing_accuracy": 0.4,
+          "under_routed": 33,
+          "over_routed": 0,
+          "escalations": 0,
+          "final_model_counts": {
+            "local-small": 55
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 100.0,
+      "quality_vs_strong": 0.0
+    },
+    {
+      "strategy": "random",
+      "bias": 0.5,
+      "sub_tasks": 55,
+      "n_runs": 1,
+      "cost_usd": 0.002564,
+      "cost_usd_std": 0.0,
+      "quality": 0.5818,
+      "quality_std": 0.0,
+      "latency_s": 43.918,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.4182,
+      "routing_accuracy_std": 0.0,
+      "escalations": 0.0,
+      "escalations_std": 0.0,
+      "under_routed": 15,
+      "over_routed": 17,
+      "final_model_counts": {
+        "local-small": 21,
+        "hosted-strong": 22,
+        "hosted-mid": 12
+      },
+      "replicates": [
+        {
+          "strategy": "random",
+          "bias": 0.5,
+          "sub_tasks": 55,
+          "cost_usd": 0.0025635750000000002,
+          "latency_s": 43.918,
+          "quality": 0.5818,
+          "routing_accuracy": 0.4182,
+          "under_routed": 15,
+          "over_routed": 17,
+          "escalations": 0,
+          "final_model_counts": {
+            "local-small": 21,
+            "hosted-strong": 22,
+            "hosted-mid": 12
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 36.2,
+      "quality_vs_strong": 0.615
+    },
+    {
+      "strategy": "rules",
+      "bias": 0.5,
+      "sub_tasks": 55,
+      "n_runs": 1,
+      "cost_usd": 0.003496,
+      "cost_usd_std": 0.0,
+      "quality": 0.9455,
+      "quality_std": 0.0,
+      "latency_s": 65.308,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.8,
+      "routing_accuracy_std": 0.0,
+      "escalations": 28.0,
+      "escalations_std": 0.0,
+      "under_routed": 6,
+      "over_routed": 5,
+      "final_model_counts": {
+        "hosted-mid": 35,
+        "hosted-strong": 20
+      },
+      "replicates": [
+        {
+          "strategy": "rules",
+          "bias": 0.5,
+          "sub_tasks": 55,
+          "cost_usd": 0.0034960499999999992,
+          "latency_s": 65.308,
+          "quality": 0.9455,
+          "routing_accuracy": 0.8,
+          "under_routed": 6,
+          "over_routed": 5,
+          "escalations": 28,
+          "final_model_counts": {
+            "hosted-mid": 35,
+            "hosted-strong": 20
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 13.0,
+      "quality_vs_strong": 1.0
+    },
+    {
+      "strategy": "classifier",
+      "bias": 0.5,
+      "sub_tasks": 55,
+      "n_runs": 1,
+      "cost_usd": 0.003171,
+      "cost_usd_std": 0.0,
+      "quality": 0.9273,
+      "quality_std": 0.0,
+      "latency_s": 114.81,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.9273,
+      "routing_accuracy_std": 0.0,
+      "escalations": 27.0,
+      "escalations_std": 0.0,
+      "under_routed": 4,
+      "over_routed": 0,
+      "final_model_counts": {
+        "hosted-mid": 40,
+        "hosted-strong": 15
+      },
+      "replicates": [
+        {
+          "strategy": "classifier",
+          "bias": 0.5,
+          "sub_tasks": 55,
+          "cost_usd": 0.0031707,
+          "latency_s": 114.81,
+          "quality": 0.9273,
+          "routing_accuracy": 0.9273,
+          "under_routed": 4,
+          "over_routed": 0,
+          "escalations": 27,
+          "final_model_counts": {
+            "hosted-mid": 40,
+            "hosted-strong": 15
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 21.1,
+      "quality_vs_strong": 0.981
+    }
+  ],
+  "rules_bias_sweep": [],
+  "classifier_bias_sweep": []
+}

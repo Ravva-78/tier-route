@@ -1,0 +1,35 @@
+## 1.  What Dijkstra’s algorithm *assumes*
+
+Dijkstra’s algorithm is a greedy method for the **single‑source shortest‑path** problem on a weighted directed graph \(G=(V,E)\) with a weight function \(w:E\rightarrow\mathbb{R}\).
+
+The algorithm maintains a set  
+
+\[
+S\subseteq V
+\]
+
+of vertices whose shortest‑path distance from the source \(s\) is already known to be optimal.  
+At each iteration it picks a vertex \(u\notin S\) with the **minimum tentative distance**  
+
+\[
+\text{dist}[u]=\min_{v\in V\setminus S}\text{dist}[v]
+\]
+
+and then “relaxes’’ all outgoing edges \((u,v)\).
+
+The **key invariant** that makes the greedy choice correct is:
+
+> **Invariant (non‑negative edge weights).**  
+> When a vertex \(u\) is added to \(S\), \(\text{dist}[u]\) equals the true shortest‑path distance \(\delta(s,u)\).
+
+The proof of this invariant uses the fact that **all edge weights are non‑negative**.  
+If every edge weight \(w(e)\ge 0\), any path that goes through a vertex not yet in \(S\) can only be **longer** (or equal) than the path that ends at the currently chosen minimum‑distance vertex. Hence the greedy choice cannot miss a shorter path that later becomes visible.
+
+---
+
+## 2.  Why the invariant breaks when a negative edge exists
+
+### 2.1.  The logical point of failure
+
+Assume we have already built the set \(S\) and we are about to extract the vertex \(u\) with the smallest tentative distance.  
+If there exists a **negative‑weight edge** \((x,y)\) with \(x\notin S\) and \(y\in S\), then a path that first reaches \(x\) (still unknown) and then traverses \((x,y)\) could **reduce** the distance to \(y\) *after* \(y\

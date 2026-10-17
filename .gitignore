@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+ENV/
+results/*.db
+results/overrides.json
+results/bench_overrides.json
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+

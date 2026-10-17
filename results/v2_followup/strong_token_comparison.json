@@ -1,0 +1,32 @@
+{
+  "always_strong_4096": {
+    "eval_name": "always_strong_4096",
+    "max_tokens": 4096,
+    "extra_body": null,
+    "tasks": 60,
+    "correct": 47,
+    "quality_ratio": "47/60",
+    "quality_pct": 78.33,
+    "cost_total": 0.01618,
+    "mean_latency_s": 2.852,
+    "median_latency_s": 1.565,
+    "total_latency_s": 171.137,
+    "truncated_count": 0
+  },
+  "always_strong_4096_low": {
+    "eval_name": "always_strong_4096_low_reasoning",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tasks": 60,
+    "correct": 47,
+    "quality_ratio": "47/60",
+    "quality_pct": 78.33,
+    "cost_total": 0.01062,
+    "mean_latency_s": 2.483,
+    "median_latency_s": 1.539,
+    "total_latency_s": 148.964,
+    "truncated_count": 0
+  }
+}

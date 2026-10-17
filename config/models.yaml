@@ -1,0 +1,35 @@
+# TierRoute model pool. Cheapest/weakest first. Add, remove or swap models here only.
+# mode: "mock" simulates model answers (to test the router offline); "live" calls real endpoints.
+# Override without editing: set env TIERROUTE_MODE=live
+mode: live
+default_quality_bias: 0.5   # 0 = save as much cost as possible, 1 = quality first
+
+models:
+  - name: local-small            # runs on your own machine (Ollama) or a Colab/Kaggle tunnel
+    tier: 0
+    base_url: http://localhost:11434/v1
+    model: llama3.2:3b
+    api_key_env: ""
+    price_in_per_m: 0.0          # USD per 1M tokens (local = no API cost)
+    price_out_per_m: 0.0
+    capability: 0.35             # mock mode only
+
+  - name: hosted-mid
+    tier: 1
+    base_url: https://api.groq.com/openai/v1
+    model: openai/gpt-oss-20b
+    api_key_env: GROQ_API_KEY
+    price_in_per_m: 0.075        # USD per 1M tokens (verified 2026-10-16 via groq.com/pricing)
+    price_out_per_m: 0.30        # USD per 1M tokens (verified 2026-10-16 via groq.com/pricing)
+    capability: 0.60
+
+  - name: hosted-strong
+    tier: 2
+    base_url: https://api.groq.com/openai/v1
+    model: openai/gpt-oss-120b
+    api_key_env: GROQ_API_KEY
+    price_in_per_m: 0.15         # USD per 1M tokens (verified 2026-10-16 via groq.com/pricing)
+    price_out_per_m: 0.60        # USD per 1M tokens (verified 2026-10-16 via groq.com/pricing)
+    capability: 0.95
+
+

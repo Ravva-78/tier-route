@@ -1,0 +1,8 @@
+strategy,evaluation_scope,subtasks,total_time_s,mean_latency_s,median_latency_s,local_small_subtasks,local_small_mean_s,local_small_median_s,local_small_total_s,hosted_mid_subtasks,hosted_mid_mean_s,hosted_mid_median_s,hosted_mid_total_s,hosted_strong_subtasks,hosted_strong_mean_s,hosted_strong_median_s,hosted_strong_total_s
+always_strong,test_benchmark (bias=0.5),36,47.903,1.331,0.977,0,N/A,N/A,0.000,0,N/A,N/A,0.000,36,1.331,0.977,47.903
+always_cheap,test_benchmark (bias=0.5),36,142.623,3.962,2.422,36,3.962,2.422,142.623,0,N/A,N/A,0.000,0,N/A,N/A,0.000
+random,test_benchmark (bias=0.5),36,69.580,1.933,1.373,14,3.147,2.385,44.056,8,0.901,0.941,7.209,14,1.308,0.999,18.315
+rules,test_benchmark (bias=0.5),36,68.673,1.908,2.288,14,2.463,2.485,34.479,9,1.175,0.974,10.572,13,1.817,1.143,23.621
+classifier,test_benchmark (bias=0.5),36,64.837,1.801,1.758,15,2.444,2.445,36.659,13,1.179,1.057,15.328,8,1.606,1.513,12.850
+rules_all_sweeps,all_raw_sweeps (biases 0.0-1.0),216,418.601,1.938,1.796,82,2.516,2.433,206.284,59,1.526,0.964,90.049,75,1.630,1.231,122.268
+classifier_all_sweeps,all_raw_sweeps (biases 0.0-1.0),216,386.724,1.790,1.585,61,2.435,2.426,148.513,63,1.043,0.987,65.710,92,1.875,1.530,172.501

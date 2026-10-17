@@ -1,0 +1,191 @@
+{
+  "mode": "mock",
+  "models": [
+    "local-small",
+    "hosted-mid",
+    "hosted-strong"
+  ],
+  "strategies": [
+    {
+      "strategy": "always_strong",
+      "bias": 0.5,
+      "sub_tasks": 55,
+      "cost_usd": 0.0017449499999999997,
+      "latency_s": 90.67,
+      "quality": 0.964,
+      "routing_accuracy": 0.273,
+      "under_routed": 0,
+      "over_routed": 40,
+      "escalations": 0,
+      "final_model_counts": {
+        "hosted-strong": 55
+      },
+      "cost_saving_vs_strong_pct": 0.0,
+      "quality_vs_strong": 1.0
+    },
+    {
+      "strategy": "always_cheap",
+      "bias": 0.5,
+      "sub_tasks": 55,
+      "cost_usd": 0.0,
+      "latency_s": 52.17,
+      "quality": 0.4,
+      "routing_accuracy": 0.4,
+      "under_routed": 33,
+      "over_routed": 0,
+      "escalations": 0,
+      "final_model_counts": {
+        "local-small": 55
+      },
+      "cost_saving_vs_strong_pct": 100.0,
+      "quality_vs_strong": 0.415
+    },
+    {
+      "strategy": "random",
+      "bias": 0.5,
+      "sub_tasks": 55,
+      "cost_usd": 0.0006013699999999999,
+      "latency_s": 52.57,
+      "quality": 0.709,
+      "routing_accuracy": 0.291,
+      "under_routed": 15,
+      "over_routed": 24,
+      "escalations": 0,
+      "final_model_counts": {
+        "hosted-mid": 27,
+        "local-small": 12,
+        "hosted-strong": 16
+      },
+      "cost_saving_vs_strong_pct": 65.5,
+      "quality_vs_strong": 0.735
+    },
+    {
+      "strategy": "rules",
+      "bias": 0.5,
+      "sub_tasks": 55,
+      "cost_usd": 0.00087833,
+      "latency_s": 68.49,
+      "quality": 0.909,
+      "routing_accuracy": 0.727,
+      "under_routed": 5,
+      "over_routed": 10,
+      "escalations": 5,
+      "final_model_counts": {
+        "local-small": 21,
+        "hosted-mid": 10,
+        "hosted-strong": 24
+      },
+      "cost_saving_vs_strong_pct": 49.7,
+      "quality_vs_strong": 0.943
+    },
+    {
+      "strategy": "classifier",
+      "bias": 0.5,
+      "sub_tasks": 55,
+      "cost_usd": 0.0007471299999999999,
+      "latency_s": 65.85,
+      "quality": 0.927,
+      "routing_accuracy": 0.836,
+      "under_routed": 6,
+      "over_routed": 3,
+      "escalations": 7,
+      "final_model_counts": {
+        "local-small": 22,
+        "hosted-mid": 14,
+        "hosted-strong": 19
+      },
+      "cost_saving_vs_strong_pct": 57.2,
+      "quality_vs_strong": 0.962
+    }
+  ],
+  "bias_sweep": [
+    {
+      "strategy": "rules",
+      "bias": 0.0,
+      "sub_tasks": 55,
+      "cost_usd": 0.000378,
+      "latency_s": 66.09,
+      "quality": 0.709,
+      "routing_accuracy": 0.509,
+      "under_routed": 27,
+      "over_routed": 0,
+      "escalations": 13,
+      "final_model_counts": {
+        "local-small": 33,
+        "hosted-mid": 13,
+        "hosted-strong": 9
+      },
+      "cost_saving_vs_strong_pct": 78.3
+    },
+    {
+      "strategy": "rules",
+      "bias": 0.25,
+      "sub_tasks": 55,
+      "cost_usd": 0.00061062,
+      "latency_s": 64.34,
+      "quality": 0.8,
+      "routing_accuracy": 0.636,
+      "under_routed": 17,
+      "over_routed": 3,
+      "escalations": 11,
+      "final_model_counts": {
+        "local-small": 26,
+        "hosted-mid": 14,
+        "hosted-strong": 15
+      },
+      "cost_saving_vs_strong_pct": 65.0
+    },
+    {
+      "strategy": "rules",
+      "bias": 0.5,
+      "sub_tasks": 55,
+      "cost_usd": 0.00087833,
+      "latency_s": 68.49,
+      "quality": 0.909,
+      "routing_accuracy": 0.727,
+      "under_routed": 5,
+      "over_routed": 10,
+      "escalations": 5,
+      "final_model_counts": {
+        "local-small": 21,
+        "hosted-mid": 10,
+        "hosted-strong": 24
+      },
+      "cost_saving_vs_strong_pct": 49.7
+    },
+    {
+      "strategy": "rules",
+      "bias": 0.75,
+      "sub_tasks": 55,
+      "cost_usd": 0.00102824,
+      "latency_s": 59.88,
+      "quality": 0.945,
+      "routing_accuracy": 0.364,
+      "under_routed": 1,
+      "over_routed": 34,
+      "escalations": 0,
+      "final_model_counts": {
+        "hosted-mid": 28,
+        "hosted-strong": 27
+      },
+      "cost_saving_vs_strong_pct": 41.1
+    },
+    {
+      "strategy": "rules",
+      "bias": 1.0,
+      "sub_tasks": 55,
+      "cost_usd": 0.00118422,
+      "latency_s": 66.47,
+      "quality": 0.964,
+      "routing_accuracy": 0.345,
+      "under_routed": 0,
+      "over_routed": 36,
+      "escalations": 0,
+      "final_model_counts": {
+        "hosted-mid": 22,
+        "hosted-strong": 33
+      },
+      "cost_saving_vs_strong_pct": 32.1
+    }
+  ]
+}

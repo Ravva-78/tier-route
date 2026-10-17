@@ -1,0 +1,917 @@
+{
+  "mode": "live",
+  "split": "test",
+  "split_description": "held-out test set (34 tasks, 36 subtasks)",
+  "n_runs": 1,
+  "temperature": 0.0,
+  "max_tokens": 1024,
+  "independence_note": "Temperature-0 repeats evaluate deterministic model outputs and are not independent random samples; Wilson 95% confidence intervals are computed over the N test items evaluated per run.",
+  "timestamp": "2026-10-16 23:51:49",
+  "models": [
+    {
+      "name": "local-small",
+      "tier": 0,
+      "model": "llama3.2:3b",
+      "price_in_per_m": 0.0,
+      "price_out_per_m": 0.0
+    },
+    {
+      "name": "hosted-mid",
+      "tier": 1,
+      "model": "openai/gpt-oss-20b",
+      "price_in_per_m": 0.075,
+      "price_out_per_m": 0.3
+    },
+    {
+      "name": "hosted-strong",
+      "tier": 2,
+      "model": "openai/gpt-oss-120b",
+      "price_in_per_m": 0.15,
+      "price_out_per_m": 0.6
+    }
+  ],
+  "strategies": [
+    {
+      "strategy": "always_strong",
+      "bias": 0.5,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 36,
+      "quality_ratio": "36/36",
+      "quality_wilson_ci": [
+        0.9036,
+        1.0
+      ],
+      "quality_wilson_str": "36/36 (100.0% [90.4%, 100.0%])",
+      "truncated_count": 1,
+      "cost_usd": 0.003346,
+      "cost_usd_std": 0.0,
+      "quality": 1.0,
+      "quality_std": 0.0,
+      "latency_s": 47.903,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.2778,
+      "routing_accuracy_std": 0.0,
+      "escalations": 0.0,
+      "escalations_std": 0.0,
+      "under_routed": 0,
+      "over_routed": 26,
+      "final_model_counts": {
+        "hosted-strong": 36
+      },
+      "replicates": [
+        {
+          "strategy": "always_strong",
+          "bias": 0.5,
+          "sub_tasks": 36,
+          "correct_count": 36,
+          "quality_ratio": "36/36",
+          "wilson_ci_95": [
+            0.9036,
+            1.0
+          ],
+          "wilson_ci_str": "36/36 (100.0% [90.4%, 100.0%])",
+          "truncated_count": 1,
+          "cost_usd": 0.0033457499999999998,
+          "latency_s": 47.903,
+          "quality": 1.0,
+          "routing_accuracy": 0.2778,
+          "under_routed": 0,
+          "over_routed": 26,
+          "escalations": 0,
+          "final_model_counts": {
+            "hosted-strong": 36
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 0.0,
+      "quality_vs_strong": 1.0
+    },
+    {
+      "strategy": "always_cheap",
+      "bias": 0.5,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 32,
+      "quality_ratio": "32/36",
+      "quality_wilson_ci": [
+        0.7469,
+        0.9559
+      ],
+      "quality_wilson_str": "32/36 (88.9% [74.7%, 95.6%])",
+      "truncated_count": 1,
+      "cost_usd": 0.0,
+      "cost_usd_std": 0.0,
+      "quality": 0.8889,
+      "quality_std": 0.0,
+      "latency_s": 142.622,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.3611,
+      "routing_accuracy_std": 0.0,
+      "escalations": 0.0,
+      "escalations_std": 0.0,
+      "under_routed": 23,
+      "over_routed": 0,
+      "final_model_counts": {
+        "local-small": 36
+      },
+      "replicates": [
+        {
+          "strategy": "always_cheap",
+          "bias": 0.5,
+          "sub_tasks": 36,
+          "correct_count": 32,
+          "quality_ratio": "32/36",
+          "wilson_ci_95": [
+            0.7469,
+            0.9559
+          ],
+          "wilson_ci_str": "32/36 (88.9% [74.7%, 95.6%])",
+          "truncated_count": 1,
+          "cost_usd": 0.0,
+          "latency_s": 142.622,
+          "quality": 0.8889,
+          "routing_accuracy": 0.3611,
+          "under_routed": 23,
+          "over_routed": 0,
+          "escalations": 0,
+          "final_model_counts": {
+            "local-small": 36
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 100.0,
+      "quality_vs_strong": 0.889
+    },
+    {
+      "strategy": "random",
+      "bias": 0.5,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 33,
+      "quality_ratio": "33/36",
+      "quality_wilson_ci": [
+        0.7817,
+        0.9713
+      ],
+      "quality_wilson_str": "33/36 (91.7% [78.2%, 97.1%])",
+      "truncated_count": 1,
+      "cost_usd": 0.002255,
+      "cost_usd_std": 0.0,
+      "quality": 0.9167,
+      "quality_std": 0.0,
+      "latency_s": 69.58,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.3889,
+      "routing_accuracy_std": 0.0,
+      "escalations": 0.0,
+      "escalations_std": 0.0,
+      "under_routed": 9,
+      "over_routed": 13,
+      "final_model_counts": {
+        "local-small": 14,
+        "hosted-strong": 14,
+        "hosted-mid": 8
+      },
+      "replicates": [
+        {
+          "strategy": "random",
+          "bias": 0.5,
+          "sub_tasks": 36,
+          "correct_count": 33,
+          "quality_ratio": "33/36",
+          "wilson_ci_95": [
+            0.7817,
+            0.9713
+          ],
+          "wilson_ci_str": "33/36 (91.7% [78.2%, 97.1%])",
+          "truncated_count": 1,
+          "cost_usd": 0.002254875,
+          "latency_s": 69.58,
+          "quality": 0.9167,
+          "routing_accuracy": 0.3889,
+          "under_routed": 9,
+          "over_routed": 13,
+          "escalations": 0,
+          "final_model_counts": {
+            "local-small": 14,
+            "hosted-strong": 14,
+            "hosted-mid": 8
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 32.6,
+      "quality_vs_strong": 0.917
+    },
+    {
+      "strategy": "rules",
+      "bias": 0.5,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 36,
+      "quality_ratio": "36/36",
+      "quality_wilson_ci": [
+        0.9036,
+        1.0
+      ],
+      "quality_wilson_str": "36/36 (100.0% [90.4%, 100.0%])",
+      "truncated_count": 1,
+      "cost_usd": 0.002515,
+      "cost_usd_std": 0.0,
+      "quality": 1.0,
+      "quality_std": 0.0,
+      "latency_s": 68.672,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.6111,
+      "routing_accuracy_std": 0.0,
+      "escalations": 2.0,
+      "escalations_std": 0.0,
+      "under_routed": 7,
+      "over_routed": 7,
+      "final_model_counts": {
+        "local-small": 14,
+        "hosted-mid": 9,
+        "hosted-strong": 13
+      },
+      "replicates": [
+        {
+          "strategy": "rules",
+          "bias": 0.5,
+          "sub_tasks": 36,
+          "correct_count": 36,
+          "quality_ratio": "36/36",
+          "wilson_ci_95": [
+            0.9036,
+            1.0
+          ],
+          "wilson_ci_str": "36/36 (100.0% [90.4%, 100.0%])",
+          "truncated_count": 1,
+          "cost_usd": 0.0025154250000000004,
+          "latency_s": 68.672,
+          "quality": 1.0,
+          "routing_accuracy": 0.6111,
+          "under_routed": 7,
+          "over_routed": 7,
+          "escalations": 2,
+          "final_model_counts": {
+            "local-small": 14,
+            "hosted-mid": 9,
+            "hosted-strong": 13
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 24.8,
+      "quality_vs_strong": 1.0
+    },
+    {
+      "strategy": "classifier",
+      "bias": 0.5,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 36,
+      "quality_ratio": "36/36",
+      "quality_wilson_ci": [
+        0.9036,
+        1.0
+      ],
+      "quality_wilson_str": "36/36 (100.0% [90.4%, 100.0%])",
+      "truncated_count": 2,
+      "cost_usd": 0.002115,
+      "cost_usd_std": 0.0,
+      "quality": 1.0,
+      "quality_std": 0.0,
+      "latency_s": 64.837,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.75,
+      "routing_accuracy_std": 0.0,
+      "escalations": 2.0,
+      "escalations_std": 0.0,
+      "under_routed": 7,
+      "over_routed": 2,
+      "final_model_counts": {
+        "local-small": 15,
+        "hosted-mid": 13,
+        "hosted-strong": 8
+      },
+      "replicates": [
+        {
+          "strategy": "classifier",
+          "bias": 0.5,
+          "sub_tasks": 36,
+          "correct_count": 36,
+          "quality_ratio": "36/36",
+          "wilson_ci_95": [
+            0.9036,
+            1.0
+          ],
+          "wilson_ci_str": "36/36 (100.0% [90.4%, 100.0%])",
+          "truncated_count": 2,
+          "cost_usd": 0.0021146999999999997,
+          "latency_s": 64.837,
+          "quality": 1.0,
+          "routing_accuracy": 0.75,
+          "under_routed": 7,
+          "over_routed": 2,
+          "escalations": 2,
+          "final_model_counts": {
+            "local-small": 15,
+            "hosted-mid": 13,
+            "hosted-strong": 8
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 36.8,
+      "quality_vs_strong": 1.0
+    }
+  ],
+  "rules_bias_sweep": [
+    {
+      "strategy": "rules",
+      "bias": 0.0,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 32,
+      "quality_ratio": "32/36",
+      "quality_wilson_ci": [
+        0.7469,
+        0.9559
+      ],
+      "quality_wilson_str": "32/36 (88.9% [74.7%, 95.6%])",
+      "truncated_count": 1,
+      "cost_usd": 0.001347,
+      "cost_usd_std": 0.0,
+      "quality": 0.8889,
+      "quality_std": 0.0,
+      "latency_s": 120.857,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.4444,
+      "routing_accuracy_std": 0.0,
+      "escalations": 3.0,
+      "escalations_std": 0.0,
+      "under_routed": 20,
+      "over_routed": 0,
+      "final_model_counts": {
+        "local-small": 30,
+        "hosted-mid": 2,
+        "hosted-strong": 4
+      },
+      "replicates": [
+        {
+          "strategy": "rules",
+          "bias": 0.0,
+          "sub_tasks": 36,
+          "correct_count": 32,
+          "quality_ratio": "32/36",
+          "wilson_ci_95": [
+            0.7469,
+            0.9559
+          ],
+          "wilson_ci_str": "32/36 (88.9% [74.7%, 95.6%])",
+          "truncated_count": 1,
+          "cost_usd": 0.0013470749999999999,
+          "latency_s": 120.857,
+          "quality": 0.8889,
+          "routing_accuracy": 0.4444,
+          "under_routed": 20,
+          "over_routed": 0,
+          "escalations": 3,
+          "final_model_counts": {
+            "local-small": 30,
+            "hosted-mid": 2,
+            "hosted-strong": 4
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 59.7
+    },
+    {
+      "strategy": "rules",
+      "bias": 0.25,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 35,
+      "quality_ratio": "35/36",
+      "quality_wilson_ci": [
+        0.8583,
+        0.9951
+      ],
+      "quality_wilson_str": "35/36 (97.2% [85.8%, 99.5%])",
+      "truncated_count": 1,
+      "cost_usd": 0.001747,
+      "cost_usd_std": 0.0,
+      "quality": 0.9722,
+      "quality_std": 0.0,
+      "latency_s": 76.331,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.6111,
+      "routing_accuracy_std": 0.0,
+      "escalations": 2.0,
+      "escalations_std": 0.0,
+      "under_routed": 13,
+      "over_routed": 1,
+      "final_model_counts": {
+        "local-small": 22,
+        "hosted-mid": 9,
+        "hosted-strong": 5
+      },
+      "replicates": [
+        {
+          "strategy": "rules",
+          "bias": 0.25,
+          "sub_tasks": 36,
+          "correct_count": 35,
+          "quality_ratio": "35/36",
+          "wilson_ci_95": [
+            0.8583,
+            0.9951
+          ],
+          "wilson_ci_str": "35/36 (97.2% [85.8%, 99.5%])",
+          "truncated_count": 1,
+          "cost_usd": 0.0017474249999999997,
+          "latency_s": 76.331,
+          "quality": 0.9722,
+          "routing_accuracy": 0.6111,
+          "under_routed": 13,
+          "over_routed": 1,
+          "escalations": 2,
+          "final_model_counts": {
+            "local-small": 22,
+            "hosted-mid": 9,
+            "hosted-strong": 5
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 47.8
+    },
+    {
+      "strategy": "rules",
+      "bias": 0.5,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 36,
+      "quality_ratio": "36/36",
+      "quality_wilson_ci": [
+        0.9036,
+        1.0
+      ],
+      "quality_wilson_str": "36/36 (100.0% [90.4%, 100.0%])",
+      "truncated_count": 2,
+      "cost_usd": 0.002507,
+      "cost_usd_std": 0.0,
+      "quality": 1.0,
+      "quality_std": 0.0,
+      "latency_s": 66.218,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.6111,
+      "routing_accuracy_std": 0.0,
+      "escalations": 2.0,
+      "escalations_std": 0.0,
+      "under_routed": 7,
+      "over_routed": 7,
+      "final_model_counts": {
+        "local-small": 14,
+        "hosted-mid": 9,
+        "hosted-strong": 13
+      },
+      "replicates": [
+        {
+          "strategy": "rules",
+          "bias": 0.5,
+          "sub_tasks": 36,
+          "correct_count": 36,
+          "quality_ratio": "36/36",
+          "wilson_ci_95": [
+            0.9036,
+            1.0
+          ],
+          "wilson_ci_str": "36/36 (100.0% [90.4%, 100.0%])",
+          "truncated_count": 2,
+          "cost_usd": 0.0025070250000000004,
+          "latency_s": 66.218,
+          "quality": 1.0,
+          "routing_accuracy": 0.6111,
+          "under_routed": 7,
+          "over_routed": 7,
+          "escalations": 2,
+          "final_model_counts": {
+            "local-small": 14,
+            "hosted-mid": 9,
+            "hosted-strong": 13
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 25.1
+    },
+    {
+      "strategy": "rules",
+      "bias": 0.75,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 35,
+      "quality_ratio": "35/36",
+      "quality_wilson_ci": [
+        0.8583,
+        0.9951
+      ],
+      "quality_wilson_str": "35/36 (97.2% [85.8%, 99.5%])",
+      "truncated_count": 1,
+      "cost_usd": 0.002925,
+      "cost_usd_std": 0.0,
+      "quality": 0.9722,
+      "quality_std": 0.0,
+      "latency_s": 44.756,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.4167,
+      "routing_accuracy_std": 0.0,
+      "escalations": 0.0,
+      "escalations_std": 0.0,
+      "under_routed": 2,
+      "over_routed": 19,
+      "final_model_counts": {
+        "local-small": 2,
+        "hosted-mid": 17,
+        "hosted-strong": 17
+      },
+      "replicates": [
+        {
+          "strategy": "rules",
+          "bias": 0.75,
+          "sub_tasks": 36,
+          "correct_count": 35,
+          "quality_ratio": "35/36",
+          "wilson_ci_95": [
+            0.8583,
+            0.9951
+          ],
+          "wilson_ci_str": "35/36 (97.2% [85.8%, 99.5%])",
+          "truncated_count": 1,
+          "cost_usd": 0.0029247749999999997,
+          "latency_s": 44.756,
+          "quality": 0.9722,
+          "routing_accuracy": 0.4167,
+          "under_routed": 2,
+          "over_routed": 19,
+          "escalations": 0,
+          "final_model_counts": {
+            "local-small": 2,
+            "hosted-mid": 17,
+            "hosted-strong": 17
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 12.6
+    },
+    {
+      "strategy": "rules",
+      "bias": 1.0,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 36,
+      "quality_ratio": "36/36",
+      "quality_wilson_ci": [
+        0.9036,
+        1.0
+      ],
+      "quality_wilson_str": "36/36 (100.0% [90.4%, 100.0%])",
+      "truncated_count": 1,
+      "cost_usd": 0.003162,
+      "cost_usd_std": 0.0,
+      "quality": 1.0,
+      "quality_std": 0.0,
+      "latency_s": 41.767,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.3611,
+      "routing_accuracy_std": 0.0,
+      "escalations": 0.0,
+      "escalations_std": 0.0,
+      "under_routed": 0,
+      "over_routed": 23,
+      "final_model_counts": {
+        "hosted-mid": 13,
+        "hosted-strong": 23
+      },
+      "replicates": [
+        {
+          "strategy": "rules",
+          "bias": 1.0,
+          "sub_tasks": 36,
+          "correct_count": 36,
+          "quality_ratio": "36/36",
+          "wilson_ci_95": [
+            0.9036,
+            1.0
+          ],
+          "wilson_ci_str": "36/36 (100.0% [90.4%, 100.0%])",
+          "truncated_count": 1,
+          "cost_usd": 0.0031620000000000003,
+          "latency_s": 41.767,
+          "quality": 1.0,
+          "routing_accuracy": 0.3611,
+          "under_routed": 0,
+          "over_routed": 23,
+          "escalations": 0,
+          "final_model_counts": {
+            "hosted-mid": 13,
+            "hosted-strong": 23
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 5.5
+    }
+  ],
+  "classifier_bias_sweep": [
+    {
+      "strategy": "classifier",
+      "bias": 0.0,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 36,
+      "quality_ratio": "36/36",
+      "quality_wilson_ci": [
+        0.9036,
+        1.0
+      ],
+      "quality_wilson_str": "36/36 (100.0% [90.4%, 100.0%])",
+      "truncated_count": 1,
+      "cost_usd": 0.002,
+      "cost_usd_std": 0.0,
+      "quality": 1.0,
+      "quality_std": 0.0,
+      "latency_s": 61.648,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.7222,
+      "routing_accuracy_std": 0.0,
+      "escalations": 2.0,
+      "escalations_std": 0.0,
+      "under_routed": 8,
+      "over_routed": 2,
+      "final_model_counts": {
+        "local-small": 14,
+        "hosted-mid": 15,
+        "hosted-strong": 7
+      },
+      "replicates": [
+        {
+          "strategy": "classifier",
+          "bias": 0.0,
+          "sub_tasks": 36,
+          "correct_count": 36,
+          "quality_ratio": "36/36",
+          "wilson_ci_95": [
+            0.9036,
+            1.0
+          ],
+          "wilson_ci_str": "36/36 (100.0% [90.4%, 100.0%])",
+          "truncated_count": 1,
+          "cost_usd": 0.00200025,
+          "latency_s": 61.648,
+          "quality": 1.0,
+          "routing_accuracy": 0.7222,
+          "under_routed": 8,
+          "over_routed": 2,
+          "escalations": 2,
+          "final_model_counts": {
+            "local-small": 14,
+            "hosted-mid": 15,
+            "hosted-strong": 7
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 40.2
+    },
+    {
+      "strategy": "classifier",
+      "bias": 0.25,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 36,
+      "quality_ratio": "36/36",
+      "quality_wilson_ci": [
+        0.9036,
+        1.0
+      ],
+      "quality_wilson_str": "36/36 (100.0% [90.4%, 100.0%])",
+      "truncated_count": 1,
+      "cost_usd": 0.002075,
+      "cost_usd_std": 0.0,
+      "quality": 1.0,
+      "quality_std": 0.0,
+      "latency_s": 62.358,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.75,
+      "routing_accuracy_std": 0.0,
+      "escalations": 2.0,
+      "escalations_std": 0.0,
+      "under_routed": 7,
+      "over_routed": 2,
+      "final_model_counts": {
+        "local-small": 14,
+        "hosted-mid": 14,
+        "hosted-strong": 8
+      },
+      "replicates": [
+        {
+          "strategy": "classifier",
+          "bias": 0.25,
+          "sub_tasks": 36,
+          "correct_count": 36,
+          "quality_ratio": "36/36",
+          "wilson_ci_95": [
+            0.9036,
+            1.0
+          ],
+          "wilson_ci_str": "36/36 (100.0% [90.4%, 100.0%])",
+          "truncated_count": 1,
+          "cost_usd": 0.0020748,
+          "latency_s": 62.358,
+          "quality": 1.0,
+          "routing_accuracy": 0.75,
+          "under_routed": 7,
+          "over_routed": 2,
+          "escalations": 2,
+          "final_model_counts": {
+            "local-small": 14,
+            "hosted-mid": 14,
+            "hosted-strong": 8
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 38.0
+    },
+    {
+      "strategy": "classifier",
+      "bias": 0.5,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 36,
+      "quality_ratio": "36/36",
+      "quality_wilson_ci": [
+        0.9036,
+        1.0
+      ],
+      "quality_wilson_str": "36/36 (100.0% [90.4%, 100.0%])",
+      "truncated_count": 1,
+      "cost_usd": 0.002055,
+      "cost_usd_std": 0.0,
+      "quality": 1.0,
+      "quality_std": 0.0,
+      "latency_s": 62.925,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.75,
+      "routing_accuracy_std": 0.0,
+      "escalations": 2.0,
+      "escalations_std": 0.0,
+      "under_routed": 7,
+      "over_routed": 2,
+      "final_model_counts": {
+        "local-small": 15,
+        "hosted-mid": 13,
+        "hosted-strong": 8
+      },
+      "replicates": [
+        {
+          "strategy": "classifier",
+          "bias": 0.5,
+          "sub_tasks": 36,
+          "correct_count": 36,
+          "quality_ratio": "36/36",
+          "wilson_ci_95": [
+            0.9036,
+            1.0
+          ],
+          "wilson_ci_str": "36/36 (100.0% [90.4%, 100.0%])",
+          "truncated_count": 1,
+          "cost_usd": 0.0020549999999999995,
+          "latency_s": 62.925,
+          "quality": 1.0,
+          "routing_accuracy": 0.75,
+          "under_routed": 7,
+          "over_routed": 2,
+          "escalations": 2,
+          "final_model_counts": {
+            "local-small": 15,
+            "hosted-mid": 13,
+            "hosted-strong": 8
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 38.6
+    },
+    {
+      "strategy": "classifier",
+      "bias": 0.75,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 36,
+      "quality_ratio": "36/36",
+      "quality_wilson_ci": [
+        0.9036,
+        1.0
+      ],
+      "quality_wilson_str": "36/36 (100.0% [90.4%, 100.0%])",
+      "truncated_count": 2,
+      "cost_usd": 0.003164,
+      "cost_usd_std": 0.0,
+      "quality": 1.0,
+      "quality_std": 0.0,
+      "latency_s": 48.671,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.4167,
+      "routing_accuracy_std": 0.0,
+      "escalations": 2.0,
+      "escalations_std": 0.0,
+      "under_routed": 3,
+      "over_routed": 18,
+      "final_model_counts": {
+        "local-small": 3,
+        "hosted-strong": 26,
+        "hosted-mid": 7
+      },
+      "replicates": [
+        {
+          "strategy": "classifier",
+          "bias": 0.75,
+          "sub_tasks": 36,
+          "correct_count": 36,
+          "quality_ratio": "36/36",
+          "wilson_ci_95": [
+            0.9036,
+            1.0
+          ],
+          "wilson_ci_str": "36/36 (100.0% [90.4%, 100.0%])",
+          "truncated_count": 2,
+          "cost_usd": 0.0031636499999999996,
+          "latency_s": 48.671,
+          "quality": 1.0,
+          "routing_accuracy": 0.4167,
+          "under_routed": 3,
+          "over_routed": 18,
+          "escalations": 2,
+          "final_model_counts": {
+            "local-small": 3,
+            "hosted-strong": 26,
+            "hosted-mid": 7
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": 5.4
+    },
+    {
+      "strategy": "classifier",
+      "bias": 1.0,
+      "sub_tasks": 36,
+      "n_runs": 1,
+      "correct_count": 36,
+      "quality_ratio": "36/36",
+      "quality_wilson_ci": [
+        0.9036,
+        1.0
+      ],
+      "quality_wilson_str": "36/36 (100.0% [90.4%, 100.0%])",
+      "truncated_count": 2,
+      "cost_usd": 0.00347,
+      "cost_usd_std": 0.0,
+      "quality": 1.0,
+      "quality_std": 0.0,
+      "latency_s": 86.286,
+      "latency_s_std": 0.0,
+      "routing_accuracy": 0.3611,
+      "routing_accuracy_std": 0.0,
+      "escalations": 2.0,
+      "escalations_std": 0.0,
+      "under_routed": 0,
+      "over_routed": 23,
+      "final_model_counts": {
+        "hosted-strong": 35,
+        "hosted-mid": 1
+      },
+      "replicates": [
+        {
+          "strategy": "classifier",
+          "bias": 1.0,
+          "sub_tasks": 36,
+          "correct_count": 36,
+          "quality_ratio": "36/36",
+          "wilson_ci_95": [
+            0.9036,
+            1.0
+          ],
+          "wilson_ci_str": "36/36 (100.0% [90.4%, 100.0%])",
+          "truncated_count": 2,
+          "cost_usd": 0.0034702500000000007,
+          "latency_s": 86.286,
+          "quality": 1.0,
+          "routing_accuracy": 0.3611,
+          "under_routed": 0,
+          "over_routed": 23,
+          "escalations": 2,
+          "final_model_counts": {
+            "hosted-strong": 35,
+            "hosted-mid": 1
+          }
+        }
+      ],
+      "cost_saving_vs_strong_pct": -3.7
+    }
+  ]
+}

@@ -1,0 +1,541 @@
+task_id,strategy,bias,run_idx,first_model,final_model,tier,gold_tier,correct,cost,latency_s,tokens,finish_reason,truncated,escalated,verified,answer,check_type
+E2,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,5.3099999999999996e-05,0.8719,177,stop,0,0,1,negative,regex
+E5,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,5.73e-05,0.7565,181,stop,0,0,1,Spam,regex
+E8,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,3.8849999999999996e-05,0.7305,148,stop,0,0,1,987-654-3210,contains_any
+E12,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,4.23e-05,0.7468,147,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,5.475e-05,0.9774,173,stop,0,0,1,Technical,contains_any
+M1,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,4.8e-05,1.0305,170,stop,0,0,1,162,number
+M2,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,5.22e-05,0.7748,171,stop,0,0,1,750,number
+M6,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,4.68e-05,0.8617,156,stop,0,0,1,"Canberra, Sydney",contains_all
+M10,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,9.659999999999999e-05,1.4894,245,stop,0,0,1,The equation simplifies to    \[ x^2 - 4x + 3 = 0 \;\Longrightarrow\; (x-1)(x-3),regex_all
+M14,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,5.1899999999999994e-05,0.8248,172,stop,0,0,1,80,number
+H7,always_strong,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00063135,2.9826,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,always_strong,0.5,1,hosted-strong,hosted-strong,2,2,1,7.125e-05,2.0379,214,stop,0,0,1,6,number
+H9,always_strong,0.5,1,hosted-strong,hosted-strong,2,2,1,4.8e-05,1.073,170,stop,0,0,1,29,number
+P5_p0,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,4.6049999999999994e-05,0.7781,154,stop,0,0,1,02101,contains_any
+P5_p1,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,4.62e-05,1.0215,155,stop,0,0,0,256,number
+P5_p2,always_strong,0.5,1,hosted-strong,hosted-strong,2,2,1,0.0005578499999999999,2.5845,1013,stop,0,0,1,**Why the worst‑case running time of Quicksort is \(O(n^{2})\)**    1. **Recurre,regex_all
+E16,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,3.4049999999999994e-05,1.0,131,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,4.005e-05,0.917,153,stop,0,0,1,192.168.1.105,contains_any
+E18,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,4.905e-05,0.7591,168,stop,0,0,1,Negative,regex
+E19,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,4.68e-05,0.7548,153,stop,0,0,1,The primary author of the theory of general relativity is **Albert Einstein**.,contains_any
+E20,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,5.22e-05,0.9764,165,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,5.8200000000000005e-05,1.0254,181,stop,0,0,1,BA-2490,contains_any
+E22,always_strong,0.5,1,hosted-strong,hosted-strong,2,0,1,3.48e-05,0.9512,130,stop,0,0,1,Mercury.,contains_any
+M16,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,0.8187,167,stop,0,0,1,12,number
+M17,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,7.589999999999999e-05,0.9912,218,stop,0,0,0,3,number
+M18,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,4.709999999999999e-05,0.9392,152,stop,0,0,1,Vielen Dank.,contains_any
+M19,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,8.13e-05,1.3318,230,stop,0,0,1,5,number
+M20,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,4.514999999999999e-05,0.9599,157,stop,0,0,1,DESC,contains_any
+M21,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,4.6949999999999996e-05,1.3292,154,stop,0,0,1,160,number
+M22,always_strong,0.5,1,hosted-strong,hosted-strong,2,1,1,4.62e-05,0.7438,155,stop,0,0,1,Dynamic Host Configuration Protocol (DHCP),contains_all
+H11,always_strong,0.5,1,hosted-strong,hosted-strong,2,2,1,6.465e-05,0.9214,203,stop,0,0,1,5,number
+H12,always_strong,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00026264999999999996,1.7177,533,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,always_strong,0.5,1,hosted-strong,hosted-strong,2,2,1,5.3549999999999994e-05,3.9348,198,stop,0,0,1,3,number
+H14,always_strong,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00017489999999999997,1.3717,392,stop,0,0,1,1. Turn **Switch 1** **on** and leave it on for several minutes.   2. After a fe,regex_all
+H15,always_strong,0.5,1,hosted-strong,hosted-strong,2,2,1,4.8899999999999996e-05,3.2351,161,stop,0,0,1,24,number
+H16,always_strong,0.5,1,hosted-strong,hosted-strong,2,2,1,9.6e-05,3.6827,247,stop,0,0,1,7.5,number
+E2,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.4943,71,stop,0,0,1,Negative,regex
+E5,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.4207,68,stop,0,0,1,Spam.,regex
+E8,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.4626,69,stop,0,0,1,987-654-3210,contains_any
+E12,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.4426,58,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.4285,62,stop,0,0,1,Technical,contains_any
+M1,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,3.8198,141,stop,0,0,1,"To find the total cost of 15 pens, multiply 15 by 12:  15 * 12 = 180  Apply 10% ",number
+M2,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,2.4079,68,stop,0,0,1,Rs 750.,number
+M6,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,2.6232,70,stop,0,0,1,"The capital of Australia is Canberra, and the largest city is Sydney.",contains_all
+M10,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,6.0384,246,stop,0,0,1,"To solve for x, we can use the quadratic formula:  x = (-b ± √(b^2 - 4ac)) / 2a ",regex_all
+M14,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,2.2949,67,stop,0,0,1,80,number
+H7,always_cheap,0.5,1,local-small,local-small,0,2,1,0.0,17.1151,752,stop,0,0,0,**Dijkstra's Algorithm Failure with Negative Edge Weights**  Dijkstra's algorith,contains_any
+H8,always_cheap,0.5,1,local-small,local-small,0,2,0,0.0,2.2755,80,stop,0,0,1,5,number
+H9,always_cheap,0.5,1,local-small,local-small,0,2,1,0.0,2.4229,77,stop,0,0,1,Day 29.,number
+P5_p0,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.4058,57,stop,0,0,1,02101,contains_any
+P5_p1,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,2.386,57,stop,0,0,0,256,number
+P5_p2,always_cheap,0.5,1,local-small,local-small,0,2,1,0.0,24.9562,1087,length,1,0,0,**Quicksort Worst-Case Scenario: O(n^2)**  Quicksort is a popular sorting algori,regex_all
+E16,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.4434,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.4622,74,stop,0,0,1,192.168.1.105,contains_any
+E18,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.2985,68,stop,0,0,1,Negative,regex
+E19,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.4472,55,stop,0,0,1,Albert Einstein,contains_any
+E20,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.4491,62,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.4031,68,stop,0,0,1,BA-2490,contains_any
+E22,always_cheap,0.5,1,local-small,local-small,0,0,1,0.0,2.2161,51,stop,0,0,1,Mercury.,contains_any
+M16,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,3.4881,140,stop,0,0,1,"To find the number of loaves remaining, we need to calculate 3/4 of 48 and subtr",number
+M17,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,2.2583,75,stop,0,0,0,3,number
+M18,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,2.3938,54,stop,0,0,1,Vielen Dank.,contains_any
+M19,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,2.3788,79,stop,0,0,1,5,number
+M20,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,2.3809,62,stop,0,0,1,DESC,contains_any
+M21,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,2.7339,69,stop,0,0,1,25% of 640 = 0.25 * 640 = 160,number
+M22,always_cheap,0.5,1,local-small,local-small,0,1,1,0.0,2.384,60,stop,0,0,1,Dynamic Host Configuration Protocol,contains_all
+H11,always_cheap,0.5,1,local-small,local-small,0,2,0,0.0,2.3017,80,stop,0,0,1,110,number
+H12,always_cheap,0.5,1,local-small,local-small,0,2,1,0.0,13.474,595,stop,0,0,1,**Floyd's Cycle-Finding Algorithm (Tortoise and Hare)** ========================,regex_all
+H13,always_cheap,0.5,1,local-small,local-small,0,2,1,0.0,2.284,100,stop,0,0,1,3,number
+H14,always_cheap,0.5,1,local-small,local-small,0,2,1,0.0,4.3103,182,stop,0,0,1,"To solve this problem, follow these steps:  1. Turn switch 1 to ON for 5 minutes",regex_all
+H15,always_cheap,0.5,1,local-small,local-small,0,2,0,0.0,2.2483,59,stop,0,0,1,50,number
+H16,always_cheap,0.5,1,local-small,local-small,0,2,0,0.0,2.2724,69,stop,0,0,1,75,number
+E2,random,0.5,1,local-small,local-small,0,0,1,0.0,2.3785,71,stop,0,0,1,Negative,regex
+E5,random,0.5,1,hosted-strong,hosted-strong,2,0,1,5.67e-05,1.8686,180,stop,0,0,1,Spam,regex
+E8,random,0.5,1,hosted-mid,hosted-mid,1,0,1,4.0125e-05,1.0148,217,stop,0,0,1,987-654-3210,contains_any
+E12,random,0.5,1,hosted-mid,hosted-mid,1,0,1,2.685e-05,0.9912,166,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,random,0.5,1,local-small,local-small,0,0,1,0.0,2.3558,62,stop,0,0,1,Technical,contains_any
+M1,random,0.5,1,hosted-mid,hosted-mid,1,1,1,3e-05,0.8431,190,stop,0,0,1,162,number
+M2,random,0.5,1,hosted-strong,hosted-strong,2,1,1,5.22e-05,0.754,171,stop,0,0,1,750,number
+M6,random,0.5,1,local-small,local-small,0,1,1,0.0,2.6433,70,stop,0,0,1,"The capital of Australia is Canberra, and the largest city is Sydney.",contains_all
+M10,random,0.5,1,hosted-strong,hosted-strong,2,1,1,9.659999999999999e-05,1.0077,245,stop,0,0,1,The equation simplifies to    \[ x^2 - 4x + 3 = 0 \;\Longrightarrow\; (x-1)(x-3),regex_all
+M14,random,0.5,1,local-small,local-small,0,1,1,0.0,2.2261,67,stop,0,0,1,80,number
+H7,random,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00063135,3.1373,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,random,0.5,1,hosted-strong,hosted-strong,2,2,1,7.125e-05,0.9911,214,stop,0,0,1,6,number
+H9,random,0.5,1,hosted-strong,hosted-strong,2,2,1,4.8e-05,1.105,170,stop,0,0,1,29,number
+P5_p0,random,0.5,1,local-small,local-small,0,0,1,0.0,2.5135,57,stop,0,0,1,02101,contains_any
+P5_p1,random,0.5,1,hosted-mid,hosted-mid,1,1,1,1.92e-05,0.9823,142,stop,0,0,0,256,number
+P5_p2,random,0.5,1,hosted-strong,hosted-strong,2,2,1,0.0005584499999999999,2.7885,1014,stop,0,0,1,**Why the worst‑case running time of Quicksort is \(O(n^{2})\)**    1. **Recurre,regex_all
+E16,random,0.5,1,local-small,local-small,0,0,1,0.0,2.47,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,random,0.5,1,local-small,local-small,0,0,1,0.0,2.3911,74,stop,0,0,1,192.168.1.105,contains_any
+E18,random,0.5,1,hosted-mid,hosted-mid,1,0,1,2.3625e-05,0.499,165,stop,0,0,1,negative,regex
+E19,random,0.5,1,hosted-strong,hosted-strong,2,0,1,4.68e-05,0.5966,153,stop,0,0,1,The primary author of the theory of general relativity is **Albert Einstein**.,contains_any
+E20,random,0.5,1,hosted-strong,hosted-strong,2,0,1,4.98e-05,0.6138,161,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,random,0.5,1,hosted-strong,hosted-strong,2,0,1,5.8200000000000005e-05,0.9495,181,stop,0,0,1,BA-2490,contains_any
+E22,random,0.5,1,hosted-mid,hosted-mid,1,0,1,2.0399999999999998e-05,0.8988,140,stop,0,0,1,Mercury.,contains_any
+M16,random,0.5,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,1.2877,167,stop,0,0,1,12,number
+M17,random,0.5,1,local-small,local-small,0,1,1,0.0,2.2799,75,stop,0,0,0,3,number
+M18,random,0.5,1,local-small,local-small,0,1,1,0.0,2.3907,54,stop,0,0,1,Vielen Dank.,contains_any
+M19,random,0.5,1,hosted-mid,hosted-mid,1,1,1,7.245e-05,1.1822,336,stop,0,0,1,5,number
+M20,random,0.5,1,hosted-mid,hosted-mid,1,1,1,2.0775e-05,0.7978,151,stop,0,0,1,DESC,contains_any
+M21,random,0.5,1,hosted-strong,hosted-strong,2,1,1,4.6949999999999996e-05,0.8663,154,stop,0,0,1,160,number
+M22,random,0.5,1,hosted-strong,hosted-strong,2,1,1,4.62e-05,0.8898,155,stop,0,0,1,Dynamic Host Configuration Protocol (DHCP),contains_all
+H11,random,0.5,1,local-small,local-small,0,2,0,0.0,2.2944,80,stop,0,0,1,110,number
+H12,random,0.5,1,local-small,local-small,0,2,1,0.0,13.231,595,stop,0,0,1,**Floyd's Cycle-Finding Algorithm (Tortoise and Hare)** ========================,regex_all
+H13,random,0.5,1,local-small,local-small,0,2,1,0.0,2.1485,100,stop,0,0,1,3,number
+H14,random,0.5,1,hosted-strong,hosted-strong,2,2,1,0.0001941,1.4588,424,stop,0,0,1,1. Turn **Switch 1** ON and leave it on for several minutes.   2. After a few mi,regex_all
+H15,random,0.5,1,local-small,local-small,0,2,0,0.0,2.4213,59,stop,0,0,1,50,number
+H16,random,0.5,1,local-small,local-small,0,2,0,0.0,2.3119,69,stop,0,0,1,75,number
+E2,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.2803,71,stop,0,0,1,Negative,regex
+E5,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.5134,68,stop,0,0,1,Spam.,regex
+E8,rules,0.5,1,hosted-mid,hosted-mid,1,0,1,4.0125e-05,0.9347,217,stop,0,0,1,987-654-3210,contains_any
+E12,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.4731,58,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.3769,62,stop,0,0,1,Technical,contains_any
+M1,rules,0.5,1,hosted-strong,hosted-strong,2,1,1,4.8e-05,0.866,170,stop,0,0,1,162,number
+M2,rules,0.5,1,hosted-strong,hosted-strong,2,1,1,5.22e-05,0.716,171,stop,0,0,1,750,number
+M6,rules,0.5,1,local-small,local-small,0,1,1,0.0,2.726,70,stop,0,0,1,"The capital of Australia is Canberra, and the largest city is Sydney.",contains_all
+M10,rules,0.5,1,hosted-strong,hosted-strong,2,1,1,9.659999999999999e-05,1.1435,245,stop,0,0,1,The equation simplifies to    \[ x^2 - 4x + 3 = 0 \;\Longrightarrow\; (x-1)(x-3),regex_all
+M14,rules,0.5,1,hosted-mid,hosted-mid,1,1,1,2.145e-05,0.9743,157,stop,0,0,1,80,number
+H7,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00063135,3.1082,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,7.125e-05,1.0588,214,stop,0,0,1,6,number
+H9,rules,0.5,1,hosted-mid,hosted-mid,1,2,1,2.7e-05,0.8201,180,stop,0,0,1,29,number
+P5_p0,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.4235,57,stop,0,0,1,02101,contains_any
+P5_p1,rules,0.5,1,hosted-mid,hosted-strong,2,1,1,6.539999999999999e-05,3.0164,297,stop,0,1,0,256,number
+P5_p2,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,0.0006238499999999999,4.496,1123,stop,0,0,1,**Why the worst‑case running time of Quicksort is \(O(n^{2})\)**    1. **Recurre,regex_all
+E16,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.5255,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.4035,74,stop,0,0,1,192.168.1.105,contains_any
+E18,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.2954,68,stop,0,0,1,Negative,regex
+E19,rules,0.5,1,hosted-mid,hosted-mid,1,0,1,2.34e-05,2.5148,153,stop,0,0,1,Albert Einstein.,contains_any
+E20,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.5605,62,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.5353,68,stop,0,0,1,BA-2490,contains_any
+E22,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.3364,51,stop,0,0,1,Mercury.,contains_any
+M16,rules,0.5,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,2.3481,167,stop,0,0,1,12,number
+M17,rules,0.5,1,hosted-mid,hosted-strong,2,1,1,0.00010455,2.0677,405,stop,0,1,0,3,number
+M18,rules,0.5,1,local-small,local-small,0,1,1,0.0,2.5335,54,stop,0,0,1,Vielen Dank.,contains_any
+M19,rules,0.5,1,hosted-strong,hosted-strong,2,1,1,8.13e-05,0.9838,230,stop,0,0,1,5,number
+M20,rules,0.5,1,local-small,local-small,0,1,1,0.0,2.4961,62,stop,0,0,1,DESC,contains_any
+M21,rules,0.5,1,hosted-mid,hosted-mid,1,1,1,2.5274999999999998e-05,0.8629,160,stop,0,0,1,160,number
+M22,rules,0.5,1,hosted-mid,hosted-mid,1,1,1,2.34e-05,1.022,156,stop,0,0,1,Dynamic Host Configuration Protocol,contains_all
+H11,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,6.465e-05,1.1205,203,stop,0,0,1,5,number
+H12,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00027345,1.6578,551,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,rules,0.5,1,hosted-mid,hosted-mid,1,2,1,2.7675000000000002e-05,1.3282,201,stop,0,0,1,3,number
+H14,rules,0.5,1,hosted-mid,hosted-mid,1,2,1,7.664999999999999e-05,0.8846,356,stop,0,0,1,"1. Turn Switch A on and leave it on for a few minutes.   2. Turn Switch A off, t",regex_all
+H15,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,4.8899999999999996e-05,1.0382,161,stop,0,0,1,24,number
+H16,rules,0.5,1,hosted-mid,hosted-mid,1,2,1,4.4099999999999995e-05,1.2305,234,stop,0,0,1,7.5,number
+E2,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.3129,71,stop,0,0,1,Negative,regex
+E5,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4117,68,stop,0,0,1,Spam.,regex
+E8,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.628,69,stop,0,0,1,987-654-3210,contains_any
+E12,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4071,58,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4911,62,stop,0,0,1,Technical,contains_any
+M1,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,3e-05,1.0569,190,stop,0,0,1,162,number
+M2,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.49e-05,1.6053,167,stop,0,0,1,750,number
+M6,classifier,0.5,1,local-small,local-small,0,1,1,0.0,2.6084,70,stop,0,0,1,"The capital of Australia is Canberra, and the largest city is Sydney.",contains_all
+M10,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,4.8e-05,1.0024,244,stop,0,0,1,"The equation simplifies to \(x^2-4x+3=0\), which factors as \((x-1)(x-3)=0\).  *",regex_all
+M14,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.145e-05,1.012,157,stop,0,0,1,80,number
+H7,classifier,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00063135,2.8707,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,classifier,0.5,1,hosted-mid,hosted-mid,1,2,1,3.7725e-05,1.2737,221,stop,0,0,1,6,number
+H9,classifier,0.5,1,local-small,local-small,0,2,1,0.0,2.4453,77,stop,0,0,1,Day 29.,number
+P5_p0,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.3196,57,stop,0,0,1,02101,contains_any
+P5_p1,classifier,0.5,1,hosted-mid,hosted-strong,2,1,1,6.539999999999999e-05,2.4949,297,stop,0,1,0,256,number
+P5_p2,classifier,0.5,1,hosted-mid,hosted-mid,1,2,1,0.000315525,1.8796,1135,length,1,0,1,**Why QuickSort can hit \(O(n^2)\)**    1. **Partition step**      - Pick a pivo,regex_all
+E16,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.5155,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.3946,74,stop,0,0,1,192.168.1.105,contains_any
+E18,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.2973,68,stop,0,0,1,Negative,regex
+E19,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4264,55,stop,0,0,1,Albert Einstein,contains_any
+E20,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4834,62,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4562,68,stop,0,0,1,BA-2490,contains_any
+E22,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4612,51,stop,0,0,1,Mercury.,contains_any
+M16,classifier,0.5,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,0.7188,167,stop,0,0,1,12,number
+M17,classifier,0.5,1,hosted-mid,hosted-strong,2,1,1,0.00010455,1.5412,405,stop,0,1,0,3,number
+M18,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.775e-05,0.72,166,stop,0,0,1,Vielen Dank.,contains_any
+M19,classifier,0.5,1,hosted-strong,hosted-strong,2,1,1,8.13e-05,1.035,230,stop,0,0,1,5,number
+M20,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.0775e-05,1.2198,151,stop,0,0,1,DESC,contains_any
+M21,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.5274999999999998e-05,0.8811,160,stop,0,0,1,160,number
+M22,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.34e-05,1.6373,156,stop,0,0,1,Dynamic Host Configuration Protocol,contains_all
+H11,classifier,0.5,1,hosted-mid,hosted-mid,1,2,1,4.2224999999999996e-05,1.2276,236,stop,0,0,1,5,number
+H12,classifier,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00027345,1.5304,551,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,classifier,0.5,1,hosted-mid,hosted-mid,1,2,1,2.7675000000000002e-05,0.9202,201,stop,0,0,1,3,number
+H14,classifier,0.5,1,hosted-strong,hosted-strong,2,2,1,0.0001761,1.4959,394,stop,0,0,1,1. Turn **Switch 1** **on** and leave it on for several minutes.   2. After a fe,regex_all
+H15,classifier,0.5,1,hosted-strong,hosted-strong,2,2,1,4.8899999999999996e-05,1.1635,161,stop,0,0,1,24,number
+H16,classifier,0.5,1,hosted-mid,hosted-mid,1,2,1,4.4099999999999995e-05,0.8917,234,stop,0,0,1,7.5,number
+E2,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.4033,71,stop,0,0,1,Negative,regex
+E5,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.4178,68,stop,0,0,1,Spam.,regex
+E8,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.6144,69,stop,0,0,1,987-654-3210,contains_any
+E12,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.384,58,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.476,62,stop,0,0,1,Technical,contains_any
+M1,rules,0.0,1,local-small,local-small,0,1,1,0.0,3.7345,141,stop,0,0,1,"To find the total cost of 15 pens, multiply 15 by 12:  15 * 12 = 180  Apply 10% ",number
+M2,rules,0.0,1,local-small,local-small,0,1,1,0.0,2.3707,68,stop,0,0,1,Rs 750.,number
+M6,rules,0.0,1,local-small,local-small,0,1,1,0.0,2.6289,70,stop,0,0,1,"The capital of Australia is Canberra, and the largest city is Sydney.",contains_all
+M10,rules,0.0,1,hosted-mid,hosted-mid,1,1,1,4.8e-05,0.9665,244,stop,0,0,1,"The equation simplifies to \(x^2-4x+3=0\), which factors as \((x-1)(x-3)=0\).  *",regex_all
+M14,rules,0.0,1,local-small,local-small,0,1,1,0.0,2.3259,67,stop,0,0,1,80,number
+H7,rules,0.0,1,hosted-strong,hosted-strong,2,2,1,0.00063135,3.1558,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,rules,0.0,1,local-small,local-small,0,2,0,0.0,2.3235,80,stop,0,0,1,5,number
+H9,rules,0.0,1,local-small,local-small,0,2,1,0.0,2.402,77,stop,0,0,1,Day 29.,number
+P5_p0,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.3324,57,stop,0,0,1,02101,contains_any
+P5_p1,rules,0.0,1,local-small,hosted-strong,2,1,1,6.539999999999999e-05,5.3369,354,stop,0,1,0,256,number
+P5_p2,rules,0.0,1,local-small,hosted-mid,1,2,1,0.000224325,28.4549,1918,stop,0,1,1,**Why quicksort can hit \(O(n^2)\)**    1. **Partition step**      - Pick a pivo,regex_all
+E16,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.476,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.4227,74,stop,0,0,1,192.168.1.105,contains_any
+E18,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.3118,68,stop,0,0,1,Negative,regex
+E19,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.6349,55,stop,0,0,1,Albert Einstein,contains_any
+E20,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.435,62,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.4028,68,stop,0,0,1,BA-2490,contains_any
+E22,rules,0.0,1,local-small,local-small,0,0,1,0.0,2.3564,51,stop,0,0,1,Mercury.,contains_any
+M16,rules,0.0,1,local-small,local-small,0,1,1,0.0,3.4088,140,stop,0,0,1,"To find the number of loaves remaining, we need to calculate 3/4 of 48 and subtr",number
+M17,rules,0.0,1,local-small,hosted-strong,2,1,1,0.00010455,4.1087,480,stop,0,1,0,3,number
+M18,rules,0.0,1,local-small,local-small,0,1,1,0.0,2.4977,54,stop,0,0,1,Vielen Dank.,contains_any
+M19,rules,0.0,1,local-small,local-small,0,1,1,0.0,2.363,79,stop,0,0,1,5,number
+M20,rules,0.0,1,local-small,local-small,0,1,1,0.0,2.3821,62,stop,0,0,1,DESC,contains_any
+M21,rules,0.0,1,local-small,local-small,0,1,1,0.0,2.7142,69,stop,0,0,1,25% of 640 = 0.25 * 640 = 160,number
+M22,rules,0.0,1,local-small,local-small,0,1,1,0.0,2.4368,60,stop,0,0,1,Dynamic Host Configuration Protocol,contains_all
+H11,rules,0.0,1,local-small,local-small,0,2,0,0.0,2.3359,80,stop,0,0,1,110,number
+H12,rules,0.0,1,hosted-strong,hosted-strong,2,2,1,0.00027345,1.8899,551,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,rules,0.0,1,local-small,local-small,0,2,1,0.0,2.4336,100,stop,0,0,1,3,number
+H14,rules,0.0,1,local-small,local-small,0,2,1,0.0,4.292,182,stop,0,0,1,"To solve this problem, follow these steps:  1. Turn switch 1 to ON for 5 minutes",regex_all
+H15,rules,0.0,1,local-small,local-small,0,2,0,0.0,2.2843,59,stop,0,0,1,50,number
+H16,rules,0.0,1,local-small,local-small,0,2,0,0.0,2.3424,69,stop,0,0,1,75,number
+E2,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.4573,71,stop,0,0,1,Negative,regex
+E5,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.4154,68,stop,0,0,1,Spam.,regex
+E8,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.4993,69,stop,0,0,1,987-654-3210,contains_any
+E12,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.4972,58,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.3861,62,stop,0,0,1,Technical,contains_any
+M1,rules,0.25,1,hosted-mid,hosted-mid,1,1,1,3e-05,0.9653,190,stop,0,0,1,162,number
+M2,rules,0.25,1,hosted-mid,hosted-mid,1,1,1,2.49e-05,1.5358,167,stop,0,0,1,750,number
+M6,rules,0.25,1,local-small,local-small,0,1,1,0.0,2.7971,70,stop,0,0,1,"The capital of Australia is Canberra, and the largest city is Sydney.",contains_all
+M10,rules,0.25,1,hosted-strong,hosted-strong,2,1,1,9.659999999999999e-05,1.4021,245,stop,0,0,1,The equation simplifies to    \[ x^2 - 4x + 3 = 0 \;\Longrightarrow\; (x-1)(x-3),regex_all
+M14,rules,0.25,1,local-small,local-small,0,1,1,0.0,2.3586,67,stop,0,0,1,80,number
+H7,rules,0.25,1,hosted-strong,hosted-strong,2,2,1,0.00063135,3.1887,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,rules,0.25,1,hosted-mid,hosted-mid,1,2,1,3.7725e-05,1.0053,221,stop,0,0,1,6,number
+H9,rules,0.25,1,local-small,local-small,0,2,1,0.0,2.4483,77,stop,0,0,1,Day 29.,number
+P5_p0,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.3596,57,stop,0,0,1,02101,contains_any
+P5_p1,rules,0.25,1,hosted-mid,hosted-strong,2,1,1,6.539999999999999e-05,1.7425,297,stop,0,1,0,256,number
+P5_p2,rules,0.25,1,hosted-mid,hosted-mid,1,2,1,0.000291225,1.9052,1054,stop,0,0,1,**Why QuickSort can hit \(O(n^2)\)**    1. **Partition step**      - Pick a pivo,regex_all
+E16,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.5163,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.4487,74,stop,0,0,1,192.168.1.105,contains_any
+E18,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.3036,68,stop,0,0,1,Negative,regex
+E19,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.4327,55,stop,0,0,1,Albert Einstein,contains_any
+E20,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.4562,62,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.4159,68,stop,0,0,1,BA-2490,contains_any
+E22,rules,0.25,1,local-small,local-small,0,0,1,0.0,2.5255,51,stop,0,0,1,Mercury.,contains_any
+M16,rules,0.25,1,hosted-mid,hosted-mid,1,1,1,2.2424999999999996e-05,0.9586,167,stop,0,0,1,12,number
+M17,rules,0.25,1,hosted-mid,hosted-strong,2,1,1,0.00010455,1.9393,405,stop,0,1,0,3,number
+M18,rules,0.25,1,local-small,local-small,0,1,1,0.0,2.5172,54,stop,0,0,1,Vielen Dank.,contains_any
+M19,rules,0.25,1,hosted-mid,hosted-mid,1,1,1,7.245e-05,1.1689,336,stop,0,0,1,5,number
+M20,rules,0.25,1,local-small,local-small,0,1,1,0.0,2.4005,62,stop,0,0,1,DESC,contains_any
+M21,rules,0.25,1,hosted-mid,hosted-mid,1,1,1,2.5274999999999998e-05,0.875,160,stop,0,0,1,160,number
+M22,rules,0.25,1,local-small,local-small,0,1,1,0.0,2.5577,60,stop,0,0,1,Dynamic Host Configuration Protocol,contains_all
+H11,rules,0.25,1,hosted-mid,hosted-mid,1,2,1,4.2224999999999996e-05,0.9232,236,stop,0,0,1,5,number
+H12,rules,0.25,1,hosted-strong,hosted-strong,2,2,1,0.00027345,1.9492,551,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,rules,0.25,1,local-small,local-small,0,2,1,0.0,2.3238,100,stop,0,0,1,3,number
+H14,rules,0.25,1,local-small,local-small,0,2,1,0.0,4.3716,182,stop,0,0,1,"To solve this problem, follow these steps:  1. Turn switch 1 to ON for 5 minutes",regex_all
+H15,rules,0.25,1,hosted-mid,hosted-mid,1,2,1,2.9849999999999997e-05,0.9538,179,stop,0,0,1,24,number
+H16,rules,0.25,1,local-small,local-small,0,2,0,0.0,2.3292,69,stop,0,0,1,75,number
+E2,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.3093,71,stop,0,0,1,Negative,regex
+E5,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.4326,68,stop,0,0,1,Spam.,regex
+E8,rules,0.5,1,hosted-mid,hosted-mid,1,0,1,4.0125e-05,1.0431,217,stop,0,0,1,987-654-3210,contains_any
+E12,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.5513,58,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.311,62,stop,0,0,1,Technical,contains_any
+M1,rules,0.5,1,hosted-strong,hosted-strong,2,1,1,4.8e-05,2.5117,170,stop,0,0,1,162,number
+M2,rules,0.5,1,hosted-strong,hosted-strong,2,1,1,5.22e-05,0.9331,171,stop,0,0,1,750,number
+M6,rules,0.5,1,local-small,local-small,0,1,1,0.0,2.7052,70,stop,0,0,1,"The capital of Australia is Canberra, and the largest city is Sydney.",contains_all
+M10,rules,0.5,1,hosted-strong,hosted-strong,2,1,1,9.659999999999999e-05,0.9897,245,stop,0,0,1,The equation simplifies to    \[ x^2 - 4x + 3 = 0 \;\Longrightarrow\; (x-1)(x-3),regex_all
+M14,rules,0.5,1,hosted-mid,hosted-mid,1,1,1,2.145e-05,0.8496,157,stop,0,0,1,80,number
+H7,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00063135,3.2981,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,5.5650000000000004e-05,1.0831,188,stop,0,0,1,6,number
+H9,rules,0.5,1,hosted-mid,hosted-mid,1,2,1,2.7e-05,1.6663,180,stop,0,0,1,29,number
+P5_p0,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.4167,57,stop,0,0,1,02101,contains_any
+P5_p1,rules,0.5,1,hosted-mid,hosted-strong,2,1,1,6.539999999999999e-05,1.2396,297,stop,0,1,0,256,number
+P5_p2,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00063105,2.9282,1135,length,1,0,1,**Why the worst‑case running time of Quicksort is \(O(n^{2})\)**    1. **Recurre,regex_all
+E16,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.5077,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.4067,74,stop,0,0,1,192.168.1.105,contains_any
+E18,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.2998,68,stop,0,0,1,Negative,regex
+E19,rules,0.5,1,hosted-mid,hosted-mid,1,0,1,2.34e-05,0.8009,153,stop,0,0,1,Albert Einstein.,contains_any
+E20,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.5129,62,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.4582,68,stop,0,0,1,BA-2490,contains_any
+E22,rules,0.5,1,local-small,local-small,0,0,1,0.0,2.4214,51,stop,0,0,1,Mercury.,contains_any
+M16,rules,0.5,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,0.9736,167,stop,0,0,1,12,number
+M17,rules,0.5,1,hosted-mid,hosted-strong,2,1,1,0.00010455,2.4391,405,stop,0,1,0,3,number
+M18,rules,0.5,1,local-small,local-small,0,1,1,0.0,2.4829,54,stop,0,0,1,Vielen Dank.,contains_any
+M19,rules,0.5,1,hosted-strong,hosted-strong,2,1,1,8.13e-05,1.2369,230,stop,0,0,1,5,number
+M20,rules,0.5,1,local-small,local-small,0,1,1,0.0,2.3771,62,stop,0,0,1,DESC,contains_any
+M21,rules,0.5,1,hosted-mid,hosted-mid,1,1,1,2.5274999999999998e-05,1.212,160,stop,0,0,1,160,number
+M22,rules,0.5,1,hosted-mid,hosted-mid,1,1,1,2.34e-05,1.0236,156,stop,0,0,1,Dynamic Host Configuration Protocol,contains_all
+H11,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,6.465e-05,1.2338,203,stop,0,0,1,5,number
+H12,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00027345,1.7916,551,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,rules,0.5,1,hosted-mid,hosted-mid,1,2,1,2.7675000000000002e-05,1.8963,201,stop,0,0,1,3,number
+H14,rules,0.5,1,hosted-mid,hosted-mid,1,2,1,7.664999999999999e-05,1.2363,356,stop,0,0,1,"1. Turn Switch A on and leave it on for a few minutes.   2. Turn Switch A off, t",regex_all
+H15,rules,0.5,1,hosted-strong,hosted-strong,2,2,1,4.8899999999999996e-05,0.7377,161,stop,0,0,1,24,number
+H16,rules,0.5,1,hosted-mid,hosted-mid,1,2,1,4.4099999999999995e-05,0.9013,234,stop,0,0,1,7.5,number
+E2,rules,0.75,1,local-small,local-small,0,0,1,0.0,2.2998,71,stop,0,0,1,Negative,regex
+E5,rules,0.75,1,hosted-mid,hosted-mid,1,0,1,2.865e-05,1.1719,181,stop,0,0,1,spam,regex
+E8,rules,0.75,1,hosted-strong,hosted-strong,2,0,1,3.8849999999999996e-05,0.9183,148,stop,0,0,1,987-654-3210,contains_any
+E12,rules,0.75,1,hosted-mid,hosted-mid,1,0,1,2.685e-05,0.823,166,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,rules,0.75,1,hosted-mid,hosted-mid,1,0,1,3.1875e-05,0.9248,188,stop,0,0,1,Technical,contains_any
+M1,rules,0.75,1,hosted-strong,hosted-strong,2,1,1,4.8e-05,1.0098,170,stop,0,0,1,162,number
+M2,rules,0.75,1,hosted-strong,hosted-strong,2,1,1,5.22e-05,1.1576,171,stop,0,0,1,750,number
+M6,rules,0.75,1,hosted-mid,hosted-mid,1,1,1,3e-05,0.892,178,stop,0,0,1,"Canberra, Sydney",contains_all
+M10,rules,0.75,1,hosted-strong,hosted-strong,2,1,1,9.659999999999999e-05,1.0248,245,stop,0,0,1,The equation simplifies to    \[ x^2 - 4x + 3 = 0 \;\Longrightarrow\; (x-1)(x-3),regex_all
+M14,rules,0.75,1,hosted-mid,hosted-mid,1,1,1,2.145e-05,1.0293,157,stop,0,0,1,80,number
+H7,rules,0.75,1,hosted-strong,hosted-strong,2,2,0,0.00063135,3.2754,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,rules,0.75,1,hosted-strong,hosted-strong,2,2,1,5.5650000000000004e-05,0.8309,188,stop,0,0,1,6,number
+H9,rules,0.75,1,hosted-mid,hosted-mid,1,2,1,2.7e-05,0.817,180,stop,0,0,1,29,number
+P5_p0,rules,0.75,1,hosted-mid,hosted-mid,1,0,1,3.5625e-05,0.964,196,stop,0,0,1,02101,contains_any
+P5_p1,rules,0.75,1,hosted-strong,hosted-strong,2,1,1,4.62e-05,1.3753,155,stop,0,0,0,256,number
+P5_p2,rules,0.75,1,hosted-strong,hosted-strong,2,2,1,0.00057345,3.278,1039,stop,0,0,1,**Why the worst‑case running time of Quicksort is \(O(n^{2})\)**    1. **Recurre,regex_all
+E16,rules,0.75,1,local-small,local-small,0,0,1,0.0,2.5506,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,rules,0.75,1,hosted-mid,hosted-mid,1,0,1,4.0425e-05,0.946,221,stop,0,0,1,192.168.1.105,contains_any
+E18,rules,0.75,1,hosted-mid,hosted-mid,1,0,1,2.3625e-05,0.951,165,stop,0,0,1,negative,regex
+E19,rules,0.75,1,hosted-mid,hosted-mid,1,0,1,2.34e-05,0.835,153,stop,0,0,1,Albert Einstein.,contains_any
+E20,rules,0.75,1,hosted-mid,hosted-mid,1,0,1,5.699999999999999e-05,1.2433,268,stop,0,0,1,"'{""status"": ""ok""}'",contains_any
+E21,rules,0.75,1,hosted-mid,hosted-mid,1,0,1,2.7299999999999996e-05,1.2626,175,stop,0,0,1,BA-2490,contains_any
+E22,rules,0.75,1,hosted-mid,hosted-mid,1,0,1,2.0399999999999998e-05,0.9195,140,stop,0,0,1,Mercury.,contains_any
+M16,rules,0.75,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,1.0758,167,stop,0,0,1,12,number
+M17,rules,0.75,1,hosted-strong,hosted-strong,2,1,1,7.589999999999999e-05,1.1083,218,stop,0,0,0,3,number
+M18,rules,0.75,1,hosted-mid,hosted-mid,1,1,1,2.775e-05,1.1042,166,stop,0,0,1,Vielen Dank.,contains_any
+M19,rules,0.75,1,hosted-strong,hosted-strong,2,1,1,8.13e-05,1.1482,230,stop,0,0,1,5,number
+M20,rules,0.75,1,hosted-mid,hosted-mid,1,1,1,2.0775e-05,1.0684,151,stop,0,0,1,DESC,contains_any
+M21,rules,0.75,1,hosted-strong,hosted-strong,2,1,1,4.6949999999999996e-05,0.5811,154,stop,0,0,1,160,number
+M22,rules,0.75,1,hosted-mid,hosted-mid,1,1,1,2.34e-05,0.5156,156,stop,0,0,1,Dynamic Host Configuration Protocol,contains_all
+H11,rules,0.75,1,hosted-strong,hosted-strong,2,2,1,6.465e-05,0.9732,203,stop,0,0,1,5,number
+H12,rules,0.75,1,hosted-strong,hosted-strong,2,2,1,0.00026264999999999996,1.9551,533,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,rules,0.75,1,hosted-strong,hosted-strong,2,2,1,5.3549999999999994e-05,1.7579,198,stop,0,0,1,3,number
+H14,rules,0.75,1,hosted-strong,hosted-strong,2,2,1,0.0001941,1.5492,424,stop,0,0,1,1. Turn **Switch 1** ON and leave it on for several minutes.   2. After a few mi,regex_all
+H15,rules,0.75,1,hosted-strong,hosted-strong,2,2,1,4.8899999999999996e-05,0.5893,161,stop,0,0,1,24,number
+H16,rules,0.75,1,hosted-mid,hosted-mid,1,2,1,4.4099999999999995e-05,0.8299,234,stop,0,0,1,7.5,number
+E2,rules,1.0,1,hosted-mid,hosted-mid,1,0,1,2.025e-05,0.8194,156,stop,0,0,1,negative,regex
+E5,rules,1.0,1,hosted-mid,hosted-mid,1,0,1,2.865e-05,0.7316,181,stop,0,0,1,spam,regex
+E8,rules,1.0,1,hosted-strong,hosted-strong,2,0,1,3.8849999999999996e-05,0.7407,148,stop,0,0,1,987-654-3210,contains_any
+E12,rules,1.0,1,hosted-mid,hosted-mid,1,0,1,2.685e-05,1.2628,166,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,rules,1.0,1,hosted-mid,hosted-mid,1,0,1,3.1875e-05,1.3381,188,stop,0,0,1,Technical,contains_any
+M1,rules,1.0,1,hosted-strong,hosted-strong,2,1,1,4.8e-05,1.018,170,stop,0,0,1,162,number
+M2,rules,1.0,1,hosted-strong,hosted-strong,2,1,1,5.22e-05,1.0308,171,stop,0,0,1,750,number
+M6,rules,1.0,1,hosted-mid,hosted-mid,1,1,1,3e-05,1.0177,178,stop,0,0,1,"Canberra, Sydney",contains_all
+M10,rules,1.0,1,hosted-strong,hosted-strong,2,1,1,9.659999999999999e-05,1.2888,245,stop,0,0,1,The equation simplifies to    \[ x^2 - 4x + 3 = 0 \;\Longrightarrow\; (x-1)(x-3),regex_all
+M14,rules,1.0,1,hosted-strong,hosted-strong,2,1,1,5.1899999999999994e-05,1.8011,172,stop,0,0,1,80,number
+H7,rules,1.0,1,hosted-strong,hosted-strong,2,2,1,0.00063135,3.046,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,rules,1.0,1,hosted-strong,hosted-strong,2,2,1,7.125e-05,1.0154,214,stop,0,0,1,6,number
+H9,rules,1.0,1,hosted-strong,hosted-strong,2,2,1,4.8e-05,1.4238,170,stop,0,0,1,29,number
+P5_p0,rules,1.0,1,hosted-mid,hosted-mid,1,0,1,3.5625e-05,0.9483,196,stop,0,0,1,02101,contains_any
+P5_p1,rules,1.0,1,hosted-strong,hosted-strong,2,1,1,4.62e-05,0.7304,155,stop,0,0,0,256,number
+P5_p2,rules,1.0,1,hosted-strong,hosted-strong,2,2,1,0.00057465,2.563,1041,stop,0,0,1,**Why the worst‑case running time of Quicksort is \(O(n^{2})\)**    1. **Recurre,regex_all
+E16,rules,1.0,1,hosted-mid,hosted-mid,1,0,1,2.5425e-05,0.9214,159,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,rules,1.0,1,hosted-mid,hosted-mid,1,0,1,4.0425e-05,0.8047,221,stop,0,0,1,192.168.1.105,contains_any
+E18,rules,1.0,1,hosted-mid,hosted-mid,1,0,1,2.3625e-05,0.9314,165,stop,0,0,1,negative,regex
+E19,rules,1.0,1,hosted-strong,hosted-strong,2,0,1,4.68e-05,1.2179,153,stop,0,0,1,The primary author of the theory of general relativity is **Albert Einstein**.,contains_any
+E20,rules,1.0,1,hosted-mid,hosted-mid,1,0,1,5.699999999999999e-05,1.2406,268,stop,0,0,1,"'{""status"": ""ok""}'",contains_any
+E21,rules,1.0,1,hosted-mid,hosted-mid,1,0,1,2.7299999999999996e-05,0.9164,175,stop,0,0,1,BA-2490,contains_any
+E22,rules,1.0,1,hosted-strong,hosted-strong,2,0,1,3.48e-05,0.9128,130,stop,0,0,1,Mercury.,contains_any
+M16,rules,1.0,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,1.2306,167,stop,0,0,1,12,number
+M17,rules,1.0,1,hosted-strong,hosted-strong,2,1,1,7.589999999999999e-05,1.3399,218,stop,0,0,0,3,number
+M18,rules,1.0,1,hosted-mid,hosted-mid,1,1,1,2.775e-05,0.8225,166,stop,0,0,1,Vielen Dank.,contains_any
+M19,rules,1.0,1,hosted-strong,hosted-strong,2,1,1,8.13e-05,1.111,230,stop,0,0,1,5,number
+M20,rules,1.0,1,hosted-mid,hosted-mid,1,1,1,2.0775e-05,1.0826,151,stop,0,0,1,DESC,contains_any
+M21,rules,1.0,1,hosted-strong,hosted-strong,2,1,1,4.6949999999999996e-05,0.5717,154,stop,0,0,1,160,number
+M22,rules,1.0,1,hosted-strong,hosted-strong,2,1,1,4.62e-05,0.7279,155,stop,0,0,1,Dynamic Host Configuration Protocol (DHCP),contains_all
+H11,rules,1.0,1,hosted-strong,hosted-strong,2,2,1,6.465e-05,1.0971,203,stop,0,0,1,5,number
+H12,rules,1.0,1,hosted-strong,hosted-strong,2,2,1,0.00027345,1.6731,551,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,rules,1.0,1,hosted-strong,hosted-strong,2,2,1,5.3549999999999994e-05,0.982,198,stop,0,0,1,3,number
+H14,rules,1.0,1,hosted-strong,hosted-strong,2,2,1,0.0001941,1.2868,424,stop,0,0,1,1. Turn **Switch 1** ON and leave it on for several minutes.   2. After a few mi,regex_all
+H15,rules,1.0,1,hosted-strong,hosted-strong,2,2,1,4.8899999999999996e-05,0.9275,161,stop,0,0,1,24,number
+H16,rules,1.0,1,hosted-strong,hosted-strong,2,2,1,9.6e-05,1.1928,247,stop,0,0,1,7.5,number
+E2,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.3482,71,stop,0,0,1,Negative,regex
+E5,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.4015,68,stop,0,0,1,Spam.,regex
+E8,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.4323,69,stop,0,0,1,987-654-3210,contains_any
+E12,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.3705,58,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.3409,62,stop,0,0,1,Technical,contains_any
+M1,classifier,0.0,1,hosted-mid,hosted-mid,1,1,1,3e-05,1.0848,190,stop,0,0,1,162,number
+M2,classifier,0.0,1,hosted-mid,hosted-mid,1,1,1,2.49e-05,0.9085,167,stop,0,0,1,750,number
+M6,classifier,0.0,1,local-small,local-small,0,1,1,0.0,2.6608,70,stop,0,0,1,"The capital of Australia is Canberra, and the largest city is Sydney.",contains_all
+M10,classifier,0.0,1,hosted-mid,hosted-mid,1,1,1,4.8e-05,1.0715,244,stop,0,0,1,"The equation simplifies to \(x^2-4x+3=0\), which factors as \((x-1)(x-3)=0\).  *",regex_all
+M14,classifier,0.0,1,hosted-mid,hosted-mid,1,1,1,2.145e-05,0.8724,157,stop,0,0,1,80,number
+H7,classifier,0.0,1,hosted-strong,hosted-strong,2,2,1,0.00063135,3.0457,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,classifier,0.0,1,hosted-mid,hosted-mid,1,2,1,3.7725e-05,1.0011,221,stop,0,0,1,6,number
+H9,classifier,0.0,1,hosted-mid,hosted-mid,1,2,1,2.7e-05,0.7683,180,stop,0,0,1,29,number
+P5_p0,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.3698,57,stop,0,0,1,02101,contains_any
+P5_p1,classifier,0.0,1,hosted-mid,hosted-strong,2,1,1,6.539999999999999e-05,1.5447,297,stop,0,1,0,256,number
+P5_p2,classifier,0.0,1,hosted-mid,hosted-mid,1,2,1,0.000273525,1.8828,995,stop,0,0,1,**Why quicksort can hit \(O(n^2)\)**    1. **Partition step**      - Pick a pivo,regex_all
+E16,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.4635,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.4257,74,stop,0,0,1,192.168.1.105,contains_any
+E18,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.3189,68,stop,0,0,1,Negative,regex
+E19,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.3803,55,stop,0,0,1,Albert Einstein,contains_any
+E20,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.4778,62,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.4358,68,stop,0,0,1,BA-2490,contains_any
+E22,classifier,0.0,1,local-small,local-small,0,0,1,0.0,2.4807,51,stop,0,0,1,Mercury.,contains_any
+M16,classifier,0.0,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,0.786,167,stop,0,0,1,12,number
+M17,classifier,0.0,1,hosted-mid,hosted-strong,2,1,1,0.00010455,2.8537,405,stop,0,1,0,3,number
+M18,classifier,0.0,1,hosted-mid,hosted-mid,1,1,1,2.775e-05,1.0238,166,stop,0,0,1,Vielen Dank.,contains_any
+M19,classifier,0.0,1,hosted-strong,hosted-strong,2,1,1,8.13e-05,1.5641,230,stop,0,0,1,5,number
+M20,classifier,0.0,1,hosted-mid,hosted-mid,1,1,1,2.0775e-05,0.997,151,stop,0,0,1,DESC,contains_any
+M21,classifier,0.0,1,hosted-mid,hosted-mid,1,1,1,2.5274999999999998e-05,0.8167,160,stop,0,0,1,160,number
+M22,classifier,0.0,1,hosted-mid,hosted-mid,1,1,1,2.34e-05,1.0197,156,stop,0,0,1,Dynamic Host Configuration Protocol,contains_all
+H11,classifier,0.0,1,hosted-mid,hosted-mid,1,2,1,4.2224999999999996e-05,1.0312,236,stop,0,0,1,5,number
+H12,classifier,0.0,1,hosted-strong,hosted-strong,2,2,1,0.00027345,1.8372,551,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,classifier,0.0,1,hosted-mid,hosted-mid,1,2,1,2.7675000000000002e-05,0.8175,201,stop,0,0,1,3,number
+H14,classifier,0.0,1,hosted-mid,hosted-mid,1,2,1,7.664999999999999e-05,1.1153,356,stop,0,0,1,"1. Turn Switch A on and leave it on for a few minutes.   2. Turn Switch A off, t",regex_all
+H15,classifier,0.0,1,hosted-strong,hosted-strong,2,2,1,4.8899999999999996e-05,0.7848,161,stop,0,0,1,24,number
+H16,classifier,0.0,1,hosted-mid,hosted-mid,1,2,1,4.4099999999999995e-05,0.9148,234,stop,0,0,1,7.5,number
+E2,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.4217,71,stop,0,0,1,Negative,regex
+E5,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.3783,68,stop,0,0,1,Spam.,regex
+E8,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.4928,69,stop,0,0,1,987-654-3210,contains_any
+E12,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.4729,58,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.4117,62,stop,0,0,1,Technical,contains_any
+M1,classifier,0.25,1,hosted-mid,hosted-mid,1,1,1,3e-05,0.9692,190,stop,0,0,1,162,number
+M2,classifier,0.25,1,hosted-mid,hosted-mid,1,1,1,2.49e-05,0.6103,167,stop,0,0,1,750,number
+M6,classifier,0.25,1,local-small,local-small,0,1,1,0.0,2.6706,70,stop,0,0,1,"The capital of Australia is Canberra, and the largest city is Sydney.",contains_all
+M10,classifier,0.25,1,hosted-mid,hosted-mid,1,1,1,4.8e-05,1.1068,244,stop,0,0,1,"The equation simplifies to \(x^2-4x+3=0\), which factors as \((x-1)(x-3)=0\).  *",regex_all
+M14,classifier,0.25,1,hosted-mid,hosted-mid,1,1,1,2.145e-05,0.8701,157,stop,0,0,1,80,number
+H7,classifier,0.25,1,hosted-strong,hosted-strong,2,2,1,0.00063135,3.0434,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,classifier,0.25,1,hosted-mid,hosted-mid,1,2,1,3.7725e-05,0.904,221,stop,0,0,1,6,number
+H9,classifier,0.25,1,hosted-mid,hosted-mid,1,2,1,2.8199999999999998e-05,0.922,184,stop,0,0,1,29,number
+P5_p0,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.4737,57,stop,0,0,1,02101,contains_any
+P5_p1,classifier,0.25,1,hosted-mid,hosted-strong,2,1,1,6.539999999999999e-05,1.7187,297,stop,0,1,0,256,number
+P5_p2,classifier,0.25,1,hosted-mid,hosted-mid,1,2,1,0.00024742499999999996,1.652,908,stop,0,0,1,**Why quicksort can hit \(O(n^2)\)**    1. **Partition step**      - Pick a pivo,regex_all
+E16,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.4752,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.5001,74,stop,0,0,1,192.168.1.105,contains_any
+E18,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.3281,68,stop,0,0,1,Negative,regex
+E19,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.3601,55,stop,0,0,1,Albert Einstein,contains_any
+E20,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.4728,62,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.4607,68,stop,0,0,1,BA-2490,contains_any
+E22,classifier,0.25,1,local-small,local-small,0,0,1,0.0,2.4305,51,stop,0,0,1,Mercury.,contains_any
+M16,classifier,0.25,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,0.9547,167,stop,0,0,1,12,number
+M17,classifier,0.25,1,hosted-mid,hosted-strong,2,1,1,0.00010455,3.1886,405,stop,0,1,0,3,number
+M18,classifier,0.25,1,hosted-mid,hosted-mid,1,1,1,2.775e-05,0.8531,166,stop,0,0,1,Vielen Dank.,contains_any
+M19,classifier,0.25,1,hosted-strong,hosted-strong,2,1,1,8.13e-05,1.0074,230,stop,0,0,1,5,number
+M20,classifier,0.25,1,hosted-mid,hosted-mid,1,1,1,2.0775e-05,0.8655,151,stop,0,0,1,DESC,contains_any
+M21,classifier,0.25,1,hosted-mid,hosted-mid,1,1,1,2.5274999999999998e-05,0.8617,160,stop,0,0,1,160,number
+M22,classifier,0.25,1,hosted-mid,hosted-mid,1,1,1,2.34e-05,0.8684,156,stop,0,0,1,Dynamic Host Configuration Protocol,contains_all
+H11,classifier,0.25,1,hosted-mid,hosted-mid,1,2,1,4.2224999999999996e-05,0.5963,236,stop,0,0,1,5,number
+H12,classifier,0.25,1,hosted-strong,hosted-strong,2,2,1,0.00027345,2.6585,551,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,classifier,0.25,1,hosted-mid,hosted-mid,1,2,1,2.7675000000000002e-05,0.9855,201,stop,0,0,1,3,number
+H14,classifier,0.25,1,hosted-strong,hosted-strong,2,2,1,0.0001761,1.5326,394,stop,0,0,1,1. Turn **Switch 1** **on** and leave it on for several minutes.   2. After a fe,regex_all
+H15,classifier,0.25,1,hosted-strong,hosted-strong,2,2,1,4.8899999999999996e-05,0.9201,161,stop,0,0,1,24,number
+H16,classifier,0.25,1,hosted-mid,hosted-mid,1,2,1,4.4099999999999995e-05,0.9198,234,stop,0,0,1,7.5,number
+E2,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.3944,71,stop,0,0,1,Negative,regex
+E5,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.3766,68,stop,0,0,1,Spam.,regex
+E8,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.5029,69,stop,0,0,1,987-654-3210,contains_any
+E12,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4617,58,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4039,62,stop,0,0,1,Technical,contains_any
+M1,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,3e-05,0.964,190,stop,0,0,1,162,number
+M2,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.49e-05,1.1199,167,stop,0,0,1,750,number
+M6,classifier,0.5,1,local-small,local-small,0,1,1,0.0,2.8063,70,stop,0,0,1,"The capital of Australia is Canberra, and the largest city is Sydney.",contains_all
+M10,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,4.8e-05,1.0821,244,stop,0,0,1,"The equation simplifies to \(x^2-4x+3=0\), which factors as \((x-1)(x-3)=0\).  *",regex_all
+M14,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.145e-05,1.0017,157,stop,0,0,1,80,number
+H7,classifier,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00063135,2.8124,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,classifier,0.5,1,hosted-mid,hosted-mid,1,2,1,3.7725e-05,1.0985,221,stop,0,0,1,6,number
+H9,classifier,0.5,1,local-small,local-small,0,2,1,0.0,2.3966,77,stop,0,0,1,Day 29.,number
+P5_p0,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.3162,57,stop,0,0,1,02101,contains_any
+P5_p1,classifier,0.5,1,hosted-mid,hosted-strong,2,1,1,6.539999999999999e-05,1.9425,297,stop,0,1,0,256,number
+P5_p2,classifier,0.5,1,hosted-mid,hosted-mid,1,2,1,0.00025702499999999997,1.7616,940,stop,0,0,1,**Why quicksort can hit \(O(n^2)\)**    1. **Partition step**      - Pick a pivo,regex_all
+E16,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.3423,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4356,74,stop,0,0,1,192.168.1.105,contains_any
+E18,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.2589,68,stop,0,0,1,Negative,regex
+E19,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4312,55,stop,0,0,1,Albert Einstein,contains_any
+E20,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4769,62,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.4044,68,stop,0,0,1,BA-2490,contains_any
+E22,classifier,0.5,1,local-small,local-small,0,0,1,0.0,2.3717,51,stop,0,0,1,Mercury.,contains_any
+M16,classifier,0.5,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,0.8535,167,stop,0,0,1,12,number
+M17,classifier,0.5,1,hosted-mid,hosted-strong,2,1,1,0.00010455,1.7578,405,stop,0,1,0,3,number
+M18,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.775e-05,1.1144,166,stop,0,0,1,Vielen Dank.,contains_any
+M19,classifier,0.5,1,hosted-strong,hosted-strong,2,1,1,8.13e-05,1.1168,230,stop,0,0,1,5,number
+M20,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.0775e-05,1.3097,151,stop,0,0,1,DESC,contains_any
+M21,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.5274999999999998e-05,0.7649,160,stop,0,0,1,160,number
+M22,classifier,0.5,1,hosted-mid,hosted-mid,1,1,1,2.34e-05,0.7998,156,stop,0,0,1,Dynamic Host Configuration Protocol,contains_all
+H11,classifier,0.5,1,hosted-mid,hosted-mid,1,2,1,4.2224999999999996e-05,0.8726,236,stop,0,0,1,5,number
+H12,classifier,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00027345,1.779,551,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,classifier,0.5,1,hosted-mid,hosted-mid,1,2,1,2.7675000000000002e-05,1.018,201,stop,0,0,1,3,number
+H14,classifier,0.5,1,hosted-strong,hosted-strong,2,2,1,0.00017489999999999997,1.5076,392,stop,0,0,1,1. Turn **Switch 1** **on** and leave it on for several minutes.   2. After a fe,regex_all
+H15,classifier,0.5,1,hosted-strong,hosted-strong,2,2,1,4.8899999999999996e-05,0.9487,161,stop,0,0,1,24,number
+H16,classifier,0.5,1,hosted-mid,hosted-mid,1,2,1,4.4099999999999995e-05,0.9196,234,stop,0,0,1,7.5,number
+E2,classifier,0.75,1,local-small,local-small,0,0,1,0.0,2.3934,71,stop,0,0,1,Negative,regex
+E5,classifier,0.75,1,hosted-strong,hosted-strong,2,0,1,5.73e-05,0.9848,181,stop,0,0,1,Spam,regex
+E8,classifier,0.75,1,hosted-strong,hosted-strong,2,0,1,3.8849999999999996e-05,1.0186,148,stop,0,0,1,987-654-3210,contains_any
+E12,classifier,0.75,1,hosted-strong,hosted-strong,2,0,1,4.23e-05,0.9327,147,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,classifier,0.75,1,hosted-strong,hosted-strong,2,0,1,5.475e-05,1.0128,173,stop,0,0,1,Technical,contains_any
+M1,classifier,0.75,1,hosted-mid,hosted-mid,1,1,1,3e-05,0.8949,190,stop,0,0,1,162,number
+M2,classifier,0.75,1,hosted-mid,hosted-mid,1,1,1,2.49e-05,1.2018,167,stop,0,0,1,750,number
+M6,classifier,0.75,1,hosted-strong,hosted-strong,2,1,1,4.68e-05,1.004,156,stop,0,0,1,"Canberra, Sydney",contains_all
+M10,classifier,0.75,1,hosted-strong,hosted-strong,2,1,1,9.659999999999999e-05,1.9052,245,stop,0,0,1,The equation simplifies to    \[ x^2 - 4x + 3 = 0 \;\Longrightarrow\; (x-1)(x-3),regex_all
+M14,classifier,0.75,1,hosted-strong,hosted-strong,2,1,1,5.1899999999999994e-05,0.9598,172,stop,0,0,1,80,number
+H7,classifier,0.75,1,hosted-strong,hosted-strong,2,2,1,0.00063135,3.0568,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,classifier,0.75,1,hosted-mid,hosted-mid,1,2,1,3.7725e-05,1.0904,221,stop,0,0,1,6,number
+H9,classifier,0.75,1,hosted-strong,hosted-strong,2,2,1,4.8e-05,0.9345,170,stop,0,0,1,29,number
+P5_p0,classifier,0.75,1,hosted-strong,hosted-strong,2,0,1,4.6049999999999994e-05,1.211,154,stop,0,0,1,02101,contains_any
+P5_p1,classifier,0.75,1,hosted-mid,hosted-strong,2,1,1,6.539999999999999e-05,1.6877,297,stop,0,1,0,256,number
+P5_p2,classifier,0.75,1,hosted-strong,hosted-strong,2,2,1,0.00063105,3.1244,1135,length,1,0,1,**Why the worst‑case running time of Quicksort is \(O(n^{2})\)**    1. **Recurre,regex_all
+E16,classifier,0.75,1,local-small,local-small,0,0,1,0.0,2.4047,55,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,classifier,0.75,1,local-small,local-small,0,0,1,0.0,2.4211,74,stop,0,0,1,192.168.1.105,contains_any
+E18,classifier,0.75,1,hosted-strong,hosted-strong,2,0,1,4.905e-05,1.1562,168,stop,0,0,1,Negative,regex
+E19,classifier,0.75,1,hosted-strong,hosted-strong,2,0,1,4.68e-05,1.4962,153,stop,0,0,1,The primary author of the theory of general relativity is **Albert Einstein**.,contains_any
+E20,classifier,0.75,1,hosted-strong,hosted-strong,2,0,1,4.8e-05,1.5287,158,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,classifier,0.75,1,hosted-strong,hosted-strong,2,0,1,5.8200000000000005e-05,0.9208,181,stop,0,0,1,BA-2490,contains_any
+E22,classifier,0.75,1,hosted-mid,hosted-mid,1,0,1,2.0399999999999998e-05,0.9176,140,stop,0,0,1,Mercury.,contains_any
+M16,classifier,0.75,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,0.9248,167,stop,0,0,1,12,number
+M17,classifier,0.75,1,hosted-mid,hosted-strong,2,1,1,0.00010455,1.7323,405,stop,0,1,0,3,number
+M18,classifier,0.75,1,hosted-mid,hosted-mid,1,1,1,2.775e-05,0.7868,166,stop,0,0,1,Vielen Dank.,contains_any
+M19,classifier,0.75,1,hosted-strong,hosted-strong,2,1,1,8.13e-05,1.2371,230,stop,0,0,1,5,number
+M20,classifier,0.75,1,hosted-strong,hosted-strong,2,1,1,4.514999999999999e-05,1.1247,157,stop,0,0,1,DESC,contains_any
+M21,classifier,0.75,1,hosted-strong,hosted-strong,2,1,1,4.6949999999999996e-05,0.5823,154,stop,0,0,1,160,number
+M22,classifier,0.75,1,hosted-strong,hosted-strong,2,1,1,4.62e-05,0.6194,155,stop,0,0,1,Dynamic Host Configuration Protocol (DHCP),contains_all
+H11,classifier,0.75,1,hosted-strong,hosted-strong,2,2,1,6.465e-05,0.7985,203,stop,0,0,1,5,number
+H12,classifier,0.75,1,hosted-strong,hosted-strong,2,2,1,0.00027345,1.9051,551,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,classifier,0.75,1,hosted-mid,hosted-mid,1,2,1,2.7675000000000002e-05,1.5292,201,stop,0,0,1,3,number
+H14,classifier,0.75,1,hosted-strong,hosted-strong,2,2,1,0.0001827,1.4548,405,stop,0,0,1,1. Turn **Switch 1** **on** and leave it on for several minutes.   2. After a fe,regex_all
+H15,classifier,0.75,1,hosted-strong,hosted-strong,2,2,1,4.8899999999999996e-05,0.73,161,stop,0,0,1,24,number
+H16,classifier,0.75,1,hosted-mid,hosted-mid,1,2,1,4.4099999999999995e-05,0.9873,234,stop,0,0,1,7.5,number
+E2,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,5.3099999999999996e-05,0.74,177,stop,0,0,1,negative,regex
+E5,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,5.67e-05,0.9588,180,stop,0,0,1,Spam,regex
+E8,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,3.8849999999999996e-05,0.7432,148,stop,0,0,1,987-654-3210,contains_any
+E12,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,4.23e-05,1.3312,147,stop,0,0,1,Alan Mathison Turing,contains_any
+E15,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,5.475e-05,1.1569,173,stop,0,0,1,Technical,contains_any
+M1,classifier,1.0,1,hosted-strong,hosted-strong,2,1,1,4.8e-05,0.9838,170,stop,0,0,1,162,number
+M2,classifier,1.0,1,hosted-strong,hosted-strong,2,1,1,5.22e-05,0.8427,171,stop,0,0,1,750,number
+M6,classifier,1.0,1,hosted-strong,hosted-strong,2,1,1,4.68e-05,0.9515,156,stop,0,0,1,"Canberra, Sydney",contains_all
+M10,classifier,1.0,1,hosted-strong,hosted-strong,2,1,1,9.659999999999999e-05,1.3854,245,stop,0,0,1,The equation simplifies to    \[ x^2 - 4x + 3 = 0 \;\Longrightarrow\; (x-1)(x-3),regex_all
+M14,classifier,1.0,1,hosted-strong,hosted-strong,2,1,1,5.1899999999999994e-05,1.2569,172,stop,0,0,1,80,number
+H7,classifier,1.0,1,hosted-strong,hosted-strong,2,2,1,0.00063135,3.0584,1137,length,1,0,1,**Why Dijkstra’s algorithm fails with negative edge weights**  1. **Invariant of,contains_any
+H8,classifier,1.0,1,hosted-strong,hosted-strong,2,2,1,7.125e-05,1.1969,214,stop,0,0,1,6,number
+H9,classifier,1.0,1,hosted-strong,hosted-strong,2,2,1,4.8e-05,2.9257,170,stop,0,0,1,29,number
+P5_p0,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,4.6049999999999994e-05,3.3597,154,stop,0,0,1,02101,contains_any
+P5_p1,classifier,1.0,1,hosted-mid,hosted-strong,2,1,1,6.539999999999999e-05,4.1447,297,stop,0,1,0,256,number
+P5_p2,classifier,1.0,1,hosted-strong,hosted-strong,2,2,1,0.00063105,3.2172,1135,length,1,0,1,**Why the worst‑case running time of Quicksort is \(O(n^{2})\)**    1. **Recurre,regex_all
+E16,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,3.4049999999999994e-05,1.122,131,stop,0,0,1,LOCAL FIRST ROUTING,contains_any
+E17,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,4.005e-05,3.3778,153,stop,0,0,1,192.168.1.105,contains_any
+E18,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,4.905e-05,3.1885,168,stop,0,0,1,Negative,regex
+E19,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,4.68e-05,3.2545,153,stop,0,0,1,The primary author of the theory of general relativity is **Albert Einstein**.,contains_any
+E20,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,5.22e-05,3.1806,165,stop,0,0,1,"{""status"": ""ok""}",contains_any
+E21,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,5.8200000000000005e-05,3.7914,181,stop,0,0,1,BA-2490,contains_any
+E22,classifier,1.0,1,hosted-strong,hosted-strong,2,0,1,3.48e-05,3.3213,130,stop,0,0,1,Mercury.,contains_any
+M16,classifier,1.0,1,hosted-strong,hosted-strong,2,1,1,4.484999999999999e-05,3.3279,167,stop,0,0,1,12,number
+M17,classifier,1.0,1,hosted-mid,hosted-strong,2,1,1,0.00010455,2.3359,405,stop,0,1,0,3,number
+M18,classifier,1.0,1,hosted-mid,hosted-mid,1,1,1,2.775e-05,0.8372,166,stop,0,0,1,Vielen Dank.,contains_any
+M19,classifier,1.0,1,hosted-strong,hosted-strong,2,1,1,8.13e-05,3.2099,230,stop,0,0,1,5,number
+M20,classifier,1.0,1,hosted-strong,hosted-strong,2,1,1,4.514999999999999e-05,0.8832,157,stop,0,0,1,DESC,contains_any
+M21,classifier,1.0,1,hosted-strong,hosted-strong,2,1,1,4.6949999999999996e-05,2.8706,154,stop,0,0,1,160,number
+M22,classifier,1.0,1,hosted-strong,hosted-strong,2,1,1,4.62e-05,3.3723,155,stop,0,0,1,Dynamic Host Configuration Protocol (DHCP),contains_all
+H11,classifier,1.0,1,hosted-strong,hosted-strong,2,2,1,6.465e-05,3.2054,203,stop,0,0,1,5,number
+H12,classifier,1.0,1,hosted-strong,hosted-strong,2,2,1,0.00027345,3.9037,551,stop,0,0,1,**Floyd’s Cycle‑Finding (Tortoise‑and‑Hare) Algorithm**  1. **Initialize two poi,regex_all
+H13,classifier,1.0,1,hosted-strong,hosted-strong,2,2,1,5.3549999999999994e-05,2.9583,198,stop,0,0,1,3,number
+H14,classifier,1.0,1,hosted-strong,hosted-strong,2,2,1,0.0001875,3.7574,413,stop,0,0,1,1. Turn **Switch 1** **on** and leave it on for several minutes.   2. After a fe,regex_all
+H15,classifier,1.0,1,hosted-strong,hosted-strong,2,2,1,4.8899999999999996e-05,3.0416,161,stop,0,0,1,24,number
+H16,classifier,1.0,1,hosted-strong,hosted-strong,2,2,1,9.6e-05,3.0939,247,stop,0,0,1,7.5,number

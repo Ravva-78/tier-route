@@ -1,0 +1,80 @@
+flowchart TD
+    %% TierRoute Request Processing Architecture
+
+    subgraph Client ["Client Interface"]
+        REQ["Incoming Client Request<br/>(prompt, bias, force_model, strategy, split)"]
+        RESP["Final Client Response<br/>(answer, total_cost, latency, decision metadata)"]
+    end
+
+    subgraph PreRouting ["Pre-Routing & Ingestion"]
+        OVR{"Admin / User<br/>Override Check?"}
+        USER_PIN["User Pin Override<br/>(override_by: user, locked: true)"]
+        ADMIN_PIN["Admin Global / Task Rule<br/>(override_by: admin, locked: true)"]
+        SPLIT_CHECK{"split == True?"}
+        SPLITTER["Request Splitter<br/>split_request(prompt)"]
+        PARTS["Discrete Sub-Task Parts<br/>[P_0, P_1, ... P_k]"]
+    end
+
+    subgraph Intelligence ["Analysis & Classification Engine"]
+        ANALYZER["Rule Analyzer<br/>analyze(text)<br/>- Regex & Keyword Cues<br/>- Task Type Detection<br/>- Complexity Score [0.0 - 1.0]"]
+        STRAT{"Strategy?"}
+        RULES["Rules Router<br/>tier_for(score, bias)<br/>Base Thresholds: [0.35, 0.70]<br/>Shift: (bias - 0.5) * 0.5"]
+        ML_CLF["ML Classifier<br/>classifier.predict(text, bias)<br/>- TF-IDF Vectorizer<br/>- LogisticRegression Probabilities<br/>- Calibrated Tier & Score"]
+        STATIC_TIER["Static Baseline<br/>always_strong / always_cheap / random"]
+    end
+
+    subgraph Execution ["Model Execution Tiers"]
+        ROUTER_ASSIGN["Tier Assignment<br/>(Tier 0, 1, or 2)"]
+        T0["Tier 0: local-small<br/>llama3.2:3b (Ollama Local API)<br/>Cost: $0.00"]
+        T1["Tier 1: hosted-mid<br/>llama-3.1-8b-instant (Groq Cloud)<br/>Cost: $0.05 / $0.08 per M"]
+        T2["Tier 2: hosted-strong<br/>llama-3.3-70b-versatile (Groq Cloud)<br/>Cost: $0.59 / $0.79 per M"]
+    end
+
+    subgraph QualityControl ["Verification & Escalation"]
+        VERIFIER["Response Verifier<br/>verify(text, response, task_type, error)<br/>- Provider HTTP/Socket Error Check<br/>- Non-Empty / Null Text Check<br/>- Format & Regex Sanity Check"]
+        VERIF_CHECK{"Verified OK?"}
+        ESC_CHECK{"can_escalate?<br/>(not ok AND not locked<br/>AND tier < Tier 2)"}
+        ESCALATE["Escalate Tier<br/>idx = idx + 1<br/>(Record Attempt & Fallback)"]
+    end
+
+    subgraph Aggregation ["Aggregation, Storage & Monitoring"]
+        MERGER["Response Merger<br/>merge(parts, answers)<br/>Format Unified Output"]
+        DECISION_LOG["SQLite Decision Log<br/>Store.log()<br/>(request_id, part_idx, strategy,<br/>first_model, final_model, cost,<br/>latency, escalated, verified, attempts)"]
+        DASHBOARD["Admin Web Dashboard<br/>/dashboard & /stats<br/>- Cost Savings vs Strong<br/>- Live Tier Distribution<br/>- Real-time Audit Table"]
+    end
+
+    %% Flow connections
+    REQ --> OVR
+    OVR -- "force_model set" --> USER_PIN --> SPLIT_CHECK
+    OVR -- "global_pin / task_rules set" --> ADMIN_PIN --> SPLIT_CHECK
+    OVR -- "No override" --> SPLIT_CHECK
+
+    SPLIT_CHECK -- "Yes" --> SPLITTER --> PARTS
+    SPLIT_CHECK -- "No" --> PARTS
+
+    PARTS --> ANALYZER
+    ANALYZER --> STRAT
+    STRAT -- "strategy = 'rules'" --> RULES --> ROUTER_ASSIGN
+    STRAT -- "strategy = 'classifier'" --> ML_CLF --> ROUTER_ASSIGN
+    STRAT -- "baseline" --> STATIC_TIER --> ROUTER_ASSIGN
+
+    USER_PIN -.-> ROUTER_ASSIGN
+    ADMIN_PIN -.-> ROUTER_ASSIGN
+
+    ROUTER_ASSIGN -- "Tier 0" --> T0
+    ROUTER_ASSIGN -- "Tier 1" --> T1
+    ROUTER_ASSIGN -- "Tier 2" --> T2
+
+    T0 --> VERIFIER
+    T1 --> VERIFIER
+    T2 --> VERIFIER
+
+    VERIFIER --> VERIF_CHECK
+    VERIF_CHECK -- "Yes (ok=True)" --> MERGER
+    VERIF_CHECK -- "No (ok=False)" --> ESC_CHECK
+    ESC_CHECK -- "Yes" --> ESCALATE --> ROUTER_ASSIGN
+    ESC_CHECK -- "No (at max tier or locked)" --> MERGER
+
+    MERGER --> RESP
+    MERGER --> DECISION_LOG
+    DECISION_LOG --> DASHBOARD

@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # TierRoute API Gateway (Reverse proxy & intelligent dispatcher)
+  tierroute:
+    build: .
+    container_name: tierroute-gateway
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - TIERROUTE_MODE=live
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+    volumes:
+      - ./results:/app/results
+      - ./config:/app/config
+    depends_on:
+      - local-ollama
+
+  # On-Premise / Edge Local LLM Engine (Zero API Cost, Private)
+  local-ollama:
+    image: ollama/ollama:latest
+    container_name: tierroute-local-engine
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+
+volumes:
+  ollama_models:

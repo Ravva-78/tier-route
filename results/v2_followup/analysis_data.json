@@ -1,0 +1,328 @@
+{
+  "oracle_router": {
+    "quality_ratio": "48/60",
+    "quality_pct": 80.0,
+    "total_cost": 0.007897,
+    "cost_saving_pct": 46.82,
+    "mean_latency_s": 4.08,
+    "workload_breakdown": {
+      "unsolved": 12,
+      "local-small": 34,
+      "hosted-mid": 13,
+      "hosted-strong": 1
+    }
+  },
+  "paired_comparison_strong_vs_classifier": [
+    {
+      "task_id": "V2-107",
+      "category": "extraction",
+      "dataset": "MessyExtraction-v2",
+      "prompt": "Extract the UUID transaction token from this garbled database audit trace: 'ERR ",
+      "strong_correct": 0,
+      "strong_model": "hosted-strong",
+      "strong_fail_type": "wrong answer (extraction_mismatch (pred='9b1deb4d-3b7d)",
+      "classifier_correct": 1,
+      "classifier_model": "local-small",
+      "classifier_info": "exact_extraction_match (9b1deb4d-3b7d-4b"
+    },
+    {
+      "task_id": "V2-108",
+      "category": "extraction",
+      "dataset": "MessyExtraction-v2",
+      "prompt": "Extract the net force with units from this physics observation note: 'Applied th",
+      "strong_correct": 0,
+      "strong_model": "hosted-strong",
+      "strong_fail_type": "wrong answer (extraction_mismatch (pred='33.2 kN', gol)",
+      "classifier_correct": 1,
+      "classifier_model": "local-small",
+      "classifier_info": "exact_extraction_match (33.2 kN)"
+    }
+  ],
+  "paired_comparison_strong_vs_cascade": [
+    {
+      "task_id": "V2-107",
+      "category": "extraction",
+      "dataset": "MessyExtraction-v2",
+      "prompt": "Extract the UUID transaction token from this garbled database audit trace: 'ERR ",
+      "strong_correct": 0,
+      "strong_model": "hosted-strong",
+      "strong_fail_type": "wrong answer (extraction_mismatch (pred='9b1deb4d-3b7d)",
+      "cascade_correct": 1,
+      "cascade_model": "local-small",
+      "cascade_info": "exact_extraction_match (9b1deb4d-3b7d-4b"
+    },
+    {
+      "task_id": "V2-108",
+      "category": "extraction",
+      "dataset": "MessyExtraction-v2",
+      "prompt": "Extract the net force with units from this physics observation note: 'Applied th",
+      "strong_correct": 0,
+      "strong_model": "hosted-strong",
+      "strong_fail_type": "wrong answer (extraction_mismatch (pred='33.2 kN', gol)",
+      "cascade_correct": 1,
+      "cascade_model": "local-small",
+      "cascade_info": "exact_extraction_match (33.2 kN)"
+    }
+  ],
+  "unsolved_tasks": [
+    {
+      "task_id": "V2-001",
+      "category": "math",
+      "dataset": "GSM8K",
+      "prompt": "Solve the following math word problem step by step. Provide your final numerical answer on the last ",
+      "gold_answer": "2280",
+      "models_tested": {
+        "hosted-strong": "numeric_mismatch (pred=2180.0, gold=2280.0)",
+        "local-small": "missing_answer_format"
+      },
+      "oracle_label": 2
+    },
+    {
+      "task_id": "V2-049",
+      "category": "multiple_choice",
+      "dataset": "ARC-Challenge",
+      "prompt": "Answer the following multiple-choice science question. Provide your final choice letter on the last ",
+      "gold_answer": "A",
+      "models_tested": {
+        "hosted-strong": "choice_mismatch (pred=D, gold=A)",
+        "local-small": "choice_mismatch (pred=C, gold=A)"
+      },
+      "oracle_label": 2
+    },
+    {
+      "task_id": "V2-071",
+      "category": "code",
+      "dataset": "MBPP",
+      "prompt": "Write a Python function to solve the following task. Task: Write a function to find the greatest com",
+      "gold_answer": "def recur_gcd(a, b):\r\n\tlow = min(a, b)\r\n\thigh = ma",
+      "models_tested": {
+        "hosted-strong": "test_execution_failed: NameError: name 'recur_gcd' is not defined",
+        "local-small": "test_execution_failed: NameError: name 'recur_gcd' is not defined",
+        "hosted-mid": "test_execution_failed: NameError: name 'recur_gcd' is not defined"
+      },
+      "oracle_label": 2
+    },
+    {
+      "task_id": "V2-072",
+      "category": "code",
+      "dataset": "MBPP",
+      "prompt": "Write a Python function to solve the following task. Task: Write a python function to find sum of ev",
+      "gold_answer": "import math  \r\ndef even_binomial_Coeff_Sum( n): \r\n",
+      "models_tested": {
+        "hosted-strong": "test_execution_failed: SyntaxError: cannot assign to expression here. Maybe you mea",
+        "local-small": "test_execution_failed: NameError: name 'even_binomial_Coeff_Sum' is not defined"
+      },
+      "oracle_label": 2
+    },
+    {
+      "task_id": "V2-073",
+      "category": "code",
+      "dataset": "MBPP",
+      "prompt": "Write a Python function to solve the following task. Task: Write a function that matches a string th",
+      "gold_answer": "import re\r\ndef text_match(text):\r\n        patterns",
+      "models_tested": {
+        "hosted-strong": "test_execution_failed: SyntaxError: invalid syntax",
+        "local-small": "test_execution_failed: NameError: name 'text_match' is not defined"
+      },
+      "oracle_label": 2
+    },
+    {
+      "task_id": "V2-074",
+      "category": "code",
+      "dataset": "MBPP",
+      "prompt": "Write a Python function to solve the following task. Task: Write a function to solve tiling problem.",
+      "gold_answer": "def get_noOfways(n):\r\n    if (n == 0):\r\n        re",
+      "models_tested": {
+        "hosted-strong": "test_execution_failed: SyntaxError: invalid character '\\u2011' (U+2011)",
+        "local-small": "test_execution_failed: NameError: name 'get_noOfways' is not defined"
+      },
+      "oracle_label": 2
+    },
+    {
+      "task_id": "V2-075",
+      "category": "code",
+      "dataset": "MBPP",
+      "prompt": "Write a Python function to solve the following task. Task: Write a function to count the number of e",
+      "gold_answer": "def count_range_in_list(li, min, max):\r\n\tctr = 0\r\n",
+      "models_tested": {
+        "hosted-strong": "test_execution_failed: AssertionError: Test 3 failed: got 3, expected 2",
+        "local-small": "test_execution_failed: NameError: name 'count_range_in_list' is not defined",
+        "hosted-mid": "test_execution_failed: NameError: name 'count_range_in_list' is not defined"
+      },
+      "oracle_label": 2
+    },
+    {
+      "task_id": "V2-076",
+      "category": "code",
+      "dataset": "MBPP",
+      "prompt": "Write a Python function to solve the following task. Task: Write a python function to find the avera",
+      "gold_answer": "def average_Even(n) : \r\n    if (n% 2!= 0) : \r\n    ",
+      "models_tested": {
+        "hosted-strong": "test_execution_failed: SyntaxError: invalid character '·' (U+00B7)",
+        "local-small": "test_execution_failed: NameError: name 'average_Even' is not defined",
+        "hosted-mid": "test_execution_failed: NameError: name 'average_Even' is not defined"
+      },
+      "oracle_label": 2
+    },
+    {
+      "task_id": "V2-079",
+      "category": "code",
+      "dataset": "MBPP",
+      "prompt": "Write a Python function to solve the following task. Task: Write a function to check if one tuple is",
+      "gold_answer": "def check_subset(test_tup1, test_tup2):\r\n  res = s",
+      "models_tested": {
+        "hosted-strong": "test_execution_failed: SyntaxError: invalid character '“' (U+201C)",
+        "local-small": "test_execution_failed: NameError: name 'check_subset' is not defined",
+        "hosted-mid": "test_execution_failed: NameError: name 'check_subset' is not defined"
+      },
+      "oracle_label": 2
+    },
+    {
+      "task_id": "V2-080",
+      "category": "code",
+      "dataset": "MBPP",
+      "prompt": "Write a Python function to solve the following task. Task: Write a function to find the perimeter of",
+      "gold_answer": "def perimeter_triangle(a,b,c):\r\n  perimeter=a+b+c\r",
+      "models_tested": {
+        "hosted-strong": "test_execution_failed: NameError: name 'perimeter_triangle' is not defined",
+        "local-small": "test_execution_failed: NameError: name 'perimeter_triangle' is not defined"
+      },
+      "oracle_label": 2
+    },
+    {
+      "task_id": "V2-091",
+      "category": "code",
+      "dataset": "HumanEval",
+      "prompt": "Complete the following Python function definition according to its docstring.  ```python def starts_",
+      "gold_answer": "    if n == 1: return 1\n    return 18 * (10 ** (n ",
+      "models_tested": {
+        "hosted-strong": "test_execution_failed: SyntaxError: unterminated triple-quoted string literal (dete",
+        "local-small": "test_execution_failed: AssertionError"
+      },
+      "oracle_label": 2
+    },
+    {
+      "task_id": "V2-100",
+      "category": "code",
+      "dataset": "HumanEval",
+      "prompt": "Complete the following Python function definition according to its docstring.  ```python def order_b",
+      "gold_answer": "    def digits_sum(n):\n        neg = 1\n        if ",
+      "models_tested": {
+        "hosted-strong": "test_execution_failed: AssertionError",
+        "local-small": "test_execution_failed: ValueError: invalid literal for int() with base 10: '-'",
+        "hosted-mid": "empty_response"
+      },
+      "oracle_label": 2
+    }
+  ],
+  "bootstrap_intervals": [
+    {
+      "strategy": "classifier",
+      "mean_saving": 40.74,
+      "saving_ci_95": [
+        24.84,
+        59.16
+      ],
+      "mean_qual_diff": 0.0339,
+      "qual_diff_ci_95": [
+        0.0,
+        0.0833
+      ]
+    },
+    {
+      "strategy": "rules",
+      "mean_saving": 22.79,
+      "saving_ci_95": [
+        6.38,
+        42.14
+      ],
+      "mean_qual_diff": 0.0339,
+      "qual_diff_ci_95": [
+        0.0,
+        0.0833
+      ]
+    },
+    {
+      "strategy": "cascade",
+      "mean_saving": 31.31,
+      "saving_ci_95": [
+        12.53,
+        51.99
+      ],
+      "mean_qual_diff": 0.0339,
+      "qual_diff_ci_95": [
+        0.0,
+        0.0833
+      ]
+    },
+    {
+      "strategy": "random",
+      "mean_saving": 63.83,
+      "saving_ci_95": [
+        51.83,
+        75.03
+      ],
+      "mean_qual_diff": -0.0833,
+      "qual_diff_ci_95": [
+        -0.1833,
+        0.0167
+      ]
+    },
+    {
+      "strategy": "always_cheap",
+      "mean_saving": 100.0,
+      "saving_ci_95": [
+        100.0,
+        100.0
+      ],
+      "mean_qual_diff": -0.2006,
+      "qual_diff_ci_95": [
+        -0.3167,
+        -0.0833
+      ]
+    },
+    {
+      "strategy": "oracle_router",
+      "mean_saving": 47.66,
+      "saving_ci_95": [
+        35.08,
+        62.08
+      ],
+      "mean_qual_diff": 0.0339,
+      "qual_diff_ci_95": [
+        0.0,
+        0.0833
+      ]
+    }
+  ],
+  "cost_per_1000_requests": {
+    "always_strong": {
+      "total_cost_60": 0.014849,
+      "cost_per_1k": 0.2475
+    },
+    "always_cheap": {
+      "total_cost_60": 0.0,
+      "cost_per_1k": 0.0
+    },
+    "random": {
+      "total_cost_60": 0.005299,
+      "cost_per_1k": 0.0883
+    },
+    "cascade": {
+      "total_cost_60": 0.010386,
+      "cost_per_1k": 0.1731
+    },
+    "rules": {
+      "total_cost_60": 0.011629,
+      "cost_per_1k": 0.1938
+    },
+    "classifier": {
+      "total_cost_60": 0.00897,
+      "cost_per_1k": 0.1495
+    },
+    "oracle_router": {
+      "total_cost_60": 0.007897,
+      "cost_per_1k": 0.1316
+    }
+  }
+}

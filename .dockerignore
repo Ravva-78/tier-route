@@ -1,0 +1,16 @@
+.env
+.env.*
+.git
+.gitignore
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+results/*.db
+results/*.csv
+results/*.png
+results/overrides.json
+results/bench_overrides.json
+.venv
+venv

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TierRoute</title>
+<style>
+:root{
+  --bg:#edf0f3; --panel:#ffffff; --ink:#15202b; --muted:#5d6b78; --line:#d5dbe1;
+  --t0:#0e8a7d; --t1:#b7791f; --t2:#4338ca; --bad:#b42318; --ok:#15803d;
+  font-family:"Segoe UI",system-ui,-apple-system,sans-serif; color:var(--ink);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#10161c; --panel:#18212a; --ink:#e6ebf0; --muted:#93a1ae; --line:#2b3844;
+        --t0:#2dd4bf; --t1:#f2b84b; --t2:#a5a0ff; --bad:#ff8a80; --ok:#6ee7a1;}
+}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);line-height:1.45}
+header{padding:20px 24px 4px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline}
+h1{margin:0;font-size:26px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:14px}
+.badge{font-size:12px;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.badge.mock{color:var(--t1);border-color:var(--t1)}
+main{padding:16px 24px 40px;display:grid;gap:16px;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);max-width:1280px;margin:auto}
+@media (max-width:900px){main{grid-template-columns:1fr;padding:12px}}
+section{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+section h2{margin:0 0 10px;font-size:16px}
+.stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;background:none;border:none;padding:0}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.stat b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;color:var(--muted)}
+.stat.save b{color:var(--ok)}
+textarea,select,input[type=text]{width:100%;font:inherit;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+textarea{min-height:92px;resize:vertical}
+label{font-size:13px;color:var(--muted);display:block;margin:10px 0 4px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:end}.row>div{flex:1;min-width:150px}
+button{font:inherit;font-weight:600;padding:9px 16px;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer}
+button.ghost{background:none;color:var(--ink);border-color:var(--line);font-weight:500}
+button:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--t2);outline-offset:1px}
+.lane{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin:8px 0 6px}
+.lane i{height:8px;border-radius:4px;background:var(--line)}
+.lane i.on0{background:var(--t0)}.lane i.on1{background:var(--t1)}.lane i.on2{background:var(--t2)}
+.lane i.tried{outline:2px dashed var(--bad);outline-offset:1px}
+.part{border-top:1px solid var(--line);padding:10px 0}
+.part:first-of-type{border-top:none}
+.chip{font-size:12px;font-weight:600;padding:1px 8px;border-radius:99px;color:#fff}
+.c0{background:var(--t0)}.c1{background:var(--t1)}.c2{background:var(--t2)}
+.ans{background:var(--bg);border-radius:8px;padding:8px 10px;white-space:pre-wrap;margin:6px 0;font-size:14px}
+.why{font-size:13px;color:var(--muted)}
+.meta{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:6px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.scroll{overflow-x:auto}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.ovr{color:var(--bad);font-weight:600}
+.full{grid-column:1/-1}
+.hint{font-size:12px;color:var(--muted);margin-top:6px}
+</style>
+</head>
+<body>
+<header>
+  <h1>TierRoute</h1>
+  <span class="sub">Every request goes to the cheapest model that can handle it. Every decision is logged and can be overridden.</span>
+  <span id="mode" class="badge"></span>
+</header>
+<main>
+  <section class="stats" id="stats"></section>
+
+  <section>
+    <h2>Send a request</h2>
+    <label for="prompt">Prompt (use a numbered list to test splitting)</label>
+    <textarea id="prompt">1. Extract the date from: 'Invoice issued on 12 January 2026.' in YYYY-MM-DD format.
+2. Classify the sentiment: 'I love how fast this app is!'
+3. Alice is twice as old as Bob. In 6 years the sum of their ages will be 48. How old is Alice now?</textarea>
+    <div class="row">
+      <div><label for="bias">Cost vs quality: <b id="biasv">0.50</b> (left saves cost, right favours quality)</label>
+        <input id="bias" type="range" min="0" max="1" step="0.05" value="0.5"></div>
+      <div><label for="pin">Pin this request to a model</label>
+        <select id="pin"><option value="">Let the router decide</option></select></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <button id="send">Route request</button>
+      <label style="margin:0;display:flex;gap:6px;align-items:center"><input type="checkbox" id="split" checked> Split into parts</label>
+    </div>
+    <div id="result" style="margin-top:14px"></div>
+  </section>
+
+  <section>
+    <h2>Admin controls</h2>
+    <label for="gpin">Send all traffic to one model</label>
+    <select id="gpin"><option value="">Off (router decides)</option></select>
+    <label>Always use a model for a task type</label>
+    <div id="rules"></div>
+    <label for="gbias">Default cost vs quality: <b id="gbiasv">0.50</b></label>
+    <input id="gbias" type="range" min="0" max="1" step="0.05" value="0.5">
+    <div class="row" style="margin-top:12px">
+      <button id="save">Save controls</button>
+      <button id="reset" class="ghost">Clear log</button>
+    </div>
+    <div class="hint" id="saved"></div>
+  </section>
+
+  <section class="full">
+    <h2>Decision log</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>Sub-task</th><th>Type</th><th>Score</th><th>Model</th><th>Cost (USD)</th><th>Latency</th><th>Why</th></tr></thead>
+      <tbody id="log"></tbody></table></div>
+  </section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const j=async(p,o)=>(await fetch(p,o)).json();
+let META=null;
+const usd=v=>"$"+Number(v).toFixed(6);
+
+async function init(){
+  META=await j("/api/models");
+  const m=$("#mode"); m.textContent=META.mode==="mock"?"mock mode: answers are simulated":"live mode";
+  if(META.mode==="mock") m.classList.add("mock");
+  for(const sel of ["#pin","#gpin"]) for(const x of META.models){
+    sel===("#pin")||sel==="#gpin"; $(sel).insertAdjacentHTML("beforeend",`<option value="${esc(x.name)}">${esc(x.name)} (${esc(x.model)})</option>`);
+  }
+  $("#rules").innerHTML=META.task_types.map(t=>`<div class="row" style="margin:4px 0"><div style="flex:0 0 110px;font-size:13px">${t}</div><div><select data-task="${t}"><option value="">Router decides</option>${META.models.map(x=>`<option>${esc(x.name)}</option>`).join("")}</select></div></div>`).join("");
+  const ov=await j("/api/overrides");
+  $("#gpin").value=ov.global_pin||"";
+  for(const [t,mn] of Object.entries(ov.task_rules||{})){const s=document.querySelector(`[data-task="${t}"]`); if(s) s.value=mn;}
+  const b=ov.bias??META.default_bias; $("#gbias").value=b; $("#gbiasv").textContent=Number(b).toFixed(2);
+  $("#bias").value=b; $("#biasv").textContent=Number(b).toFixed(2);
+  refresh();
+}
+$("#bias").oninput=e=>$("#biasv").textContent=Number(e.target.value).toFixed(2);
+$("#gbias").oninput=e=>$("#gbiasv").textContent=Number(e.target.value).toFixed(2);
+
+function lane(p){
+  const tried=new Set(p.attempts.map(a=>a.tier));
+  return `<div class="lane" aria-label="models tried">`+[0,1,2].map(t=>`<i class="${t===p.tier?"on"+t:""} ${tried.has(t)&&t!==p.tier?"tried":""}" title="tier ${t}"></i>`).join("")+`</div>`;
+}
+function renderResult(r){
+  const parts=r.parts.map((p,i)=>`<div class="part">
+    <div><span class="chip c${p.tier}">${esc(p.final_model)}</span> <span class="meta">part ${i+1} · ${esc(p.task_type)} · score ${p.score} · ${usd(p.cost)} · ${p.latency_s.toFixed(2)}s ${p.escalated?'· <span class="ovr">escalated</span>':''} ${p.override_by?'· <span class="ovr">'+p.override_by+' override</span>':''}</span></div>
+    ${lane(p)}
+    <div class="why">${esc(p.part_text)}</div>
+    <div class="ans">${esc(p.answer||"(no answer)")}</div>
+    <div class="why">Why: ${esc(p.reason)}</div></div>`).join("");
+  const save=r.est_strong_cost>0?(100*(1-r.total_cost/r.est_strong_cost)).toFixed(0):"0";
+  $("#result").innerHTML=parts+`<div class="meta" style="margin-top:8px">Total ${usd(r.total_cost)} vs ${usd(r.est_strong_cost)} if the strongest model had handled it (${save}% saved) · ${r.total_latency_s.toFixed(2)}s</div>`;
+}
+$("#send").onclick=async()=>{
+  $("#send").disabled=true; $("#send").textContent="Routing…";
+  try{
+    const r=await j("/api/route",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({prompt:$("#prompt").value,bias:Number($("#bias").value),force_model:$("#pin").value||null,split:$("#split").checked})});
+    renderResult(r); refresh();
+  }catch(e){$("#result").textContent="Request failed: "+e}
+  $("#send").disabled=false; $("#send").textContent="Route request";
+};
+$("#save").onclick=async()=>{
+  const rules={}; document.querySelectorAll("[data-task]").forEach(s=>{if(s.value) rules[s.dataset.task]=s.value});
+  await j("/api/overrides",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({global_pin:$("#gpin").value||null,task_rules:rules,bias:Number($("#gbias").value)})});
+  $("#saved").textContent="Controls saved. They apply to the next request.";
+};
+$("#reset").onclick=async()=>{await j("/api/reset",{method:"POST"});refresh();};
+
+async function refresh(){
+  const [s,l]=await Promise.all([j("/api/stats"),j("/api/logs?limit=40")]);
+  $("#stats").innerHTML=[
+    ["Requests",s.requests],["Sub-tasks",s.parts],["Cost so far",usd(s.cost)],
+    ["If always strongest",usd(s.strong)],["Saved",s.savings_pct+"%","save"],["Escalations",s.escalations],["Overrides",s.overrides]
+  ].map(([k,v,c])=>`<div class="stat ${c||""}"><b>${v}</b><span>${k}</span></div>`).join("");
+  $("#log").innerHTML=l.map(r=>`<tr><td>${esc(r.part_text.slice(0,70))}</td><td>${esc(r.task_type)}</td><td class="num">${r.score}</td>
+   <td><span class="chip c${r.tier}">${esc(r.final_model)}</span>${r.override_by?' <span class="ovr">'+r.override_by+'</span>':''}</td>
+   <td class="num">${usd(r.cost)}</td><td class="num">${Number(r.latency_s).toFixed(2)}s</td><td>${esc(r.reason)}</td></tr>`).join("")
+   ||`<tr><td colspan="7" class="why">No requests yet. Send one above and each decision will appear here.</td></tr>`;
+}
+init();
+</script>
+</body>
+</html>

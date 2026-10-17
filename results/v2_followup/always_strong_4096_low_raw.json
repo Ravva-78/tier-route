@@ -1,0 +1,1142 @@
+[
+  {
+    "task_id": "V2-001",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 154,
+    "tokens_out": 180,
+    "cost": 0.0001311,
+    "latency_s": 1.339,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "numeric_mismatch (pred=2180.0, gold=2280.0)",
+    "error": null,
+    "answer_preview": "Kim raises $320 more than Alexandra, who raises $430.   - Alexandra: $430   - Kim: $430 + $320 = $750    Maryam raises $400 more than Sarah, who raises $300.   "
+  },
+  {
+    "task_id": "V2-002",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 154,
+    "tokens_out": 155,
+    "cost": 0.00011609999999999999,
+    "latency_s": 1.559,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (1.0)",
+    "error": null,
+    "answer_preview": "Kalinda’s rate: 4 pieces / minute   Mom’s rate: half of Kalinda’s = 2 pieces / minute    Combined rate = 4 + 2 = 6 pieces per minute    Total pieces = 360    Ti"
+  },
+  {
+    "task_id": "V2-003",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 149,
+    "tokens_out": 246,
+    "cost": 0.00016994999999999998,
+    "latency_s": 1.646,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (5.0)",
+    "error": null,
+    "answer_preview": "Tom sails outward from 1 PM to 4 PM, which is a duration of    \\[ 4\\text{ PM} - 1\\text{ PM} = 3\\text{ hours}. \\]  At 10 mph, the distance he covers outward is  "
+  },
+  {
+    "task_id": "V2-004",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 149,
+    "tokens_out": 238,
+    "cost": 0.00016514999999999998,
+    "latency_s": 1.764,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (12.0)",
+    "error": null,
+    "answer_preview": "James has two sons.   - The older son is 12 years old.   - The younger son is 4 years younger, so he is \\(12 - 4 = 8\\) years old.    Assuming each son needs a c"
+  },
+  {
+    "task_id": "V2-005",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 161,
+    "tokens_out": 183,
+    "cost": 0.00013394999999999998,
+    "latency_s": 1.217,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (273.0)",
+    "error": null,
+    "answer_preview": "First, find how many yards each person used.  - Mariah used \\(\\frac{1}{4}\\) of a skein: \\[ \\frac{1}{4} \\times 364 = \\frac{364}{4} = 91 \\text{ yards} \\]  - Grand"
+  },
+  {
+    "task_id": "V2-008",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 134,
+    "tokens_out": 288,
+    "cost": 0.00019289999999999997,
+    "latency_s": 1.656,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (145.0)",
+    "error": null,
+    "answer_preview": "Let the cost of one cup be \\(c\\).  - Number of cups: \\(20\\) dozen \\(=20 \\times 12 = 240\\) cups.   - Number of plates: half a dozen \\(=6\\) plates.   - Cost of on"
+  },
+  {
+    "task_id": "V2-014",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 157,
+    "tokens_out": 158,
+    "cost": 0.00011834999999999999,
+    "latency_s": 1.231,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (1430.0)",
+    "error": null,
+    "answer_preview": "First, add the costs of the material and the jeweler’s work:    \\(500 + 800 = 1300\\).  Next, calculate the insurance cost, which is 10 % of the subtotal:    \\(0"
+  },
+  {
+    "task_id": "V2-018",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 135,
+    "tokens_out": 191,
+    "cost": 0.00013485,
+    "latency_s": 1.215,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (66.0)",
+    "error": null,
+    "answer_preview": "**Step 1: Calculate the cost of the books**   - Number of books = 3   - Cost per book = \\$16   - Total cost for books = \\(3 \\times 16 = \\$48\\)  **Step 2: Calcul"
+  },
+  {
+    "task_id": "V2-019",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 143,
+    "tokens_out": 121,
+    "cost": 9.405e-05,
+    "latency_s": 5.37,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (15.0)",
+    "error": null,
+    "answer_preview": "Eve started with 20 pomelos.   She ends up with \\(\\frac14\\) of what she started with:  \\[ \\frac14 \\times 20 = 5 \\text{ pomelos} \\]  The number she gave away is "
+  },
+  {
+    "task_id": "V2-022",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 186,
+    "tokens_out": 417,
+    "cost": 0.0002781,
+    "latency_s": 1.638,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (2000.0)",
+    "error": null,
+    "answer_preview": "Elliott’s goal: 10,000 steps.  1. Steps taken on walks to and from school = half of his goal      \\[    \\frac{1}{2}\\times 10{,}000 = 5{,}000 \\text{ steps}    \\]"
+  },
+  {
+    "task_id": "V2-023",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 153,
+    "tokens_out": 179,
+    "cost": 0.00013035,
+    "latency_s": 4.334,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (1520.0)",
+    "error": null,
+    "answer_preview": "Rafaela receives a tip from each of the 40 customers:  \\[ 40 \\times \\$20 = \\$800 \\]  Julieta receives 10% less than Rafaela:  \\[ \\$800 - 0.10 \\times \\$800 = 0.9"
+  },
+  {
+    "task_id": "V2-024",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 157,
+    "tokens_out": 159,
+    "cost": 0.00011894999999999999,
+    "latency_s": 0.996,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (11050.0)",
+    "error": null,
+    "answer_preview": "The total cost for 20 balloons was \\$900, so the original price per balloon was    \\[ \\frac{900}{20}=45\\text{ dollars per balloon}. \\]  After the price increase"
+  },
+  {
+    "task_id": "V2-028",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 158,
+    "tokens_out": 481,
+    "cost": 0.00031229999999999995,
+    "latency_s": 1.897,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (18.0)",
+    "error": null,
+    "answer_preview": "Let the initial number of vacuum cleaners be \\(N\\).  1. **Green house:**      Sold \\(\\frac13 N\\).      Remaining: \\(N-\\frac13 N = \\frac{2N}{3}\\).  2. **Red hous"
+  },
+  {
+    "task_id": "V2-031",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 205,
+    "tokens_out": 309,
+    "cost": 0.00021615,
+    "latency_s": 5.841,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (145.0)",
+    "error": null,
+    "answer_preview": "First, determine each student’s points.  1. **Adam:** 50 points (given).  2. **Betty:** 30 % more than Adam      \\[    50 \\times 1.30 = 65 \\text{ points}    \\] "
+  },
+  {
+    "task_id": "V2-032",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 149,
+    "tokens_out": 236,
+    "cost": 0.00016395,
+    "latency_s": 1.54,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (123.0)",
+    "error": null,
+    "answer_preview": "**Step‑by‑step solution**  1. Let the number of boys be \\(B\\).      Given \\(B = 30\\).  2. The number of girls is three times the number of boys:      \\[    G = "
+  },
+  {
+    "task_id": "V2-033",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 135,
+    "tokens_out": 306,
+    "cost": 0.00020385,
+    "latency_s": 1.476,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (98.0)",
+    "error": null,
+    "answer_preview": "The area of a rectangle is    \\[ \\text{Area}= \\text{length}\\times \\text{width}. \\]  **1. Convert the length to feet**   The length is given as \\(3\\) yards.   \\("
+  },
+  {
+    "task_id": "V2-034",
+    "category": "math",
+    "dataset": "GSM8K",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 145,
+    "tokens_out": 321,
+    "cost": 0.00021435,
+    "latency_s": 1.781,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_numeric_match (7.0)",
+    "error": null,
+    "answer_preview": "First, determine the cost of the candies.  - Cost of 5 lollipops: \\(5 \\times \\$0.40 = \\$2.00\\). - Total cost of 5 lollipops + 4 candies is \\$3.20, so the cost o"
+  },
+  {
+    "task_id": "V2-036",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 153,
+    "tokens_out": 43,
+    "cost": 4.875e-05,
+    "latency_s": 3.373,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (A)",
+    "error": null,
+    "answer_preview": "Answer: A"
+  },
+  {
+    "task_id": "V2-037",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 141,
+    "tokens_out": 52,
+    "cost": 5.234999999999999e-05,
+    "latency_s": 3.256,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (C)",
+    "error": null,
+    "answer_preview": "Answer: C"
+  },
+  {
+    "task_id": "V2-038",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 162,
+    "tokens_out": 31,
+    "cost": 4.29e-05,
+    "latency_s": 0.776,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (C)",
+    "error": null,
+    "answer_preview": "Answer: C"
+  },
+  {
+    "task_id": "V2-041",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 175,
+    "tokens_out": 30,
+    "cost": 4.425e-05,
+    "latency_s": 0.932,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (B)",
+    "error": null,
+    "answer_preview": "Answer: B"
+  },
+  {
+    "task_id": "V2-043",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 209,
+    "tokens_out": 50,
+    "cost": 6.135e-05,
+    "latency_s": 2.699,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "choice_mismatch (pred=D, gold=B)",
+    "error": null,
+    "answer_preview": "Answer: D"
+  },
+  {
+    "task_id": "V2-044",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 132,
+    "tokens_out": 28,
+    "cost": 3.66e-05,
+    "latency_s": 0.84,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (A)",
+    "error": null,
+    "answer_preview": "Answer: A"
+  },
+  {
+    "task_id": "V2-045",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 140,
+    "tokens_out": 55,
+    "cost": 5.4e-05,
+    "latency_s": 0.918,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (B)",
+    "error": null,
+    "answer_preview": "Answer: B"
+  },
+  {
+    "task_id": "V2-046",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 135,
+    "tokens_out": 31,
+    "cost": 3.8849999999999996e-05,
+    "latency_s": 1.028,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (A)",
+    "error": null,
+    "answer_preview": "Answer: A"
+  },
+  {
+    "task_id": "V2-047",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 142,
+    "tokens_out": 34,
+    "cost": 4.1700000000000004e-05,
+    "latency_s": 1.137,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (B)",
+    "error": null,
+    "answer_preview": "Answer: B"
+  },
+  {
+    "task_id": "V2-049",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 158,
+    "tokens_out": 93,
+    "cost": 7.95e-05,
+    "latency_s": 1.341,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "choice_mismatch (pred=B, gold=A)",
+    "error": null,
+    "answer_preview": "Answer: B"
+  },
+  {
+    "task_id": "V2-052",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 135,
+    "tokens_out": 52,
+    "cost": 5.1450000000000004e-05,
+    "latency_s": 0.93,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (A)",
+    "error": null,
+    "answer_preview": "Answer: A"
+  },
+  {
+    "task_id": "V2-054",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 150,
+    "tokens_out": 18,
+    "cost": 3.3299999999999996e-05,
+    "latency_s": 0.942,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (D)",
+    "error": null,
+    "answer_preview": "Answer: D"
+  },
+  {
+    "task_id": "V2-056",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 197,
+    "tokens_out": 56,
+    "cost": 6.315e-05,
+    "latency_s": 1.228,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (B)",
+    "error": null,
+    "answer_preview": "Answer: B"
+  },
+  {
+    "task_id": "V2-058",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 138,
+    "tokens_out": 25,
+    "cost": 3.57e-05,
+    "latency_s": 0.983,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (B)",
+    "error": null,
+    "answer_preview": "Answer: B"
+  },
+  {
+    "task_id": "V2-059",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 206,
+    "tokens_out": 33,
+    "cost": 5.0700000000000006e-05,
+    "latency_s": 0.913,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (D)",
+    "error": null,
+    "answer_preview": "Answer: D"
+  },
+  {
+    "task_id": "V2-062",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 172,
+    "tokens_out": 64,
+    "cost": 6.42e-05,
+    "latency_s": 0.982,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (C)",
+    "error": null,
+    "answer_preview": "Answer: C"
+  },
+  {
+    "task_id": "V2-067",
+    "category": "multiple_choice",
+    "dataset": "ARC-Challenge",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 169,
+    "tokens_out": 26,
+    "cost": 4.094999999999999e-05,
+    "latency_s": 1.049,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_choice_match (B)",
+    "error": null,
+    "answer_preview": "Answer: B"
+  },
+  {
+    "task_id": "V2-071",
+    "category": "code",
+    "dataset": "MBPP",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 126,
+    "tokens_out": 592,
+    "cost": 0.0003741,
+    "latency_s": 2.143,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "test_execution_failed: UnicodeEncodeError: 'charmap' codec can't encode character '",
+    "error": null,
+    "answer_preview": "Here is a self‑contained Python implementation that computes the greatest common divisor (GCD) of two integers using a simple recursive version of Euclid’s algo"
+  },
+  {
+    "task_id": "V2-072",
+    "category": "code",
+    "dataset": "MBPP",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 120,
+    "tokens_out": 1098,
+    "cost": 0.0006768,
+    "latency_s": 3.185,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "test_execution_failed: SyntaxError: cannot assign to function call here. Maybe you ",
+    "error": null,
+    "answer_preview": "**Solution Explanation**  For a non‑negative integer `n` the binomial coefficients are    \\[ \\binom{n}{0},\\binom{n}{1},\\dots ,\\binom{n}{n}. \\]  We need the sum "
+  },
+  {
+    "task_id": "V2-073",
+    "category": "code",
+    "dataset": "MBPP",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 125,
+    "tokens_out": 623,
+    "cost": 0.00039255000000000003,
+    "latency_s": 5.592,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "test_execution_failed: NameError: name 'text_match' is not defined",
+    "error": null,
+    "answer_preview": "**Solution Explanation**  The required pattern is:  * the first character must be `'a'` * after that there may be any number (including zero) of `'b'` character"
+  },
+  {
+    "task_id": "V2-074",
+    "category": "code",
+    "dataset": "MBPP",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 115,
+    "tokens_out": 1186,
+    "cost": 0.0007288500000000001,
+    "latency_s": 5.07,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "test_execution_failed: SyntaxError: invalid character '\\u2011' (U+2011)",
+    "error": null,
+    "answer_preview": "**Solution Explanation**  The classic *tiling problem* asks for the number of ways to completely cover a `2 × n` board with dominoes of size `2 × 1` (vertical) "
+  },
+  {
+    "task_id": "V2-075",
+    "category": "code",
+    "dataset": "MBPP",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 125,
+    "tokens_out": 710,
+    "cost": 0.00044475,
+    "latency_s": 6.987,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "test_execution_failed: AssertionError: Test 5 failed: got 3, expected 2",
+    "error": null,
+    "answer_preview": "**Solution Explanation**  We need a function that receives    * a list `seq` of numbers (integers or floats)   * two bounds `low` and `high`  and returns how ma"
+  },
+  {
+    "task_id": "V2-076",
+    "category": "code",
+    "dataset": "MBPP",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 123,
+    "tokens_out": 714,
+    "cost": 0.00044685,
+    "latency_s": 6.768,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "test_execution_failed: SyntaxError: invalid character '…' (U+2026)",
+    "error": null,
+    "answer_preview": "**Solution Explanation**  The task is to compute the average (arithmetic mean) of all even integers from `2` up to a given even number `n` (inclusive).   If `n`"
+  },
+  {
+    "task_id": "V2-079",
+    "category": "code",
+    "dataset": "MBPP",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 121,
+    "tokens_out": 664,
+    "cost": 0.00041654999999999996,
+    "latency_s": 8.603,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "test_execution_failed: NameError: name 'check_subset' is not defined",
+    "error": null,
+    "answer_preview": "Here is a self‑contained Python solution.   The function `is_tuple_subset(sub, sup)` returns `True` when every element of the tuple `sub` appears in the tuple `"
+  },
+  {
+    "task_id": "V2-080",
+    "category": "code",
+    "dataset": "MBPP",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 117,
+    "tokens_out": 501,
+    "cost": 0.00031814999999999995,
+    "latency_s": 1.991,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "test_execution_failed: NameError: name 'perimeter_triangle' is not defined",
+    "error": null,
+    "answer_preview": "Here is a self‑contained Python solution.   The function `triangle_perimeter` receives the three side lengths of a triangle (as numbers), validates that they ca"
+  },
+  {
+    "task_id": "V2-087",
+    "category": "code",
+    "dataset": "HumanEval",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 260,
+    "tokens_out": 316,
+    "cost": 0.0002286,
+    "latency_s": 6.935,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "unit_tests_passed",
+    "error": null,
+    "answer_preview": "```python def search(lst):     \"\"\"     You are given a non-empty list of positive integers. Return the greatest integer that is greater than      zero, and has "
+  },
+  {
+    "task_id": "V2-088",
+    "category": "code",
+    "dataset": "HumanEval",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 203,
+    "tokens_out": 390,
+    "cost": 0.00026445,
+    "latency_s": 3.831,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "unit_tests_passed",
+    "error": null,
+    "answer_preview": "```python def generate_integers(a, b):     \"\"\"     Given two positive integers a and b, return the even digits between a     and b, in ascending order.      For"
+  },
+  {
+    "task_id": "V2-089",
+    "category": "code",
+    "dataset": "HumanEval",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 264,
+    "tokens_out": 330,
+    "cost": 0.0002376,
+    "latency_s": 3.931,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "unit_tests_passed",
+    "error": null,
+    "answer_preview": "```python def sum_squares(lst):     \"\"\"     This function will take a list of integers. For all entries in the list, the function shall square the integer entry"
+  },
+  {
+    "task_id": "V2-091",
+    "category": "code",
+    "dataset": "HumanEval",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 140,
+    "tokens_out": 877,
+    "cost": 0.0005472,
+    "latency_s": 2.761,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "unit_tests_passed",
+    "error": null,
+    "answer_preview": "```python def starts_one_ends(n: int) -> int:     \"\"\"     Given a positive integer n, return the count of the n‑digit positive integers     that start **or** en"
+  },
+  {
+    "task_id": "V2-092",
+    "category": "code",
+    "dataset": "HumanEval",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 154,
+    "tokens_out": 189,
+    "cost": 0.0001365,
+    "latency_s": 5.768,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "unit_tests_passed",
+    "error": null,
+    "answer_preview": "```python from typing import List  def all_prefixes(string: str) -> List[str]:     \"\"\"Return list of all prefixes from shortest to longest of the input string. "
+  },
+  {
+    "task_id": "V2-093",
+    "category": "code",
+    "dataset": "HumanEval",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 209,
+    "tokens_out": 216,
+    "cost": 0.00016094999999999998,
+    "latency_s": 1.539,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "unit_tests_passed",
+    "error": null,
+    "answer_preview": "```python def common(l1: list, l2: list):     \"\"\"Return sorted unique common elements for two lists.      Examples     --------     >>> common([1, 4, 3, 34, 653"
+  },
+  {
+    "task_id": "V2-095",
+    "category": "code",
+    "dataset": "HumanEval",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 217,
+    "tokens_out": 296,
+    "cost": 0.00021014999999999999,
+    "latency_s": 4.663,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "unit_tests_passed",
+    "error": null,
+    "answer_preview": "```python def is_happy(s):     \"\"\"     You are given a string s.     Your task is to check if the string is happy or not.     A string is happy if its length is"
+  },
+  {
+    "task_id": "V2-100",
+    "category": "code",
+    "dataset": "HumanEval",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 210,
+    "tokens_out": 1169,
+    "cost": 0.0007329,
+    "latency_s": 3.207,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "test_execution_failed: AssertionError",
+    "error": null,
+    "answer_preview": "```python def order_by_points(nums):     \"\"\"     Write a function which sorts the given list of integers     in ascending order according to the sum of their di"
+  },
+  {
+    "task_id": "V2-103",
+    "category": "extraction",
+    "dataset": "MessyExtraction-v2",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 136,
+    "tokens_out": 51,
+    "cost": 5.1e-05,
+    "latency_s": 6.609,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_extraction_match (CX-8839201-US)",
+    "error": null,
+    "answer_preview": "Answer: CX-8839201-US"
+  },
+  {
+    "task_id": "V2-107",
+    "category": "extraction",
+    "dataset": "MessyExtraction-v2",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 148,
+    "tokens_out": 128,
+    "cost": 9.9e-05,
+    "latency_s": 1.105,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_extraction_match (9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d)",
+    "error": null,
+    "answer_preview": "The UUID transaction token present in the audit trace is:  **9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d**  Answer: 9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"
+  },
+  {
+    "task_id": "V2-108",
+    "category": "extraction",
+    "dataset": "MessyExtraction-v2",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 135,
+    "tokens_out": 40,
+    "cost": 4.425e-05,
+    "latency_s": 1.028,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 0,
+    "grader_info": "extraction_mismatch (pred='33.2 kN', gold='33.2 kN')",
+    "error": null,
+    "answer_preview": "Answer: 33.2 kN"
+  },
+  {
+    "task_id": "V2-109",
+    "category": "extraction",
+    "dataset": "MessyExtraction-v2",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 123,
+    "tokens_out": 65,
+    "cost": 5.745e-05,
+    "latency_s": 1.036,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_extraction_match (dev.ops@cloudcore.io)",
+    "error": null,
+    "answer_preview": "The obfuscated address reads “dev [dot] ops [at] cloudcore [dot] io”, which translates to:  **dev.ops@cloudcore.io**  Answer: dev.ops@cloudcore.io"
+  },
+  {
+    "task_id": "V2-111",
+    "category": "extraction",
+    "dataset": "MessyExtraction-v2",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 136,
+    "tokens_out": 79,
+    "cost": 6.78e-05,
+    "latency_s": 1.054,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_extraction_match (2026-08-25)",
+    "error": null,
+    "answer_preview": "The expiration date in the text is **08/25/2026**, which normalizes to **2026-08-25**.  Answer: 2026-08-25"
+  },
+  {
+    "task_id": "V2-114",
+    "category": "extraction",
+    "dataset": "MessyExtraction-v2",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 150,
+    "tokens_out": 26,
+    "cost": 3.8100000000000005e-05,
+    "latency_s": 1.007,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_extraction_match (84 bpm)",
+    "error": null,
+    "answer_preview": "Answer: 84 bpm"
+  },
+  {
+    "task_id": "V2-115",
+    "category": "extraction",
+    "dataset": "MessyExtraction-v2",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 147,
+    "tokens_out": 98,
+    "cost": 8.085e-05,
+    "latency_s": 1.341,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_extraction_match (d2c3b4a5e6f71829405b6c7d8e9f0123456789abcdef0123456789abcdef0123)",
+    "error": null,
+    "answer_preview": "Answer: d2c3b4a5e6f71829405b6c7d8e9f0123456789abcdef0123456789abcdef0123"
+  },
+  {
+    "task_id": "V2-116",
+    "category": "extraction",
+    "dataset": "MessyExtraction-v2",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 134,
+    "tokens_out": 40,
+    "cost": 4.4099999999999995e-05,
+    "latency_s": 1.031,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_extraction_match (2026-02-19)",
+    "error": null,
+    "answer_preview": "Answer: 2026-02-19"
+  },
+  {
+    "task_id": "V2-117",
+    "category": "extraction",
+    "dataset": "MessyExtraction-v2",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 132,
+    "tokens_out": 39,
+    "cost": 4.32e-05,
+    "latency_s": 1.034,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_extraction_match (35%)",
+    "error": null,
+    "answer_preview": "Answer: 35%"
+  },
+  {
+    "task_id": "V2-118",
+    "category": "extraction",
+    "dataset": "MessyExtraction-v2",
+    "max_tokens": 4096,
+    "extra_body": {
+      "reasoning_effort": "low"
+    },
+    "tokens_in": 138,
+    "tokens_out": 38,
+    "cost": 4.35e-05,
+    "latency_s": 0.918,
+    "finish_reason": "stop",
+    "truncated": 0,
+    "correct": 1,
+    "grader_info": "exact_extraction_match (a4f7b2c)",
+    "error": null,
+    "answer_preview": "Answer: a4f7b2c"
+  }
+]

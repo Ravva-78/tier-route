@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "created_at": "2026-10-16",
+  "stratification": "Stratified by difficulty tier (T0, T1, T2) keeping multi-part tasks intact. No overlap or near-duplicates between train and test.",
+  "dev_task_ids": [
+    "E1", "E3", "E4", "E6", "E7", "E9", "E11", "E13", "E14", "E10",
+    "M3", "M4", "M5", "M7", "M8", "M9", "M11", "M12", "M13", "M15",
+    "H1", "H2", "H3", "H4", "H5", "H6", "H10",
+    "P1", "P2", "P3", "P4"
+  ],
+  "test_task_ids": [
+    "E2", "E5", "E8", "E12", "E15",
+    "M1", "M2", "M6", "M10", "M14",
+    "H7", "H8", "H9",
+    "P5",
+    "E16", "E17", "E18", "E19", "E20", "E21", "E22",
+    "M16", "M17", "M18", "M19", "M20", "M21", "M22",
+    "H11", "H12", "H13", "H14", "H15", "H16"
+  ],
+  "dev_subtasks": 39,
+  "test_subtasks": 36,
+  "total_subtasks": 75,
+  "split_ratio": {
+    "dev_pct": 52.0,
+    "test_pct": 48.0
+  },
+  "tier_breakdown": {
+    "dev": {
+      "tier_0": 14,
+      "tier_1": 14,
+      "tier_2": 11,
+      "total": 39
+    },
+    "test": {
+      "tier_0": 13,
+      "tier_1": 13,
+      "tier_2": 10,
+      "total": 36
+    }
+  }
+}
