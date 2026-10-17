@@ -1,0 +1,58 @@
+# PARTIAL live smoke test (local + mid tiers only), 2026-10-17 20:47:51 +0530, mode=live, verifier=judge(0.5)
+# Guard: server on :8001 with hosted-strong base_url pointed at a closed local port, so no call can reach the strong tier.
+
+mode: live | models: local-small, hosted-mid, hosted-strong
+
+=== 1. easy ===
+  part 0: first=local-small final=local-small escalated=False override=None cost=$0.000041 latency=9.42s
+    chain : local-small
+    reason: qa task, complexity 0.03 -> tier 0 at quality bias 0.50 (simple-task cues: capital of; 6 words)
+    answer: 'Paris'
+  total cost $0.000041 (all-strong estimate $0.000008)
+
+=== 2. medium (routes to hosted-mid) ===
+  part 0: first=hosted-mid final=hosted-mid escalated=False override=None cost=$0.000022 latency=1.06s
+    chain : hosted-mid
+    reason: reasoning task, complexity 0.28 -> tier 1 at quality bias 0.50 (reasoning cues: why; 9 words)
+    answer: 'The sky appears blue because sunlight is scattered by atmospheric molecules, and shorter blue wavele'
+  total cost $0.000022 (all-strong estimate $0.000043)
+
+=== 3. multi-part, easy parts ===
+  part 0: first=local-small final=local-small escalated=False override=None cost=$0.000029 latency=3.41s
+    chain : local-small
+    reason: formatting task, complexity 0.00 -> tier 0 at quality bias 0.50 (simple-task cues: convert, uppercase; 4 words)
+    answer: 'HELLO'
+  part 1: first=local-small final=local-small escalated=False override=None cost=$0.000041 latency=3.42s
+    chain : local-small
+    reason: qa task, complexity 0.03 -> tier 0 at quality bias 0.50 (simple-task cues: capital of; 6 words)
+    answer: 'Tokyo'
+  part 2: first=local-small final=local-small escalated=False override=None cost=$0.000045 latency=3.46s
+    chain : local-small
+    reason: qa task, complexity 0.03 -> tier 0 at quality bias 0.50 (simple-task cues: list; 4 words)
+    answer: 'Red, Blue, Yellow'
+  total cost $0.000115 (all-strong estimate $0.000028)
+
+=== 4. forced escalation local -> mid (cascade; local draft must fail the judge) ===
+  part 0: first=local-small final=hosted-mid escalated=True override=None cost=$0.000183 latency=4.72s
+    chain : local-small [judge_conf=0.00] -> hosted-mid
+    reason: cascade: start at cheapest, escalate on failed verification | escalated: local-small (judge_conf=0.00) -> hosted-mid (ok)
+    answer: '4404101227'
+  total cost $0.000183 (all-strong estimate $0.000149)
+
+=== 5. user override (force_model=hosted-mid) ===
+  part 0: first=hosted-mid final=hosted-mid escalated=False override=user cost=$0.000012 latency=0.79s
+    chain : hosted-mid
+    reason: user pinned model 'hosted-mid'
+    answer: 'ABC'
+  total cost $0.000012 (all-strong estimate $0.000023)
+
+SKIPPED (need hosted-strong): hard prompt; override to hosted-strong
+
+=== 6. admin rule (translation -> hosted-mid) ===
+  part 0: first=hosted-mid final=hosted-mid escalated=False override=admin cost=$0.000018 latency=1.12s
+    chain : hosted-mid
+    reason: admin rule: translation -> 'hosted-mid'
+    answer: '¿Dónde está la estación?'
+  total cost $0.000018 (all-strong estimate $0.000037)
+
+smoke test finished (overrides restored)

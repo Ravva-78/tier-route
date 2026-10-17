@@ -49,7 +49,7 @@ Prerequisites done once (see QUICKSTART.md): Ollama running with `llama3.2:3b`, 
 | Min | What to do | What to point out |
 |---|---|---|
 | 0:00 | `python scripts/health_check.py` | all three tiers answer (local Ollama, Groq mid, Groq strong); prices come from `config/models.yaml` |
-| 0:30 | `run_dashboard.bat` (opens http://localhost:8000) | dashboard, model pool with prices, strategy and bias controls |
+| 0:30 | `.\run_dashboard.bat` (in PowerShell; opens http://localhost:8000) | dashboard, model pool with prices, strategy and bias controls |
 | 1:00 | Send "What is the capital of France?" | routed to `local-small`, cost $0, reason shown |
 | 1:45 | Send a hard prompt ("Prove step by step why merge sort is O(n log n) ...") | goes straight to `hosted-strong`; compare cost with the all-strong estimate |
 | 2:30 | Send a 3-item numbered request | split into parts, each routed on its own, merged answer |

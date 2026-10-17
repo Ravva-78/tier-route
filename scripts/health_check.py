@@ -40,9 +40,15 @@ def check_jev() -> None:
 
 def main() -> bool:
     cfg = load_config()
+    only = None
+    if "--tiers" in sys.argv:  # e.g. --tiers 0,1 : skip the strong tier (saves its daily token cap)
+        only = {int(x) for x in sys.argv[sys.argv.index("--tiers") + 1].split(",")}
     print("=" * 65 + f"\nTierRoute health check (mode: {cfg.mode})\n" + "=" * 65)
     ok_all = True
     for spec in cfg.models:
+        if only is not None and spec.tier not in only:
+            print(f"\n[Tier {spec.tier}] {spec.name}  SKIPPED (--tiers)")
+            continue
         print(f"\n[Tier {spec.tier}] {spec.name}  ({spec.model} @ {spec.base_url})")
         if spec.api_key_env and not os.getenv(spec.api_key_env):
             print(f"  API key:   MISSING (set {spec.api_key_env} in .env)")

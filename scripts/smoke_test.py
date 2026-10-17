@@ -5,7 +5,9 @@ import sys
 
 import httpx
 
-BASE = (sys.argv[1] if len(sys.argv) > 1 else "http://localhost:8000").rstrip("/")
+ARGS = [a for a in sys.argv[1:] if not a.startswith("--")]
+NO_STRONG = "--no-strong" in sys.argv  # only local/mid prompts: never touches hosted-strong
+BASE = (ARGS[0] if ARGS else "http://localhost:8000").rstrip("/")
 C = httpx.Client(timeout=180)
 
 
@@ -36,13 +38,21 @@ saved = C.get(BASE + "/api/overrides").json()
 C.post(BASE + "/api/overrides", json={"global_pin": None, "task_rules": {}, "bias": None})
 try:
     show("1. easy", route(prompt="What is the capital of France?", split=False))
-    show("2. hard", route(prompt="Prove step by step why merge sort is O(n log n) and compare its trade-offs with quicksort.", split=False))
-    show("3. multi-part", route(prompt="1. Convert to uppercase: 'hello'\n2. Translate to French: Good morning.\n3. What is 17*23?"))
-    show("4. forced escalation (cascade + heuristic verifier; every tier is told to answer 'I'm not sure', which that verifier rejects)",
-         route(prompt="Reply with exactly these words and nothing else: I'm not sure", strategy="cascade", split=False,
-               verifier="heuristic"))
-    show("5. user override (force_model=hosted-strong)",
-         route(prompt="Convert to uppercase: 'abc'", force_model="hosted-strong", split=False))
+    if NO_STRONG:
+        show("2. medium (routes to hosted-mid)", route(prompt="Summarize in one sentence why the sky is blue.", split=False))
+        show("3. multi-part, easy parts", route(prompt="1. Convert to uppercase: 'hello'\n2. What is the capital of Japan?\n3. List 3 primary colors."))
+        show("4. forced escalation local -> mid (cascade; local draft must fail the judge)",
+             route(prompt="What is 48271 * 91237? Reply with just the number.", strategy="cascade", split=False))
+        show("5. user override (force_model=hosted-mid)", route(prompt="Convert to uppercase: 'abc'", force_model="hosted-mid", split=False))
+        print("\nSKIPPED (need hosted-strong): hard prompt; override to hosted-strong")
+    else:
+        show("2. hard", route(prompt="Prove step by step why merge sort is O(n log n) and compare its trade-offs with quicksort.", split=False))
+        show("3. multi-part", route(prompt="1. Convert to uppercase: 'hello'\n2. Translate to French: Good morning.\n3. What is 17*23?"))
+        show("4. forced escalation (cascade + heuristic verifier; every tier is told to answer 'I'm not sure', which that verifier rejects)",
+             route(prompt="Reply with exactly these words and nothing else: I'm not sure", strategy="cascade", split=False,
+                   verifier="heuristic"))
+        show("5. user override (force_model=hosted-strong)",
+             route(prompt="Convert to uppercase: 'abc'", force_model="hosted-strong", split=False))
     C.post(BASE + "/api/overrides", json={"task_rules": {"translation": "hosted-mid"}})
     show("6. admin rule (translation -> hosted-mid)", route(prompt="Translate to Spanish: Where is the station?", split=False))
 finally:

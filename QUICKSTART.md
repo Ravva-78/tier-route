@@ -29,7 +29,7 @@ Needs Python 3.11+, git, a free Groq API key (https://console.groq.com) and ~3 G
    ```
 6. **Start the server and open the dashboard**
    ```powershell
-   run_dashboard.bat   # serves http://localhost:8000 and opens the browser
+   .\run_dashboard.bat   # serves http://localhost:8000 and opens the browser (PowerShell needs the leading .\ ; cmd does not)
    ```
 7. **Smoke test** (second terminal, server running): sends 6 prompts (easy, hard, multi-part, forced escalation,
    user override, admin rule) and prints each routing decision.
