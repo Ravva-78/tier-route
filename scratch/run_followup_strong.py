@@ -3,7 +3,7 @@ import os
 import time
 from tierroute.config import load_config
 from tierroute.providers import Provider
-from tierroute.grading_v2 import grade_task_v2
+from evaluation.grading_v2 import grade_task_v2
 
 cfg = load_config()
 spec_strong = next(m for m in cfg.models if m.name == "hosted-strong")

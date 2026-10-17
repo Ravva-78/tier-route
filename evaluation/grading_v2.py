@@ -1,4 +1,5 @@
-"""Exact-match grading harness for benchmark v2.
+"""EVALUATION-ONLY. Never import this from tierroute/ (enforced by tests/test_no_leak.py).
+Exact-match grading harness for benchmark v2.
 Supports:
 - Numeric exact match (parsed from 'Answer: X')
 - Multiple choice exact match (parsed from 'Answer: X')

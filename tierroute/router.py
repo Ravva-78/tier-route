@@ -10,7 +10,8 @@ from .classifier import classifier
 from .merger import merge
 from .providers import Provider
 from .splitter import split_request
-from .verifier import verify
+from .strategies import ESCALATING, run_ladder
+from .verifiers import Ctx, HeuristicVerifier
 
 SYSTEM = "Answer concisely and directly. Follow any requested output format exactly."
 # Tier cut-offs on the 0..1 complexity score (tier 0|1 and tier 1|2).
@@ -41,8 +42,9 @@ class Overrides:
 
 
 class Router:
-    def __init__(self, cfg, store, overrides):
+    def __init__(self, cfg, store, overrides, verifier=None):
         self.cfg, self.store, self.overrides = cfg, store, overrides
+        self.verifier = verifier or HeuristicVerifier()  # gold-free; see tierroute/verifiers.py
         self.models = cfg.models
         self.by_name = {m.name: m for m in self.models}
         self.index = {m.name: i for i, m in enumerate(self.models)}
@@ -70,6 +72,8 @@ class Router:
             return n - 1, "baseline: always strongest", None, False, 1.0
         if strategy == "always_cheap":
             return 0, "baseline: always cheapest", None, False, 0.0
+        if strategy == "cascade":
+            return 0, "cascade: start at cheapest, escalate on failed verification", None, False, 0.0
         if strategy == "random":
             return random.randrange(n), "baseline: random", None, False, 0.5
         if strategy == "classifier":
@@ -89,21 +93,24 @@ class Router:
         feat = analyze(text)
         idx, reason, override_by, locked, score_used = self._choose(feat, bias, force_model, strategy, text=text)
         first_idx = idx
-        attempts, total_cost, total_lat = [], 0.0, 0.0
-        while True:
-            m = self.models[idx]
-            res = self.providers[m.name].generate(text, system=SYSTEM, meta=meta, temperature=temperature, max_tokens=max_tokens)
-            cost = m.cost(res.tokens_in, res.tokens_out)
-            ok, why = verify(text, res.text, feat["task_type"], res.error)
-            attempts.append({"model": m.name, "tier": m.tier, "ok": ok, "check": why, "cost": cost,
-                             "latency_s": round(res.latency_s, 3), "tokens_in": res.tokens_in,
-                             "tokens_out": res.tokens_out, "finish_reason": res.finish_reason})
-            total_cost += cost
-            total_lat += res.latency_s
-            can_escalate = (not ok) and (not locked) and (strategy in ("rules", "classifier")) and idx < len(self.models) - 1
-            if not can_escalate:
-                break
-            idx += 1
+
+        def gen(tier, prompt, sample=0, temperature=temperature, judge=False):
+            m = self.models[tier]
+            kw = {"max_tokens": max_tokens, "temperature": temperature}
+            if not judge and not sample:
+                kw.update(system=SYSTEM, meta=meta)
+            return self.providers[m.name].generate(prompt, **kw)
+
+        ctx = Ctx(gen, lambda tier, r: self.models[tier].cost(r.tokens_in, r.tokens_out))
+        outcome = run_ladder(idx, text, ctx, self.verifier,
+                             escalate=(not locked) and strategy in ESCALATING, max_tier=len(self.models) - 1)
+        attempts, total_cost, total_lat = [], outcome.cost, outcome.latency_s
+        for a in outcome.attempts:
+            m, r = self.models[a.tier], a.res
+            attempts.append({"model": m.name, "tier": m.tier, "ok": a.verdict.ok, "check": a.verdict.reason,
+                             "cost": a.cost, "latency_s": round(a.latency_s, 3), "tokens_in": r.tokens_in,
+                             "tokens_out": r.tokens_out, "finish_reason": r.finish_reason})
+        res = outcome.final.res
         last = attempts[-1]
         row = {
             "request_id": rid, "ts": time.time(), "part_idx": i, "part_text": text,
