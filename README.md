@@ -1,5 +1,7 @@
 # TierRoute: cost-aware LLM router
 
+> Step-by-step setup: see **QUICKSTART.md**. Final, leak-free results: `results/final/RESULTS_FINAL.md`. Older results are indexed in `results/README.md` (several are invalid).
+
 Routes each request to the cheapest model that can handle it: local model, mid hosted, strong hosted.
 Splits multi-part requests, verifies answers, escalates weak ones, logs every decision, and lets users/admins override.
 

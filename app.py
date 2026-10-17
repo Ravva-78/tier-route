@@ -10,11 +10,12 @@ from tierroute.analyzer import TASK_TYPES
 from tierroute.config import ROOT, load_config
 from tierroute.router import Overrides, Router
 from tierroute.store import Store
+from tierroute.verifiers import REGISTRY
 
 cfg = load_config()
 store = Store(ROOT / "results" / "decisions.db")
 overrides = Overrides(ROOT / "results" / "overrides.json")
-router = Router(cfg, store, overrides)
+router = Router(cfg, store, overrides, verifier=REGISTRY[cfg.verifier["name"]](**cfg.verifier.get("params", {})))
 app = FastAPI(title="TierRoute API Gateway", version="1.0.0")
 
 

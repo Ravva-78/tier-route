@@ -45,6 +45,7 @@ class Config:
     mode: str
     default_bias: float
     models: list
+    verifier: dict = None  # {name, params} of the gold-free escalation verifier (see tierroute/verifiers.py)
 
 
 def load_config(path=None) -> Config:
@@ -61,5 +62,5 @@ def load_config(path=None) -> Config:
                 m.base_url = local_url_override.strip()
 
     mode = os.getenv("TIERROUTE_MODE", raw.get("mode", "mock"))
-    return Config(mode, float(raw.get("default_quality_bias", 0.5)), models)
+    return Config(mode, float(raw.get("default_quality_bias", 0.5)), models, raw.get("verifier") or {"name": "heuristic", "params": {}})
 
