@@ -89,7 +89,7 @@ class Router:
                f"at quality bias {bias:.2f} ({feat['signals']})")
         return idx, why, None, False, feat["score"]
 
-    def _handle_part(self, rid, i, text, bias, force_model, strategy, meta, temperature=0.2, max_tokens=1024):
+    def _handle_part(self, rid, i, text, bias, force_model, strategy, meta, temperature=0.2, max_tokens=4096, verifier=None):
         feat = analyze(text)
         idx, reason, override_by, locked, score_used = self._choose(feat, bias, force_model, strategy, text=text)
         first_idx = idx
@@ -97,12 +97,16 @@ class Router:
         def gen(tier, prompt, sample=0, temperature=temperature, judge=False):
             m = self.models[tier]
             kw = {"max_tokens": max_tokens, "temperature": temperature}
+            if judge:  # reasoning judge needs room to think, same settings as the benchmark (see benchmark/live_ctx.py)
+                kw.update(max_tokens=4096, temperature=0.0, extra_body={"reasoning_effort": "low"})
+            if tier > 0 and not judge:  # same hosted settings as the evaluated configuration (reasoning models need token room)
+                kw.update(extra_body={"reasoning_effort": "low"})
             if not judge and not sample:
                 kw.update(system=SYSTEM, meta=meta)
             return self.providers[m.name].generate(prompt, **kw)
 
         ctx = Ctx(gen, lambda tier, r: self.models[tier].cost(r.tokens_in, r.tokens_out))
-        outcome = run_ladder(idx, text, ctx, self.verifier,
+        outcome = run_ladder(idx, text, ctx, verifier or self.verifier,
                              escalate=(not locked) and strategy in ESCALATING, max_tier=len(self.models) - 1)
         attempts, total_cost, total_lat = [], outcome.cost, outcome.latency_s
         for a in outcome.attempts:
@@ -127,7 +131,7 @@ class Router:
         }
         return row, res.text, first_idx
 
-    def route(self, prompt, bias=None, force_model=None, split=True, strategy="rules", meta=None, log=True, temperature=0.2, max_tokens=1024):
+    def route(self, prompt, bias=None, force_model=None, split=True, strategy="rules", meta=None, log=True, temperature=0.2, max_tokens=4096, verifier=None):
         rid = uuid.uuid4().hex[:8]
         ov_bias = self.overrides.data.get("bias")
         if bias is None:
@@ -139,7 +143,7 @@ class Router:
             metas = [meta if isinstance(meta, dict) else None] * len(parts)
         rows, answers, first_idxs = [], [], []
         for i, p in enumerate(parts):
-            row, ans, fi = self._handle_part(rid, i, p, bias, force_model, strategy, metas[i], temperature=temperature, max_tokens=max_tokens)
+            row, ans, fi = self._handle_part(rid, i, p, bias, force_model, strategy, metas[i], temperature=temperature, max_tokens=max_tokens, verifier=verifier)
             rows.append(row)
             answers.append(ans)
             first_idxs.append(fi)

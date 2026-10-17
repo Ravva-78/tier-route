@@ -1,0 +1,75 @@
+# LIVE health check + smoke test, 2026-10-17 20:01:23 +0530, verifier=judge(0.5) (case 4 overrides to heuristic), mode=live
+
+## scripts/health_check.py
+=================================================================
+TierRoute health check (mode: live)
+=================================================================
+
+[Tier 0] local-small  (llama3.2:3b @ http://localhost:11434/v1)
+  Ollama:    running, model 'llama3.2:3b' present
+  Status:    OK  reply='OK' tokens=30+2 latency=2.18s
+
+[Tier 1] hosted-mid  (openai/gpt-oss-20b @ https://api.groq.com/openai/v1)
+  Status:    OK  reply='OK' tokens=76+41 latency=1.25s
+
+[Tier 2] hosted-strong  (openai/gpt-oss-120b @ https://api.groq.com/openai/v1)
+  Status:    OK  reply='OK' tokens=76+45 latency=1.11s
+
+[Jev] disabled (optional; set TIERROUTE_ENABLE_JEV=1 and OPENROUTER_API_KEY to enable) - skipped
+
+ALL REQUIRED MODELS HEALTHY
+
+## scripts/smoke_test.py
+mode: live | models: local-small, hosted-mid, hosted-strong
+
+=== 1. easy ===
+  part 0: first=local-small final=local-small escalated=False override=None cost=$0.000041 latency=4.04s
+    chain : local-small
+    reason: qa task, complexity 0.03 -> tier 0 at quality bias 0.50 (simple-task cues: capital of; 6 words)
+    answer: 'Paris'
+  total cost $0.000041 (all-strong estimate $0.000008)
+
+=== 2. hard ===
+  part 0: first=hosted-strong final=hosted-strong escalated=False override=None cost=$0.000631 latency=49.14s
+    chain : hosted-strong [finish_reason=length]
+    reason: formatting task, complexity 0.53 -> tier 2 at quality bias 0.50 (reasoning cues: prove, why, step by step; simple-task cues: sort; 17 words)
+    answer: '**Merge‑sort time complexity**\n\n1. **Recurrence formulation**  \n   For an input of size\u202f\\(n\\) merge‑'
+  total cost $0.000631 (all-strong estimate $0.000631)
+
+=== 3. multi-part ===
+  part 0: first=local-small final=local-small escalated=False override=None cost=$0.000029 latency=3.62s
+    chain : local-small
+    reason: formatting task, complexity 0.00 -> tier 0 at quality bias 0.50 (simple-task cues: convert, uppercase; 4 words)
+    answer: 'HELLO'
+  part 1: first=local-small final=hosted-mid escalated=True override=None cost=$0.000062 latency=4.72s
+    chain : local-small [judge_conf=0.00] -> hosted-mid
+    reason: translation task, complexity 0.03 -> tier 0 at quality bias 0.50 (simple-task cues: translate; 5 words) | escalated: local-small (judge_conf=0.00) -> 
+    answer: 'Bonjour.'
+  part 2: first=hosted-mid final=hosted-mid escalated=False override=None cost=$0.000023 latency=0.99s
+    chain : hosted-mid
+    reason: qa task, complexity 0.31 -> tier 1 at quality bias 0.50 (math/quantity; 3 words)
+    answer: '391'
+  total cost $0.000113 (all-strong estimate $0.000119)
+
+=== 4. forced escalation (cascade + heuristic verifier; every tier is told to answer 'I'm not sure', which that verifier rejects) ===
+  part 0: first=local-small final=hosted-strong escalated=True override=None cost=$0.000025 latency=49.81s
+    chain : local-small [answer signals uncertainty] -> hosted-mid [answer signals uncertainty] -> hosted-strong [provider error: HTTP 429: Rate limit exceeded after 4 attempts]
+    reason: cascade: start at cheapest, escalate on failed verification | escalated: local-small (answer signals uncertainty) -> hosted-mid (answer signals uncert
+    answer: ''
+  total cost $0.000025 (all-strong estimate $0.000002)
+
+=== 5. user override (force_model=hosted-strong) ===
+  part 0: first=hosted-strong final=hosted-strong escalated=False override=user cost=$0.000001 latency=46.77s
+    chain : hosted-strong [provider_error]
+    reason: user pinned model 'hosted-strong'
+    answer: ''
+  total cost $0.000001 (all-strong estimate $0.000001)
+
+=== 6. admin rule (translation -> hosted-mid) ===
+  part 0: first=hosted-mid final=hosted-mid escalated=False override=admin cost=$0.000026 latency=1.17s
+    chain : hosted-mid
+    reason: admin rule: translation -> 'hosted-mid'
+    answer: '¿Dónde está la estación?'
+  total cost $0.000026 (all-strong estimate $0.000053)
+
+smoke test finished (overrides restored)

@@ -38,8 +38,9 @@ try:
     show("1. easy", route(prompt="What is the capital of France?", split=False))
     show("2. hard", route(prompt="Prove step by step why merge sort is O(n log n) and compare its trade-offs with quicksort.", split=False))
     show("3. multi-part", route(prompt="1. Convert to uppercase: 'hello'\n2. Translate to French: Good morning.\n3. What is 17*23?"))
-    show("4. forced escalation (cascade; cheap tiers are told to answer 'I'm not sure')",
-         route(prompt="Reply with exactly these words and nothing else: I'm not sure", strategy="cascade", split=False))
+    show("4. forced escalation (cascade + heuristic verifier; every tier is told to answer 'I'm not sure', which that verifier rejects)",
+         route(prompt="Reply with exactly these words and nothing else: I'm not sure", strategy="cascade", split=False,
+               verifier="heuristic"))
     show("5. user override (force_model=hosted-strong)",
          route(prompt="Convert to uppercase: 'abc'", force_model="hosted-strong", split=False))
     C.post(BASE + "/api/overrides", json={"task_rules": {"translation": "hosted-mid"}})

@@ -2,3 +2,10 @@ always_strong {'n': 60, 'quality': 53, 'cost': 0.00982245, 'escalations': 0, 'wo
 heuristic {}: Q=43.33/60 cost=$0.003313 (strong $0.009822) esc=2.7 feasible=True
 strict {}: Q=44.67/60 cost=$0.002645 (strong $0.009822) esc=2.0 feasible=True
 self_consistency {'min_agree': 2}: Q=45.33/60 cost=$0.004153 (strong $0.009822) esc=12.0 feasible=True
+self_consistency {'min_agree': 3}: Q=47.67/60 cost=$0.004724 (strong $0.009822) esc=20.0 feasible=True
+judge {'threshold': 0.5}: Q=52.33/60 cost=$0.006715 (strong $0.009822) esc=16.3 feasible=True
+judge {'threshold': 0.6}: Q=52.33/60 cost=$0.006715 (strong $0.009822) esc=16.3 feasible=True
+judge {'threshold': 0.7}: Q=52.33/60 cost=$0.006731 (strong $0.009822) esc=17.3 feasible=True
+judge {'threshold': 0.8}: Q=52.33/60 cost=$0.006731 (strong $0.009822) esc=17.3 feasible=True
+judge {'threshold': 0.9}: Q=52.33/60 cost=$0.006731 (strong $0.009822) esc=17.3 feasible=True
+selected judge {'threshold': 0.5}

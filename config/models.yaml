@@ -32,4 +32,7 @@ models:
     price_out_per_m: 0.60        # USD per 1M tokens (verified 2026-10-16 via groq.com/pricing)
     capability: 0.95
 
-
+# Escalation verifier chosen on the v2 DEV set only (results/final/verifier_selection.md). Gold-free: sees prompt + output.
+verifier:
+  name: judge
+  params: {threshold: 0.5}

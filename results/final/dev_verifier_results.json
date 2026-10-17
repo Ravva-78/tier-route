@@ -1,0 +1,542 @@
+{
+ "always_strong": {
+  "n": 60,
+  "quality": 53,
+  "cost": 0.00982245,
+  "escalations": 0,
+  "workload": [
+   0,
+   0,
+   60
+  ],
+  "mean_latency": 7.123667164643606,
+  "median_latency": 1.440727710723877
+ },
+ "baselines": {
+  "always_cheap": {
+   "n": 60,
+   "quality": 41,
+   "cost": 0.0,
+   "escalations": 0,
+   "workload": [
+    60,
+    0,
+    0
+   ],
+   "mean_latency": 5.003332078456879,
+   "median_latency": 4.994315266609192
+  },
+  "random": {
+   "n": 60,
+   "quality": 49,
+   "cost": 0.003622875,
+   "escalations": 0,
+   "workload": [
+    25,
+    15,
+    20
+   ],
+   "mean_latency": 3.0865274548530577,
+   "median_latency": 2.171535611152649
+  }
+ },
+ "candidates": [
+  {
+   "verifier": "heuristic",
+   "params": {},
+   "mean_quality": 43.333333333333336,
+   "mean_cost": 0.00331325,
+   "feasible": true,
+   "mean_escalations": 2.6666666666666665,
+   "mean_latency": 4.983695095115238,
+   "per_router": {
+    "cascade": {
+     "n": 60,
+     "quality": 42,
+     "cost": 0.0013415999999999999,
+     "escalations": 4,
+     "workload": [
+      56,
+      3,
+      1
+     ],
+     "mean_latency": 5.1673678437868755,
+     "median_latency": 4.994315266609192,
+     "quality_orig": 42
+    },
+    "rules": {
+     "n": 60,
+     "quality": 45,
+     "cost": 0.0034820999999999997,
+     "escalations": 1,
+     "workload": [
+      38,
+      18,
+      4
+     ],
+     "mean_latency": 3.3030465960502626,
+     "median_latency": 2.4175881147384644,
+     "quality_orig": 45
+    },
+    "classifier": {
+     "n": 60,
+     "quality": 43,
+     "cost": 0.00511605,
+     "escalations": 3,
+     "workload": [
+      46,
+      4,
+      10
+     ],
+     "mean_latency": 6.480670845508575,
+     "median_latency": 4.062314867973328,
+     "quality_orig": 43
+    }
+   }
+  },
+  {
+   "verifier": "strict",
+   "params": {},
+   "mean_quality": 44.666666666666664,
+   "mean_cost": 0.0026450499999999995,
+   "feasible": true,
+   "mean_escalations": 2.0,
+   "mean_latency": 4.917608796225654,
+   "per_router": {
+    "cascade": {
+     "n": 60,
+     "quality": 43,
+     "cost": 0.0002262,
+     "escalations": 2,
+     "workload": [
+      58,
+      2,
+      0
+     ],
+     "mean_latency": 5.046602956453959,
+     "median_latency": 4.994315266609192,
+     "quality_orig": 43
+    },
+    "rules": {
+     "n": 60,
+     "quality": 47,
+     "cost": 0.002605725,
+     "escalations": 2,
+     "workload": [
+      37,
+      20,
+      3
+     ],
+     "mean_latency": 3.241390562057495,
+     "median_latency": 2.4175881147384644,
+     "quality_orig": 47
+    },
+    "classifier": {
+     "n": 60,
+     "quality": 44,
+     "cost": 0.0051032249999999986,
+     "escalations": 2,
+     "workload": [
+      47,
+      3,
+      10
+     ],
+     "mean_latency": 6.464832870165507,
+     "median_latency": 4.062314867973328,
+     "quality_orig": 44
+    }
+   }
+  },
+  {
+   "verifier": "self_consistency",
+   "params": {
+    "min_agree": 2
+   },
+   "mean_quality": 45.333333333333336,
+   "mean_cost": 0.0041527,
+   "feasible": true,
+   "mean_escalations": 12.0,
+   "mean_latency": 13.335552766588,
+   "per_router": {
+    "cascade": {
+     "n": 60,
+     "quality": 44,
+     "cost": 0.00280635,
+     "escalations": 17,
+     "workload": [
+      43,
+      16,
+      1
+     ],
+     "mean_latency": 16.333139169216157,
+     "median_latency": 15.64927327632904,
+     "quality_orig": 44
+    },
+    "rules": {
+     "n": 60,
+     "quality": 47,
+     "cost": 0.0040353,
+     "escalations": 11,
+     "workload": [
+      28,
+      28,
+      4
+     ],
+     "mean_latency": 9.57944969733556,
+     "median_latency": 7.152950406074524,
+     "quality_orig": 47
+    },
+    "classifier": {
+     "n": 60,
+     "quality": 45,
+     "cost": 0.005616449999999999,
+     "escalations": 8,
+     "workload": [
+      41,
+      9,
+      10
+     ],
+     "mean_latency": 14.09406943321228,
+     "median_latency": 11.297151446342468,
+     "quality_orig": 45
+    }
+   }
+  },
+  {
+   "verifier": "self_consistency",
+   "params": {
+    "min_agree": 3
+   },
+   "mean_quality": 47.666666666666664,
+   "mean_cost": 0.004723875,
+   "feasible": true,
+   "mean_escalations": 20.0,
+   "mean_latency": 13.525865476661258,
+   "per_router": {
+    "cascade": {
+     "n": 60,
+     "quality": 47,
+     "cost": 0.0035027249999999995,
+     "escalations": 27,
+     "workload": [
+      33,
+      26,
+      1
+     ],
+     "mean_latency": 16.583818380037943,
+     "median_latency": 15.74422562122345,
+     "quality_orig": 47
+    },
+    "rules": {
+     "n": 60,
+     "quality": 48,
+     "cost": 0.00442665,
+     "escalations": 16,
+     "workload": [
+      23,
+      33,
+      4
+     ],
+     "mean_latency": 9.670345818996429,
+     "median_latency": 7.152950406074524,
+     "quality_orig": 48
+    },
+    "classifier": {
+     "n": 60,
+     "quality": 48,
+     "cost": 0.0062422499999999995,
+     "escalations": 17,
+     "workload": [
+      32,
+      18,
+      10
+     ],
+     "mean_latency": 14.323432230949402,
+     "median_latency": 11.500082612037659,
+     "quality_orig": 48
+    }
+   }
+  },
+  {
+   "verifier": "judge",
+   "params": {
+    "threshold": 0.5
+   },
+   "mean_quality": 52.333333333333336,
+   "mean_cost": 0.0067150249999999995,
+   "feasible": true,
+   "mean_escalations": 16.333333333333332,
+   "mean_latency": 6.98898187081019,
+   "per_router": {
+    "cascade": {
+     "n": 60,
+     "quality": 52,
+     "cost": 0.005741250000000001,
+     "escalations": 20,
+     "workload": [
+      40,
+      20,
+      0
+     ],
+     "mean_latency": 7.60343683163325,
+     "median_latency": 6.93956184387207,
+     "quality_orig": 52
+    },
+    "rules": {
+     "n": 60,
+     "quality": 52,
+     "cost": 0.005850975000000001,
+     "escalations": 14,
+     "workload": [
+      25,
+      32,
+      3
+     ],
+     "mean_latency": 5.075100676218669,
+     "median_latency": 4.327549457550049,
+     "quality_orig": 52
+    },
+    "classifier": {
+     "n": 60,
+     "quality": 53,
+     "cost": 0.008552849999999999,
+     "escalations": 15,
+     "workload": [
+      34,
+      16,
+      10
+     ],
+     "mean_latency": 8.288408104578654,
+     "median_latency": 5.867863416671753,
+     "quality_orig": 53
+    }
+   }
+  },
+  {
+   "verifier": "judge",
+   "params": {
+    "threshold": 0.6
+   },
+   "mean_quality": 52.333333333333336,
+   "mean_cost": 0.0067150249999999995,
+   "feasible": true,
+   "mean_escalations": 16.333333333333332,
+   "mean_latency": 6.98898187081019,
+   "per_router": {
+    "cascade": {
+     "n": 60,
+     "quality": 52,
+     "cost": 0.005741250000000001,
+     "escalations": 20,
+     "workload": [
+      40,
+      20,
+      0
+     ],
+     "mean_latency": 7.60343683163325,
+     "median_latency": 6.93956184387207,
+     "quality_orig": 52
+    },
+    "rules": {
+     "n": 60,
+     "quality": 52,
+     "cost": 0.005850975000000001,
+     "escalations": 14,
+     "workload": [
+      25,
+      32,
+      3
+     ],
+     "mean_latency": 5.075100676218669,
+     "median_latency": 4.327549457550049,
+     "quality_orig": 52
+    },
+    "classifier": {
+     "n": 60,
+     "quality": 53,
+     "cost": 0.008552849999999999,
+     "escalations": 15,
+     "workload": [
+      34,
+      16,
+      10
+     ],
+     "mean_latency": 8.288408104578654,
+     "median_latency": 5.867863416671753,
+     "quality_orig": 53
+    }
+   }
+  },
+  {
+   "verifier": "judge",
+   "params": {
+    "threshold": 0.7
+   },
+   "mean_quality": 52.333333333333336,
+   "mean_cost": 0.00673145,
+   "feasible": true,
+   "mean_escalations": 17.333333333333332,
+   "mean_latency": 7.009253903230032,
+   "per_router": {
+    "cascade": {
+     "n": 60,
+     "quality": 52,
+     "cost": 0.005757675,
+     "escalations": 21,
+     "workload": [
+      39,
+      21,
+      0
+     ],
+     "mean_latency": 7.62370886405309,
+     "median_latency": 6.93956184387207,
+     "quality_orig": 52
+    },
+    "rules": {
+     "n": 60,
+     "quality": 52,
+     "cost": 0.005867400000000001,
+     "escalations": 15,
+     "workload": [
+      24,
+      33,
+      3
+     ],
+     "mean_latency": 5.095372708638509,
+     "median_latency": 4.3465927839279175,
+     "quality_orig": 52
+    },
+    "classifier": {
+     "n": 60,
+     "quality": 53,
+     "cost": 0.008569275,
+     "escalations": 16,
+     "workload": [
+      33,
+      17,
+      10
+     ],
+     "mean_latency": 8.308680136998495,
+     "median_latency": 5.867863416671753,
+     "quality_orig": 53
+    }
+   }
+  },
+  {
+   "verifier": "judge",
+   "params": {
+    "threshold": 0.8
+   },
+   "mean_quality": 52.333333333333336,
+   "mean_cost": 0.00673145,
+   "feasible": true,
+   "mean_escalations": 17.333333333333332,
+   "mean_latency": 7.009253903230032,
+   "per_router": {
+    "cascade": {
+     "n": 60,
+     "quality": 52,
+     "cost": 0.005757675,
+     "escalations": 21,
+     "workload": [
+      39,
+      21,
+      0
+     ],
+     "mean_latency": 7.62370886405309,
+     "median_latency": 6.93956184387207,
+     "quality_orig": 52
+    },
+    "rules": {
+     "n": 60,
+     "quality": 52,
+     "cost": 0.005867400000000001,
+     "escalations": 15,
+     "workload": [
+      24,
+      33,
+      3
+     ],
+     "mean_latency": 5.095372708638509,
+     "median_latency": 4.3465927839279175,
+     "quality_orig": 52
+    },
+    "classifier": {
+     "n": 60,
+     "quality": 53,
+     "cost": 0.008569275,
+     "escalations": 16,
+     "workload": [
+      33,
+      17,
+      10
+     ],
+     "mean_latency": 8.308680136998495,
+     "median_latency": 5.867863416671753,
+     "quality_orig": 53
+    }
+   }
+  },
+  {
+   "verifier": "judge",
+   "params": {
+    "threshold": 0.9
+   },
+   "mean_quality": 52.333333333333336,
+   "mean_cost": 0.00673145,
+   "feasible": true,
+   "mean_escalations": 17.333333333333332,
+   "mean_latency": 7.009253903230032,
+   "per_router": {
+    "cascade": {
+     "n": 60,
+     "quality": 52,
+     "cost": 0.005757675,
+     "escalations": 21,
+     "workload": [
+      39,
+      21,
+      0
+     ],
+     "mean_latency": 7.62370886405309,
+     "median_latency": 6.93956184387207,
+     "quality_orig": 52
+    },
+    "rules": {
+     "n": 60,
+     "quality": 52,
+     "cost": 0.005867400000000001,
+     "escalations": 15,
+     "workload": [
+      24,
+      33,
+      3
+     ],
+     "mean_latency": 5.095372708638509,
+     "median_latency": 4.3465927839279175,
+     "quality_orig": 52
+    },
+    "classifier": {
+     "n": 60,
+     "quality": 53,
+     "cost": 0.008569275,
+     "escalations": 16,
+     "workload": [
+      33,
+      17,
+      10
+     ],
+     "mean_latency": 8.308680136998495,
+     "median_latency": 5.867863416671753,
+     "quality_orig": 53
+    }
+   }
+  }
+ ],
+ "selected": {
+  "verifier": "judge",
+  "params": {
+   "threshold": 0.5
+  }
+ }
+}

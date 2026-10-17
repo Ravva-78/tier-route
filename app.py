@@ -25,6 +25,7 @@ class RouteReq(BaseModel):
     force_model: Optional[str] = None
     split: bool = True
     strategy: Optional[str] = "rules"
+    verifier: Optional[str] = None  # optional per-request override: heuristic | strict | self_consistency | judge
 
 
 class OpenAIChatMessage(BaseModel):
@@ -54,7 +55,8 @@ def dashboard():
 @app.post("/api/route")
 def route(req: RouteReq):
     return router.route(req.prompt, bias=req.bias, force_model=req.force_model or None,
-                        split=req.split, strategy=req.strategy or "rules")
+                        split=req.split, strategy=req.strategy or "rules",
+                        verifier=REGISTRY[req.verifier]() if req.verifier in REGISTRY else None)
 
 
 @app.post("/v1/chat/completions")
