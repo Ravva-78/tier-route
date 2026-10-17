@@ -1,4 +1,5 @@
 # TierRoute project status (generated 2026-10-17 20:50 IST)
+> **UPDATE 2026-10-18 05:20 IST: the v3 run completed.** `results/final/v3_tables.md`, `v3_rows.csv`, `figures/` and `RESULTS_FINAL.md` now exist. The verdict line 'Final v3 results available' is now **yes**; the sections below that say the run is incomplete describe the state on 2026-10-17 evening.
 
 No report text here: verdicts, facts and open items only.
 

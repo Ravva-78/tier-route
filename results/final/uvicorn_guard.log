@@ -1,0 +1,16 @@
+INFO:     Started server process [38932]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:55376 - "GET /api/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "GET /api/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "GET /api/overrides HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "POST /api/overrides HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "POST /api/route HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "POST /api/route HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "POST /api/route HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "POST /api/route HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "POST /api/route HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "POST /api/overrides HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "POST /api/route HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "POST /api/overrides HTTP/1.1" 200 OK
