@@ -14,3 +14,6 @@ results/bench_overrides.json
 .env.*
 !.env.example
 
+
+# Private course material (never commit or ship)
+docs/

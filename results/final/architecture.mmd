@@ -1,0 +1,34 @@
+flowchart TD
+    %% TierRoute architecture, derived from the CURRENT code (tierroute/router.py, strategies.py, verifiers.py).
+    %% Replaces results/report_pack/architecture.mmd, which names old models/prices/thresholds.
+    REQ["Client request<br/>(prompt, bias, force_model, strategy, split)"]
+    OVR{"Override?<br/>user force_model / admin global_pin / admin task_rule"}
+    SPLIT["Splitter<br/>split_request(): numbered/bulleted/inline parts"]
+    ANA["Analyzer<br/>analyze(): task type + complexity score 0-1<br/>(keyword, math, code, length cues)"]
+    STRAT{"Strategy"}
+    RULES["rules<br/>score vs thresholds, shifted by bias"]
+    CLF["classifier<br/>TF-IDF (1-2 grams) + LogisticRegression<br/>trained on seed prompts + v2 DEV oracle tiers"]
+    CASC["cascade<br/>always start at tier 0"]
+    BASE["baselines<br/>always_strong / always_cheap / random"]
+    T0["Tier 0 local-small<br/>llama3.2:3b via Ollama<br/>$0 / $0 per 1M tokens"]
+    T1["Tier 1 hosted-mid<br/>openai/gpt-oss-20b via Groq<br/>$0.075 in / $0.30 out per 1M"]
+    T2["Tier 2 hosted-strong<br/>openai/gpt-oss-120b via Groq<br/>$0.15 in / $0.60 out per 1M"]
+    VER["Verifier (gold-free; prompt + output only)<br/>heuristic | strict-format | self-consistency | LLM-judge"]
+    OK{"verified?"}
+    ESC["Escalate one tier<br/>(not for locked/pinned parts, not past tier 2)"]
+    MERGE["Merger<br/>merge(parts, answers)"]
+    LOG[("SQLite decision log<br/>first/final model, cost, latency, attempts, reason")]
+    DASH["Dashboard + OpenAI-compatible /v1/chat/completions"]
+    EVAL["Evaluation only (evaluation/ package)<br/>graders, gold answers, unit tests<br/>NEVER imported by tierroute/ (tests/test_no_leak.py)"]
+
+    REQ --> OVR
+    OVR -- "pinned" --> T0 & T1 & T2
+    OVR -- "none" --> SPLIT --> ANA --> STRAT
+    STRAT --> RULES & CLF & CASC & BASE
+    RULES & CLF & CASC & BASE -- "first tier" --> T0 & T1 & T2
+    T0 & T1 & T2 --> VER --> OK
+    OK -- "yes" --> MERGE
+    OK -- "no" --> ESC --> T1 & T2
+    MERGE --> DASH
+    MERGE --> LOG --> DASH
+    MERGE -. "final answers, after routing is finished" .-> EVAL

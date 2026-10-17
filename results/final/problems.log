@@ -25,3 +25,9 @@
 2026-10-17 19:18:36 tier 2 call failed (attempt 1/12): HTTP 429: Rate limit exceeded after 4 attempts
 2026-10-17 19:19:54 tier 2 call failed (attempt 2/12): HTTP 429: Rate limit exceeded after 4 attempts
 2026-10-17 19:22:14 tier 2 call failed (attempt 1): HTTP 429: Rate limit exceeded after 4 attempts
+2026-10-17 19:25:52 tier 2 call failed (attempt 1): HTTP 429: Rate limit exceeded after 4 attempts
+2026-10-17 19:28:24 tier 2 call failed (attempt 1): HTTP 429: Rate limit exceeded after 4 attempts
+2026-10-17 19:30:13 tier 2 call failed (attempt 1): HTTP 429: Rate limit exceeded after 4 attempts
+2026-10-17 19:37:19 tier 1 call failed (attempt 1): Connection failed to https://api.groq.com/openai/v1/chat/completions. Endpoint may be offline.
+2026-10-17 19:37:47 tier 1 call failed (attempt 1): Connection failed to https://api.groq.com/openai/v1/chat/completions. Endpoint may be offline.
+2026-10-17 19:38:09 tier 1 call failed (attempt 1): Provider error: HTTPStatusError - Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completion
